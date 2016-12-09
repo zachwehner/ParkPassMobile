@@ -9,9 +9,6 @@ namespace ParkPass
 
 		public string City { get; set; }
 
-		public ParkListItem()
-		{
-			
-		}
+	
 	}
 }

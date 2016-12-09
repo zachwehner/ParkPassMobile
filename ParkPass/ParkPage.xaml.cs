@@ -12,12 +12,12 @@ namespace ParkPass
 			InitializeComponent();
 
 
-			ParkListView.ItemsSource = new List<ParkListItem>           {
+			ParkListView.ItemsSource = new List<ParkListItem>
+			{
 				new ParkListItem {
 					Name = "YellowStone",
 					City = "Wyoming",
-					State = "Wyoming"
-				},
+					State = "Wyoming" },
 				new ParkListItem {
 					Name = "Grand Tetons",
 					City = "Wyoming",
@@ -30,5 +30,13 @@ namespace ParkPass
 				}
 			};
 		}
+
+		async void Handle_ItemTapped(object sender, Xamarin.Forms.ItemTappedEventArgs e)
+		{
+			await Navigation.PopModalAsync();
+	
+		}
+
+
 	}
 }
