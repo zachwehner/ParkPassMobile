@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.App">
+	<Application.Resources>
+    <ResourceDictionary>
+
+    <!-- General Color-->
+    <Color x:Key="defaultGray">#979797</Color>
+
+    <!--Background Colors-->
+    <Color x:Key="defaultBackgroundColor">#FFFFFF</Color>
+
+    <!-- Label Colors-->
+    <Color x:Key="defaultLabelTextColor">#979797</Color>
+    <Color x:Key="blackLabelTextColor">#000000</Color>
+    <Color x:Key="whiteLabelTextColor">#FFFFFF</Color>
+    <Color x:Key="blueLabelBackgroundColor">#4A90E2</Color>
+
+    <!-- Entry Colors-->
+    <Color x:Key="defaultEntryTextColor">#979797</Color>
+    <Color x:Key="defaultEntryPlaceholderColor">#979797</Color>
+    <Color x:Key="defaultEntryBackgroundColor">#FFFFFF</Color>
+
+    <!-- Button Colors-->
+    <Color x:Key="greenButtonBackgroundColor">#7ED321</Color>
+    <Color x:Key="blueButtonBackgroundColor">#3AA2E1</Color>
+    <Color x:Key="googleButtonBackgroundColor">#DD4B39</Color>
+    <Color x:Key="facebookButtonBackgroundColor">#3B5999</Color>
+    <Color x:Key="cancelButtonBackgroundColor">#E40613</Color>
+    <Color x:Key="defaultButtonTextColor">#FFFFFF</Color>
+
+    <!-- Font Sizes-->
+    <x:Double x:Key="xlargeFontSize">30</x:Double>
+    <x:Double x:Key="largeFontSize">24</x:Double>
+    <x:Double x:Key="smallFontSize">12</x:Double>
+    <x:Double x:Key="xsmallFontSize">10</x:Double>
+
+    </ResourceDictionary>
+  </Application.Resources>
+</Application>
