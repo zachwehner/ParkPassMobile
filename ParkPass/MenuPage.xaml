@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.MenuPage" xmlns:local="clr-namespace:ParkPass;assembly=ParkPass"
-		>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.MenuPage" xmlns:local="clr-namespace:ParkPass;assembly=ParkPass">
 <MasterDetailPage.Master>
-		
-<ContentPage Title="Menu" BackgroundColor="Black">
+		<ContentPage Title="Menu" BackgroundColor="Black">
 			
-			<ContentPage.ToolbarItems>
-				<ToolbarItem Text="OpenMenu" Clicked="ParkName_Clicked" >
+			<ContentPage.ToolbarItems HorizontalOptions="Center" >
+				<ToolbarItem Text=""  Icon="menu.png" >
+		
+			</ToolbarItem>
+			<ToolbarItem x:Name="ParkName" Text="Binding ParkNameValue" Clicked="ParkName_Clicked">
 
 			</ToolbarItem>
-			<ToolbarItem Text="Purchase" Clicked="Purchase_Clicked">
-
-			</ToolbarItem>
-			<ToolbarItem Text="ParkName" Clicked="ParkName_Clicked">
+			<ToolbarItem Text="ParkName" Clicked="Purchase_Clicked" Icon="purchase.png">
 
 			</ToolbarItem>
 

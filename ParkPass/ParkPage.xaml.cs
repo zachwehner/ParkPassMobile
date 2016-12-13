@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using ParkPass;
 using Xamarin.Forms;
 
 namespace ParkPass
@@ -33,6 +33,11 @@ namespace ParkPass
 
 		async void Handle_ItemTapped(object sender, Xamarin.Forms.ItemTappedEventArgs e)
 		{
+			var park = (ParkListItem) ParkListView.SelectedItem;
+
+			var x = park.Name;
+			var y = new MenuPage();
+		//	y.BindingContext = park as ParkNameValue;
 			await Navigation.PopModalAsync();
 	
 		}

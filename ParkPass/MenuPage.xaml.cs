@@ -7,6 +7,8 @@ namespace ParkPass
 {
 	public partial class MenuPage : MasterDetailPage
 	{
+		public string ParkNameValue;
+
 		public MenuPage()
 		{
 			InitializeComponent();
@@ -14,7 +16,7 @@ namespace ParkPass
 
 		public async void Purchase_Clicked(object sender, System.EventArgs e)
 		{
-			await Navigation.PushAsync(new MenuPage());
+			await Navigation.PushModalAsync(new ParkPassPage());
 	
 		}
 		public async void ParkName_Clicked(object sender, System.EventArgs e)

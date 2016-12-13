@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.ParkPage"
-		xmlns:coreviews="clr-namespace:ParkPass.Views;assembly=ParkPass">
+		xmlns:coreviews="clr-namespace:ParkPass.Views;assembly=ParkPass" 
+		Padding="25, 20, 25, 10"
+             BackgroundColor="{StaticResource defaultBackgroundColor}"
+             Title="Parks">
+
+	
 	<StackLayout>
-		Label Text="Name" TextColor="{StaticResource defaultLabelTextColor}" />
+		<Label Text="Name" TextColor="{StaticResource defaultLabelTextColor}" />
         <coreviews:TextEntry x:Name="nameEntry" />
-		Label Text="City" TextColor="{StaticResource defaultLabelTextColor}" />
+
+
+		<Label Text="City" TextColor="{StaticResource defaultLabelTextColor}" />
         <coreviews:TextEntry x:Name="cityEntry" />
-		Label Text="State" TextColor="{StaticResource defaultLabelTextColor}" />
+		<Label Text="State" TextColor="{StaticResource defaultLabelTextColor}" />
         <coreviews:TextEntry x:Name="stateEntry" />
 		<Button TextColor="{StaticResource defaultButtonTextColor}" Text="Search">
 		</Button>

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Xamarin.Forms;
-
+using System;
 namespace ParkPass
 {
 	public partial class App : Application
@@ -11,7 +11,11 @@ namespace ParkPass
 		{
 			
 			InitializeComponent();
-			MainPage = new NavigationPage(new LoginPage());
+			MainPage = new NavigationPage(new MenuPage());
+		//	MainPage = new LoginPage();
+
+
+
 			//MainPage = new NavigationPage(new MenuPage());
 			//MainPage = new NavigationPage(new HomePage());
 		}
@@ -30,5 +34,7 @@ namespace ParkPass
 		{
 			// Handle when your app resumes
 		}
+
+
 	}
 }
