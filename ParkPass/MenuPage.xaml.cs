@@ -5,27 +5,28 @@ using Xamarin.Forms;
 
 namespace ParkPass
 {
-	public partial class MenuPage : MasterDetailPage
+	public partial class MenuPage : ContentPage
 	{
 		public string ParkNameValue;
+	
+	
 
 		public MenuPage()
 		{
+			//this.ToolbarItems.Add(new ToolbarItem("Menu", "Hamburger_Menu.png", HandleAction, ToolbarItemOrder.Default, 0));
+			//this.ToolbarItems.Add(new ToolbarItem(parkNameValue, null, ParkName_Clicked, ToolbarItemOrder.Default, 0));
+			this.ToolbarItems.Add(new ToolbarItem("Purchase", "purchase.png", HandleAction, ToolbarItemOrder.Default, 0));
+
 			InitializeComponent();
+
 		}
 
-		public async void Purchase_Clicked(object sender, System.EventArgs e)
+		void HandleAction()
 		{
-			await Navigation.PushModalAsync(new ParkPassPage());
-	
+			throw new NotImplementedException();
 		}
-		public async void ParkName_Clicked(object sender, System.EventArgs e)
-		{
-			var parkPage = new ParkPage();
 
-			await Navigation.PushModalAsync(parkPage);
-		
-		}
+
 
 	}
 }

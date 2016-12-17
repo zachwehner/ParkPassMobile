@@ -9,26 +9,23 @@
 	<StackLayout>
 		<Label Text="Name" TextColor="{StaticResource defaultLabelTextColor}" />
         <coreviews:TextEntry x:Name="nameEntry" />
-
-
-		<Label Text="City" TextColor="{StaticResource defaultLabelTextColor}" />
-        <coreviews:TextEntry x:Name="cityEntry" />
 		<Label Text="State" TextColor="{StaticResource defaultLabelTextColor}" />
         <coreviews:TextEntry x:Name="stateEntry" />
-		<Button TextColor="{StaticResource defaultButtonTextColor}" Text="Search">
+		<Button TextColor="{StaticResource defaultButtonTextColor}" Text="Search" BackgroundColor="{StaticResource greenButtonBackgroundColor}">
 		</Button>
-		<Button TextColor="{StaticResource defaultButtonTextColor}" Text="Find Parks Near Me">
+		<Button TextColor="{StaticResource defaultButtonTextColor}" Text="Find Parks Near Me" BackgroundColor="{StaticResource greenButtonBackgroundColor}">
 		</Button>
 		<ListView x:Name="ParkListView" Header="Available Parks:" HasUnevenRows="true" SelectedItem="{Binding objItemSelected, Mode=TwoWay}" ItemTapped="Handle_ItemTapped">
 
 			<ListView.ItemTemplate>
 				<DataTemplate>
 					<ViewCell>
-						<StackLayout Orientation="Vertical" Padding="20" BackgroundColor="Red">
+						<StackLayout Orientation="Vertical" Padding="20" BackgroundColor="Gray" >
+							<Image VerticalOptions="Start" Source="{Binding ImagePath}" x:Name="image" Aspect="AspectFill" />
 							<Label Text="{Binding Name}"
 								Font="Large"/>
-							<Label Text="{Binding City}" 
-								Font="Small"/>
+							<!--<Label Text="{Binding City}" 
+								Font="Small"/>-->
 							<Label Text="{Binding State}" 
 								Font="Small"/>
 						</StackLayout>
@@ -37,4 +34,5 @@
 			</ListView.ItemTemplate>
 		</ListView>
 	</StackLayout>
+	
 </ContentPage>

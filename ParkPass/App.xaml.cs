@@ -5,19 +5,15 @@ namespace ParkPass
 {
 	public partial class App : Application
 	{
-		public string ParkName;
+
 
 		public App()
 		{
-			
 			InitializeComponent();
-			MainPage = new NavigationPage(new MenuPage());
-		//	MainPage = new LoginPage();
 
-
-
-			//MainPage = new NavigationPage(new MenuPage());
-			//MainPage = new NavigationPage(new HomePage());
+			NavigationPage.SetHasNavigationBar(this, false);
+			MainPage = new NavigationPage(new MainPage());
+			NavigationPage.SetHasNavigationBar(this, false);
 		}
 
 		protected override void OnStart()

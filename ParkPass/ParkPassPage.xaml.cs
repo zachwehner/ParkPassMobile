@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
-
+using ParkPass.Models;
 namespace ParkPass
 {
 	public partial class ParkPassPage : ContentPage

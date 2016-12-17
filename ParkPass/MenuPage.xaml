@@ -1,38 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.MenuPage" xmlns:local="clr-namespace:ParkPass;assembly=ParkPass">
-<MasterDetailPage.Master>
-		<ContentPage Title="Menu" BackgroundColor="Black">
-			
-			<ContentPage.ToolbarItems HorizontalOptions="Center" >
-				<ToolbarItem Text=""  Icon="menu.png" >
-		
-			</ToolbarItem>
-			<ToolbarItem x:Name="ParkName" Text="Binding ParkNameValue" Clicked="ParkName_Clicked">
-
-			</ToolbarItem>
-			<ToolbarItem Text="ParkName" Clicked="Purchase_Clicked" Icon="purchase.png">
-
-			</ToolbarItem>
-
-			</ContentPage.ToolbarItems>
-
-<StackLayout Orientation="Vertical">
-
-<Button Text="Account">
-				</Button>
-<Button Text="Sign Out">
-				</Button>
-<Button Text="My Passes">
-				</Button>
-<Button Text="Settings">
-				</Button>
-			</StackLayout>
-		</ContentPage>
-
-	</MasterDetailPage.Master>
-	<MasterDetailPage.Detail>
-
-	<local:Page1>
-		</local:Page1>
-	</MasterDetailPage.Detail>
-</MasterDetailPage>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.MenuPage" Icon="Hamburger_Menu.png" Title="Menu" Padding="10,40,10,0" BackgroundColor="{StaticResource greenButtonBackgroundColor}">
+	<ContentPage.Content>
+		<StackLayout>
+			<Button Text="Account" TextColor="{StaticResource defaultButtonTextColor}">
+			</Button>
+			<Button Text="My Passes" TextColor="{StaticResource defaultButtonTextColor}">
+			</Button>
+			<Button Text="My Surveys" TextColor="{StaticResource defaultButtonTextColor}">
+			</Button>
+			<Button Text="Settings" TextColor="{StaticResource defaultButtonTextColor}">
+			</Button>
+			<Button Text="Sign Out" TextColor="{StaticResource defaultButtonTextColor}">
+			</Button>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

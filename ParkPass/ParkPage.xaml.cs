@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using ParkPass;
 using Xamarin.Forms;
-
+using ParkPass.Models;
 namespace ParkPass
 {
 	public partial class ParkPage : ContentPage
 	{
+		public string ParkNameValue2;
 		public ParkPage()
 		{
 			InitializeComponent();
+		
 
 
 			ParkListView.ItemsSource = new List<ParkListItem>
@@ -17,16 +19,23 @@ namespace ParkPass
 				new ParkListItem {
 					Name = "YellowStone",
 					City = "Wyoming",
-					State = "Wyoming" },
-				new ParkListItem {
-					Name = "Grand Tetons",
-					City = "Wyoming",
-					State = "Wyoming"
+					State = "Wyoming",
+					ImagePath = "Park_Placeholder.png",
+					Description = "You can find lots of Bison and Black Bears"
 				},
 				new ParkListItem {
-					Name = "Glacier",
+					Name = "Yosemite",
+					City = "Wyoming",
+					State = "California",
+					ImagePath = "Yosemite_Placeholder.png",
+					Description = "Lots of large trees and high mountains"
+				},
+				new ParkListItem {
+					Name = "GrandTeton",
 					City = "Cold City",
-					State = "Alaska"
+					State = "Wyoming",
+					ImagePath = "Grand_Teton.png",
+					Description = "The grandest of Tetons. Look for large mountains"
 				}
 			};
 		}
@@ -35,13 +44,16 @@ namespace ParkPass
 		{
 			var park = (ParkListItem) ParkListView.SelectedItem;
 
-			var x = park.Name;
-			var y = new MenuPage();
-		//	y.BindingContext = park as ParkNameValue;
+			MessagingCenter.Send<ParkPage, ParkListItem>(this, "ParkPassName", park);
+
 			await Navigation.PopModalAsync();
 	
 		}
 
 
+		void HandleAction()
+		{
+			throw new NotImplementedException();
+		}
 	}
 }
