@@ -53,14 +53,16 @@ namespace ParkPass
 			string passDescription;
 			string passStatus;
 			string passCode;
+			string passPurchasedDate;
 
 			passName = pass.Name;
 			passDescription = pass.Category;
 			passStatus = pass.Status;
+			passPurchasedDate = pass.PurchasedDate;
 			passCode = "0101011";
 			//MessagingCenter.Send<ParkPage, ParkListItem>(this, "ParkPassName", park);
 
-			await Navigation.PushAsync(new ViewPassPage(passName, passDescription, passStatus, passCode));
+			await Navigation.PushAsync(new ViewPassPage(passName, passDescription, passStatus, passCode, passPurchasedDate));
 		}
 	}
 }
