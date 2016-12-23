@@ -11,6 +11,7 @@ namespace ParkPass.iOS.Renderer
 			base.OnElementChanged(e);
 			if (Control != null)
 			{
+				
 				Control.AutocorrectionType = UITextAutocorrectionType.No;  // No Autocorrection
 			}
 		}

@@ -8,7 +8,7 @@
 	 <ContentPage.Content>
     <StackLayout Padding="10,0,10,20" VerticalOptions="FillAndExpand">
       <StackLayout x:Name="contentLayout" VerticalOptions="CenterAndExpand">
-        <Image  Source="PPP_Logo.png"/>
+        <Image  Source="ParkPassPreferred.png"/>
         <Label Text="Email" TextColor="{StaticResource defaultLabelTextColor}" />
         <coreviews:TextEntry x:Name="emailEntry" />
         <Label Text="Password" TextColor="{StaticResource defaultLabelTextColor}" />

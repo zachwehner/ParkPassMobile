@@ -11,21 +11,30 @@ namespace ParkPass
 		{
 			InitializeComponent();
 
-			ParkPassListView.ItemsSource = new List<ParkPassListItem>
+			ParkPassListView.ItemsSource = new List<ParkPassCell>
 			{
-				new ParkPassListItem {
+				new ParkPassCell {
 					Name = "Adult",
-					Price = "100",
-					Description = "This is an Adult Pass" },
-				new ParkPassListItem {
-					Name = "Child",
-					Price = "56",
-					Description = "This is a Child Pass"
+					Category = "Daily Pass",
+				
+					ImageFilename ="QRcode_Placeholder.png",
+					PassPrice = "100.00",
 				},
-				new ParkPassListItem {
-					Name = "Season",
-					Price = "77",
-					Description = "This is a season pass"
+				new ParkPassCell {
+					Name = "Child",
+					Category = "Daily Pass",
+				
+					ImageFilename ="QRcode_Placeholder.png",
+					PassPrice = "100.00",
+				
+				},
+				new ParkPassCell {
+					Name = "Family",
+					Category = "Season Pass",
+			
+					ImageFilename ="QRcode_Placeholder.png",
+					PassPrice = "100.00",
+
 				}
 			};
 		}
@@ -33,7 +42,7 @@ namespace ParkPass
 		async void Handle_Clicked(object sender, System.EventArgs e)
 		{
 			var checkoutPage = new CheckoutPage();
-
+			Navigation.PopModalAsync();
 			await Navigation.PushModalAsync(checkoutPage);
 		}
 	}

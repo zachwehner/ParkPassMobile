@@ -1,32 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.ParkPassPage" Title="ParkPasses"
-			xmlns:coreviews="clr-namespace:ParkPass.Views;assembly=ParkPass"
-
-		Padding="25, 20, 25, 10"
-             BackgroundColor="{StaticResource defaultBackgroundColor}"
-             >
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.ParkPassPage" Title="ParkPasses" xmlns:coreviews="clr-namespace:ParkPass.Views;assembly=ParkPass" Padding="25, 20, 25, 10" BackgroundColor="{StaticResource defaultBackgroundColor}" xmlns:local="clr-namespace:ParkPass;assembly=ParkPass">
 	<ContentPage.Content>
 		<StackLayout>
-	
-		<ListView x:Name="ParkPassListView" Header="Available ParkPasses:" HasUnevenRows="true" SelectedItem="{Binding objItemSelected, Mode=TwoWay}">
-
-			<ListView.ItemTemplate>
-				<DataTemplate>
-					<ViewCell>
-						<StackLayout Orientation="Vertical" Padding="20" BackgroundColor="Red">
-							<Label Text="{Binding Name}"
-								Font="Large"/>
-							<Label Text="{Binding Price}" 
-								Font="Small"/>
-							<Label Text="{Binding Description}" 
-								Font="Small"/>
-						</StackLayout>
-					</ViewCell>
-				</DataTemplate>
-			</ListView.ItemTemplate>
-		</ListView>
-			<Button Text="Checkout" Clicked="Handle_Clicked">
-		</Button>
-	</StackLayout>
+			<ListView x:Name="ParkPassListView" Header="Available ParkPasses:" HasUnevenRows="true">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+                        <local:ParkPassCell Name="{Binding Name}" ParkName= "{Binding ParkName}" Category="{Binding Category}" Status="{Binding Status}" PurchasedDate="{Binding PurchasedDate}" PassPrice="{Binding PassPrice}" ImageFilename="{Binding ImageFilename}" />
+                    </DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+			<Button Text="Checkout" Clicked="Handle_Clicked" FontSize="{StaticResource medFontSize}" BackgroundColor="{StaticResource greenButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}">
+			</Button>
+		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

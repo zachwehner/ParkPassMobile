@@ -15,6 +15,7 @@ namespace ParkPass
 		void Handle_Clicked(object sender, System.EventArgs e)
 		{
 			var barcodePage = new BarcodePage();
+			Navigation.PopModalAsync();
 			Navigation.PushModalAsync(barcodePage);
 
 		}

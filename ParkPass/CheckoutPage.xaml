@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.CheckoutPage" xmlns:coreviews="clr-namespace:ParkPass.Views;assembly=ParkPass" >
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.CheckoutPage" Padding="10,40,10,0" xmlns:coreviews="clr-namespace:ParkPass.Views;assembly=ParkPass" >
 	<ContentPage.Content>
 		<StackLayout>
-		<Label Text="Name" TextColor="{StaticResource defaultLabelTextColor}" />
+		<Label Text="Enter Billing Details" FontSize="{StaticResource xlargeFontSize}" TextColor="{StaticResource defaultLabelTextColor}" />
+       
+			<Label Text="Name" TextColor="{StaticResource defaultLabelTextColor}" />
         <coreviews:TextEntry x:Name="nameEntry" />
 
 
@@ -14,7 +16,7 @@
         <coreviews:TextEntry x:Name="cityEntry" />
 		<Label Text="State" TextColor="{StaticResource defaultLabelTextColor}" />
         <coreviews:TextEntry x:Name="stateEntry" />
-		<Button Text="Confirm" Clicked="Handle_Clicked">
+		<Button Text="Confirm" Clicked="Handle_Clicked" FontSize="{StaticResource medFontSize}" BackgroundColor="{StaticResource greenButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}">
 		</Button>
 
 

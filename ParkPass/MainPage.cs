@@ -17,20 +17,114 @@ namespace ParkPass
 		
 		private MenuPage menuPage;
 		public String parkNameValue { get; set;}
+		ParkDetailsPage parkDetailsPage;
 
 		public MainPage()
 		{
-			
+			string MenuTextColor = "FFFFFF";
 			menuPage = new MenuPage();
+
+
+			ContentPage menupage = new ContentPage();
+
+			var parkpassImage = new Image
+			{
+				Source = "ParkPassPreferred.png"
+
+
+			};
+			var accountButton = new Button
+			{
+				BackgroundColor = Color.FromHex("7ED321"),
+				TextColor = Color.FromHex(MenuTextColor),
+				Image = "Account.png",
+				Text = "Account",
+				HeightRequest = 40,
+				WidthRequest = 250,
+				FontSize = 24
+			};
+			accountButton.Clicked += Account_Clicked;
+
+			var surveyButton = new Button
+			{
+				BackgroundColor = Color.FromHex("7ED321"),
+				TextColor = Color.FromHex(MenuTextColor),
+				Image = "Survey.png",
+				Text = "  Surveys",
+				HeightRequest = 40,
+				WidthRequest = 200,
+				FontSize = 24
+			};
+			surveyButton.Clicked += Survey_Clicked;
+
+			var parksButton = new Button
+			{
+				BackgroundColor = Color.FromHex("7ED321"),
+				TextColor = Color.FromHex(MenuTextColor),
+				Image = "Tree.png",
+				Text = "    Parks",
+				HeightRequest = 40,
+				WidthRequest = 200,
+				FontSize = 24
+			};
+			parksButton.Clicked += Parks_Clicked;
+			var settingButton = new Button
+			{
+				BackgroundColor = Color.FromHex("7ED321"),
+				TextColor = Color.FromHex(MenuTextColor),
+				Image = "Settings.png",
+				Text = "  Settings",
+				HeightRequest = 40,
+				WidthRequest = 200,
+				FontSize = 24
+			};
+			settingButton.Clicked += Settings_Clicked;
+
+			var myPassesButton = new Button
+			{
+				BackgroundColor = Color.FromHex("7ED321"),
+				TextColor = Color.FromHex(MenuTextColor),
+				Image = "Passes.png",
+				Text = "  Passes",
+				HeightRequest = 40,
+				WidthRequest = 200,
+				FontSize = 24
+			};
+			myPassesButton.Clicked += MyPasses_Clicked;
+
+			var signOutButton = new Button
+			{
+				BackgroundColor = Color.FromHex("7ED321"),
+				TextColor = Color.FromHex(MenuTextColor),
+				Image = "Signout.png",
+				Text = "  Signout",
+				HeightRequest = 40,
+				WidthRequest = 200,
+				FontSize = 24
+			};
+			signOutButton.Clicked += Signout_Clicked;
+
+			menuPage.Content = new StackLayout
+			{
+				Margin = 0,
+				Padding = 0,
+				Spacing = 10,
+				Children = { parkpassImage, accountButton, parksButton, myPassesButton, surveyButton, settingButton, signOutButton }
+			};
+
+
 			Master = menuPage;
+
 			parkNameValue = "Please Choose A Park";
 
 
 			NavigationPage.SetHasNavigationBar(this, false);
-			ParkDetailsPage parkDetailsPage = new ParkDetailsPage();
-			//parkDetailsPage.ToolbarItems.Add(new ToolbarItem("Menu", "Hamburger_Menu.png", HandleAction, ToolbarItemOrder.Default, 0));
-			parkDetailsPage.ToolbarItems.Add(new ToolbarItem(parkNameValue, null, ParkName_Clicked, ToolbarItemOrder.Default, 0));
-			parkDetailsPage.ToolbarItems.Add(new ToolbarItem("Purchase", "purchase.png", Purchase_Clicked, ToolbarItemOrder.Default, 0));
+
+			parkDetailsPage = new ParkDetailsPage();
+				// do something with id
+			
+
+
 			Detail = new NavigationPage(parkDetailsPage);
 			NavigationPage.SetHasNavigationBar(this, false);
 
@@ -40,13 +134,6 @@ namespace ParkPass
 			});
 				
 			menuPage.Title = "Parks";
-
-			//navDrawerPage.ListView.ItemSelected += OnItemSelected;
-
-		//	MessagingCenter.Subscribe<ContentPage>(this, MessageEventNames.SetMasterPageGestureEnabledFalse, (sender) =>
-		//	{
-		//		this.IsGestureEnabled = false;
-		//	});
 		}
 
 		/// <summary>
@@ -56,9 +143,6 @@ namespace ParkPass
 		{
 			base.OnAppearing();
 			menuPage.Title = parkNameValue;
-
-
-			//this.IsGestureEnabled = true;
 		}
 
 		/// <summary>
@@ -78,6 +162,7 @@ namespace ParkPass
 		/// <param name="e">The event arguments.</param>
 		private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
 		{
+			
 			//var item = e.SelectedItem as NavigationDrawerItem;
 			//item = new NavigationDrawerItem;
 			//item.PageType = SelectParkPage;
@@ -100,7 +185,9 @@ namespace ParkPass
 		{
 			var parkPage = new ParkPage();
 			parkPage.BindingContext = MainPage.BindingContextProperty;
+
 			await Navigation.PushModalAsync(parkPage);
+
 			var x = parkPage.ParkNameValue2;
 
 		}
@@ -110,10 +197,43 @@ namespace ParkPass
 
 		}
 
+		public async void Account_Clicked(object sender, System.EventArgs e)
+		{
+			Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(AccountPage)));
+		
+		}
+		public async void Parks_Clicked(object sender, System.EventArgs e)
+		{
+			Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(ParkDetailsPage)));
+
+		}
+
+		public async void Survey_Clicked(object sender, System.EventArgs e)
+		{
+			Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(MySurveysPage)));
+
+		}
+		public async void Settings_Clicked(object sender, System.EventArgs e)
+		{
+			Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(SettingsPage)));
+
+		}
+		public async void MyPasses_Clicked(object sender, System.EventArgs e)
+		{
+			Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(ParkPassListPage)));
+
+		}
 		public async void Purchase_Clicked()
 		{
 			await Navigation.PushModalAsync(new ParkPassPage());
 
 		}
+		public async void Signout_Clicked(object sender, System.EventArgs e)
+		{
+			await Navigation.PushAsync(new LoginPage());
+
+		}
+	
+
 	}
 }

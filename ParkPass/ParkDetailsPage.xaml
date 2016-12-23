@@ -47,18 +47,21 @@
     </RelativeLayout>
     	
        <StackLayout Padding="2,-4,2,4" Grid.Column="0" Grid.Row="1" VerticalOptions="Start">
-				<Label x:Name="parkDescriptionLbl" Text="" FontSize="{StaticResource smallFontSize}" TextColor="Black"/>
+       <BoxView Color="White" HeightRequest="5"></BoxView>
+				<BoxView Color="{StaticResource blueLabelBackgroundColor}" HeightRequest="10"  ></BoxView>
+				<BoxView Color="White" HeightRequest="5" ></BoxView>
+				<Label x:Name="parkDescriptionLbl" TextColor="{StaticResource defaultLabelTextColor}" FontSize="{StaticResource smallFontSize}" />
 			
         <Label x:Name="passTypeNameLbl2" FontSize="{StaticResource largeFontSize}" TextColor="{StaticResource whiteLabelTextColor}" HorizontalTextAlignment="Center" BackgroundColor="{StaticResource blueLabelBackgroundColor}"></Label>
 
 				<StackLayout>
-				<Button Text="Amenities" BackgroundColor="{StaticResource greenButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}" Clicked="Amenities_Clicked">
+				<Button x:Name="btnAmenties" Text="Amenities" FontSize="{StaticResource medFontSize}" BackgroundColor="{StaticResource greenButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}" Clicked="Amenities_Clicked">
 				</Button>
-				<Button Text="Helpful Numbers" BackgroundColor="{StaticResource greenButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}">
+				<Button x:Name="btnHelpful" Text="Helpful Numbers" FontSize="{StaticResource medFontSize}" BackgroundColor="{StaticResource greenButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}" Clicked="HelpfulNumbers_Clicked">
 				</Button>
-				<Button Text="Nearby Food" BackgroundColor="{StaticResource greenButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}">
+				<Button x:Name="btnFood" Text="Nearby Food" FontSize="{StaticResource medFontSize}" BackgroundColor="{StaticResource greenButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}">
 				</Button>
-					<Button Text="Buy Park Pass" BackgroundColor="{StaticResource greenButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}">
+					<Button x:Name="btnPass"  Text="Buy Park Pass" FontSize="{StaticResource medFontSize}" BackgroundColor="{StaticResource greenButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}" Clicked="Purchase_Clicked">
 				</Button>
 					</StackLayout>
 

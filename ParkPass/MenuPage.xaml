@@ -2,16 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.MenuPage" Icon="Hamburger_Menu.png" Title="Menu" Padding="10,40,10,0" BackgroundColor="{StaticResource greenButtonBackgroundColor}">
 	<ContentPage.Content>
 		<StackLayout>
-			<Button Text="Account" TextColor="{StaticResource defaultButtonTextColor}">
-			</Button>
-			<Button Text="My Passes" TextColor="{StaticResource defaultButtonTextColor}">
-			</Button>
-			<Button Text="My Surveys" TextColor="{StaticResource defaultButtonTextColor}">
-			</Button>
-			<Button Text="Settings" TextColor="{StaticResource defaultButtonTextColor}">
-			</Button>
-			<Button Text="Sign Out" TextColor="{StaticResource defaultButtonTextColor}">
-			</Button>
+
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

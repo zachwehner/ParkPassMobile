@@ -34,7 +34,7 @@ namespace ParkPass
 					Name = "GrandTeton",
 					City = "Cold City",
 					State = "Wyoming",
-					ImagePath = "Grand_Teton.png",
+					ImagePath = "GrandTeton.jpg",
 					Description = "The grandest of Tetons. Look for large mountains"
 				}
 			};
@@ -43,7 +43,7 @@ namespace ParkPass
 		async void Handle_ItemTapped(object sender, Xamarin.Forms.ItemTappedEventArgs e)
 		{
 			var park = (ParkListItem) ParkListView.SelectedItem;
-
+			Application.Current.Properties["currentPark"] = park;
 			MessagingCenter.Send<ParkPage, ParkListItem>(this, "ParkPassName", park);
 
 			await Navigation.PopModalAsync();

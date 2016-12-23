@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace ParkPass
 {
-	public partial class Page1 : ContentPage
+	public partial class AccountPage : ContentPage
 	{
-		public Page1()
+		public AccountPage()
 		{
 			InitializeComponent();
 		}

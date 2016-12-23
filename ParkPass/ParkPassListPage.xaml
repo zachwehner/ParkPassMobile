@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.ParkPassListPage"  xmlns:local="clr-namespace:ParkPass;assembly=ParkPass">
+	    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="My Passes" HorizontalTextAlignment="Center" />
+            <ListView x:Name="myPassesListView" CachingStrategy="RecycleElement" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <local:ParkPassCell Name="{Binding Name}" ParkName= "{Binding ParkName}" Category="{Binding Category}" Status="{Binding Status}" PurchasedDate="{Binding PurchasedDate}" PassPrice="{Binding PassPrice}" ImageFilename="{Binding ImageFilename}" Tapped="Handle_Tapped"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
