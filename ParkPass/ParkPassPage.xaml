@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.ParkPassPage" Title="ParkPasses" xmlns:coreviews="clr-namespace:ParkPass.Views;assembly=ParkPass" Padding="25, 20, 25, 10" BackgroundColor="{StaticResource defaultBackgroundColor}" xmlns:local="clr-namespace:ParkPass;assembly=ParkPass">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.ParkPassPage" Title="ParkPasses" xmlns:coreviews="clr-namespace:ParkPass.Views;assembly=ParkPass" Padding="25, 20, 25, 10" BackgroundColor = "{StaticResource greenButtonBackgroundColor}" xmlns:local="clr-namespace:ParkPass;assembly=ParkPass">
 	<ContentPage.Content>
-		<StackLayout>
+		<Frame Padding = "0,0,0,0" Margin = "10" HorizontalOptions = "FillAndExpand" OutlineColor = "White" BackgroundColor="White" HasShadow = "true">
+		<StackLayout Margin = "2">
+
 			<ListView x:Name="ParkPassListView" Header="Available ParkPasses:" HasUnevenRows="true">
 				<ListView.Header>
 		<Label Text="Available Passes" FontSize="24" BackgroundColor = "{ StaticResource facebookButtonBackgroundColor}" TextColor = "{ StaticResource whiteLabelTextColor}" />
@@ -15,5 +17,6 @@
 			<Button Text="Checkout" Clicked="Handle_Clicked" FontSize="{StaticResource medFontSize}" BackgroundColor="{StaticResource greenButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}">
 			</Button>
 		</StackLayout>
+				</Frame>
 	</ContentPage.Content>
 </ContentPage>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.ParkDetailsPage" BackgroundColor="{StaticResource greenButtonBackgroundColor}" >
 	<ContentPage.Content>
-		
+
 		<Grid VerticalOptions="Start" Grid.Column="0" Grid.Row="0">
     <Grid.RowDefinitions>
       <RowDefinition Height="3*" />
@@ -11,15 +11,22 @@
       <ColumnDefinition Width="*" />
     </Grid.ColumnDefinitions>
     <RelativeLayout Grid.Column="0" Grid.Row="0">
-				
-      <Image VerticalOptions="Start" Source="{Binding imagesource}" x:Name="image" Aspect="AspectFill"
+				 
+		 <Frame x:Name="imageFrame" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+            Property=Height,Factor=0,Constant=0}"
+        RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
+        RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,Property=Height,Factor=1,Constant=0}" Padding = "0,0,0,0" Margin= "10,10,10,10" HorizontalOptions = "FillAndExpand" OutlineColor = "White" HasShadow = "true">		
+      <Image VerticalOptions="Start" Source="{Binding imagesource}" x:Name="image" Aspect="AspectFill" Margin="1,1,1,1"
              RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
             Property=Height,Factor=0,Constant=0}"
         RelativeLayout.WidthConstraint="{ConstraintExpression
             Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
         RelativeLayout.HeightConstraint="{ConstraintExpression
             Type=RelativeToParent,Property=Height,Factor=1,Constant=0}" />
-      <Grid VerticalOptions="StartAndExpand"
+					</Frame>
+      <!--<Grid VerticalOptions="StartAndExpand"
                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
             ElementName=image,Property=Y,Factor=0,Constant=20}"
         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,
@@ -42,36 +49,34 @@
           <Label x:Name="parkNameLbl" FontSize="{StaticResource xlargeFontSize}" TextColor="{StaticResource whiteLabelTextColor}"/>
           <Label x:Name="parkLocationLbl" FontSize="{StaticResource largeFontSize}" TextColor="{StaticResource whiteLabelTextColor}" />
         </StackLayout>
-      </Grid>
+      </Grid>-->
+			
     </RelativeLayout>
     	
        <StackLayout Padding="2,-4,2,4" Grid.Column="0" Grid.Row="1" VerticalOptions="Start">
+     
 				<StackLayout>
+					
 	<Image x:Name="ParkPassLogo" Source="ParkPassPreferred.png"> </Image>
 	</StackLayout>
-       <BoxView x:Name="topwhiteHR" Color="White" HeightRequest="5"></BoxView>
-				<BoxView x:Name="blueHR" Color="{StaticResource blueLabelBackgroundColor}" HeightRequest="10"  ></BoxView>
-				<BoxView x:Name="bottomwhiteHR" Color="White" HeightRequest="5" ></BoxView>
-				<Label x:Name="parkDescriptionLbl" TextColor="{StaticResource defaultLabelTextColor}" FontSize="{StaticResource smallFontSize}" />
-			
-        <Label x:Name="passTypeNameLbl2" FontSize="{StaticResource largeFontSize}" TextColor="{StaticResource whiteLabelTextColor}" HorizontalTextAlignment="Center" BackgroundColor="{StaticResource blueLabelBackgroundColor}"></Label>
-
-				<StackLayout>
-				<Button x:Name="btnAmenties" Text="Amenities" BorderWidth= "2"  BorderColor="{StaticResource whiteLabelTextColor}" FontSize="{StaticResource medFontSize}" BackgroundColor="{StaticResource blueButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}" Clicked="Amenities_Clicked">
+				 <Frame x:Name="descriptionFrame" Padding = "0,0,0,0" HorizontalOptions = "FillAndExpand" OutlineColor = "White" HasShadow = "true">
+				<Label x:Name="parkDescriptionLbl" TextColor="Black" FontSize="10" />
+			</Frame>
+				
+        <Label x:Name="passTypeNameLbl2" FontSize="{StaticResource largeFontSize}" TextColor="Black" HorizontalTextAlignment="Center" BackgroundColor="{StaticResource blueLabelBackgroundColor}"></Label>
+         <Frame x:Name="btnFrame" Padding = "0,0,0,0" HorizontalOptions = "FillAndExpand" OutlineColor = "White"  HasShadow = "true">
+				<StackLayout Spacing = "5" Margin = "10" >
+				<Button x:Name="btnAmenties" Text="Amenities" BorderWidth= "1"  BorderColor="{StaticResource whiteLabelTextColor}" FontSize="{StaticResource medFontSize}" BackgroundColor="{StaticResource blueButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}" Clicked="Amenities_Clicked">
 				</Button>
-				<Button x:Name="btnHelpful" Text="Helpful Numbers" BorderWidth= "2"  BorderColor="{StaticResource whiteLabelTextColor}" FontSize="{StaticResource medFontSize}" BackgroundColor="{StaticResource blueButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}" Clicked="HelpfulNumbers_Clicked">
+				<Button x:Name="btnHelpful" Text="Helpful Numbers" BorderWidth= "1"  BorderColor="{StaticResource whiteLabelTextColor}" FontSize="{StaticResource medFontSize}" BackgroundColor="{StaticResource blueButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}" Clicked="HelpfulNumbers_Clicked">
 				</Button>
-				<Button x:Name="btnFood" Text="Nearby "  BorderWidth= "2" BorderColor="{StaticResource whiteLabelTextColor}" FontSize="{StaticResource medFontSize}" BackgroundColor="{StaticResource blueButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}">
+				<Button x:Name="btnFood" Text="Nearby "  BorderWidth= "1" BorderColor="{StaticResource whiteLabelTextColor}" FontSize="{StaticResource medFontSize}" BackgroundColor="{StaticResource blueButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}">
 				</Button>
-					<Button x:Name="btnPass"  Text="Buy Park Pass" BorderWidth= "2"  BorderColor="{StaticResource whiteLabelTextColor}" FontSize="{StaticResource medFontSize}" BackgroundColor="{StaticResource blueButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}" Clicked="Purchase_Clicked">
+					<Button x:Name="btnPass"  Text="Buy Park Pass" BorderWidth= "1"  BorderColor="{StaticResource whiteLabelTextColor}" FontSize="{StaticResource medFontSize}" BackgroundColor="{StaticResource blueButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}" Clicked="Purchase_Clicked">
 				</Button>
 					</StackLayout>
-
-	<ContentView x:Name="bottombluehr" Padding="5,5" BackgroundColor="{StaticResource blueLabelBackgroundColor}">
-        <Label x:Name="passTypeNameLbl" FontSize="{StaticResource largeFontSize}" TextColor="{StaticResource whiteLabelTextColor}" HorizontalTextAlignment="Center" BackgroundColor="{StaticResource blueLabelBackgroundColor}"></Label>
-      </ContentView>
-				
-        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+			</Frame>			
+   <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
           <Label x:Name="NoParks" FontSize="{StaticResource smallFontSize}" HorizontalTextAlignment="Center" IsVisible="false">There are no passes available for this type.</Label>
           <ListView x:Name="passListView"
               ItemsSource="{Binding ParkPasses}"
@@ -109,6 +114,6 @@
     </StackLayout>
 			
   </Grid>
-		
+	
 	</ContentPage.Content>
 </ContentPage>

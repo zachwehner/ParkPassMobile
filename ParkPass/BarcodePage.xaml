@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.BarcodePage" Padding="10,40,10,0">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.BarcodePage" Padding="10,40,10,0" BackgroundColor = "{StaticResource greenButtonBackgroundColor}">
 	<ContentPage.Content>
-				<StackLayout>
+		 <Frame Padding = "0,0,0,0" Margin = "30" HorizontalOptions = "FillAndExpand" OutlineColor = "White" BackgroundColor="White" HasShadow = "true">
+				<StackLayout Margin = "30">
 				<Label Text="Purchased Pass" FontSize="{StaticResource xlargeFontSize}" TextColor="{StaticResource defaultLabelTextColor}" />
 			<!--<Button Text="Save Passes To Wallet" Clicked="Handle_Clicked" FontSize="{StaticResource medFontSize}" BackgroundColor="{StaticResource greenButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}"> </Button>
 		<Button Text="Send Passes To Email" Clicked="Handle_Clicked" FontSize="{StaticResource medFontSize}" BackgroundColor="{StaticResource greenButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}"> </Button>
 		<Image x:Name = "barcodeImageSpot" ></Image>
 -->
 	</StackLayout>
+			</Frame>
 	</ContentPage.Content>
 </ContentPage>

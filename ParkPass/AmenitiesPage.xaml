@@ -3,9 +3,10 @@
 	<pages:PopupPage.Animation>
 		<animations:ScaleAnimation PositionIn="Center" PositionOut="Center" ScaleIn="1.2" ScaleOut="0.8" DurationIn="400" DurationOut="300" EasingIn="SinOut" EasingOut="SinIn" HasBackgroundAnimation="True" />
 	</pages:PopupPage.Animation>
-	 <ListView x:Name="AmenitiesListView" CachingStrategy="RecycleElement" >
+	<Frame Padding = "0,0,0,0" Margin = "30" HorizontalOptions = "FillAndExpand" OutlineColor = "White" BackgroundColor="White" HasShadow = "true">
+	<ListView x:Name="AmenitiesListView" CachingStrategy="RecycleElement" >
 		<ListView.Header>
-		<Label Text="Available Amenities" FontSize="24" BackgroundColor = "{ StaticResource facebookButtonBackgroundColor}" TextColor = "{ StaticResource whiteLabelTextColor}" />
+		<Label Text="Available Amenities" FontSize="24" BackgroundColor = "{ StaticResource blueButtonBackgroundColor}" TextColor = "{ StaticResource whiteLabelTextColor}" />
 		</ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -13,7 +14,8 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
 		<ListView.Footer>
-		<Button Text="Close" Clicked="Close_Clicked" BackgroundColor="{ StaticResource facebookButtonBackgroundColor}" TextColor ="{ StaticResource whiteLabelTextColor}" />
+		<Button Text="Close" Clicked="Close_Clicked" BackgroundColor="{ StaticResource blueButtonBackgroundColor}" TextColor ="{ StaticResource whiteLabelTextColor}" />
 		</ListView.Footer>
             </ListView>
+		</Frame>
 </pages:PopupPage>

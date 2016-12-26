@@ -118,7 +118,7 @@ internal class ParkPassiOSCell : UITableViewCell, INativeElementView
 		SubheadingLabel.Frame = new CGRect(50, 4, ContentView.Bounds.Width - 50, 25);
 		PriceLabel.Frame = new CGRect(ContentView.Bounds.Width - 140, 18, 100, 20);
 		ParkNameLabel.Frame = new CGRect(50, 18, ContentView.Bounds.Width - 63, 25);
-		PurchasedDateLabel.Frame = new CGRect(50, 18, ContentView.Bounds.Width - 50, 25);
+		PurchasedDateLabel.Frame = new CGRect(40, 18, ContentView.Bounds.Width - 50, 25);
 		CellImageView.Frame = new CGRect(5,4, 30, 35);
 		StatusLabel.Frame = new CGRect(ContentView.Bounds.Width - 50, 18, 100, 20);
 	}

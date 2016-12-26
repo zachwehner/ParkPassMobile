@@ -34,24 +34,25 @@ namespace ParkPass
 				parkNameValue = "Please Choose A Park";
 
 				parkDescriptionLbl.Text = "Get started by selecting a park above!";
-				parkDescriptionLbl.TextColor = Color.FromHex("FFFFFF");
+				parkDescriptionLbl.TextColor = Color.FromHex("000000");
 				parkDescriptionLbl.FontSize = 24;
 				btnFood.IsVisible = false;
 				btnPass.IsVisible = false;
 				btnHelpful.IsVisible = false;
 				btnAmenties.IsVisible = false;
+				descriptionFrame.IsVisible = true;
+				btnFrame.IsVisible = false;
+				imageFrame.IsVisible = false;
+				passListView.IsVisible = false;
 
-				blueHR.IsVisible = false;
-				bottombluehr.IsVisible = false;
-					passListView.IsVisible = false;
-					topwhiteHR.IsVisible = false;
-					bottomwhiteHR.IsVisible = false;
+					
+					
 			}
 			else {
 				ParkPassLogo.IsVisible = false;
 				image.Source = selectedPark.ImagePath;
 				imagesource = selectedPark.ImagePath;
-				parkLocationLbl.Text = selectedPark.State;
+				//parkLocationLbl.Text = selectedPark.State;
 				parkDescriptionLbl.Text = selectedPark.Description;
 				parkNameValue = selectedPark.Name;
 
@@ -74,18 +75,21 @@ namespace ParkPass
 
 				image.Source = park.ImagePath;
 				imagesource = park.ImagePath;
-				parkLocationLbl.Text = park.State;
+				//parkLocationLbl.Text = park.State;
 				parkDescriptionLbl.Text = park.Description;
+				parkDescriptionLbl.FontSize = 12;
+				descriptionFrame.IsVisible = true;
+				btnFrame.IsVisible = true;
+				imageFrame.IsVisible = true;
 				btnFood.IsVisible = true;
 				btnPass.IsVisible = true;
 				btnHelpful.IsVisible = true;
 				btnAmenties.IsVisible = true;
 				ParkPassLogo.IsVisible = false;
-				blueHR.IsVisible = true;
-				bottombluehr.IsVisible = true;
-				passListView.IsVisible = true;
-				topwhiteHR.IsVisible = true;
-				bottomwhiteHR.IsVisible = true;
+				parkDescriptionLbl.TextColor = Color.FromHex("000000");
+				passListView.IsVisible = false;
+
+			
 				//lblImageName123.Source = park.ImagePath;
 			});
 

@@ -55,7 +55,7 @@ namespace ParkPass
 			{
 				BackgroundColor = Color.FromHex("7ED321"),
 				TextColor = Color.FromHex("FFFFFF"),
-				 
+
 
 				Text = "Save To Wallet"
 			};
@@ -68,14 +68,17 @@ namespace ParkPass
 				Text = "Send To Email"
 			};
 			emailButton.Clicked += Email_Clicked;
-			Content = new StackLayout
+			Content = new Frame
 			{
-				Spacing = 10,
-				Children = { purchasedLabel,passDescriptionLabel,barcode, walletButton, emailButton }
+				Content =
+				new StackLayout
+				{
+					Spacing = 10,
+					Children = { purchasedLabel, passDescriptionLabel, barcode, walletButton, emailButton }
 
 
+				}
 			};
-			
 			                                      
 		}
 		async void Wallet_Clicked(object sender, System.EventArgs e)

@@ -76,23 +76,34 @@ namespace ParkPass
 
 
 
-			Content = new StackLayout
-			{
-				Spacing = 10,
-				Children = { 
-							
+			Content =
+				new StackLayout
+				{
+					
+					Opacity = 10,
+					Spacing = 10,
+					Children = {
+
+					new Frame
+					{
+				Padding = 0,
+				HorizontalOptions = LayoutOptions.FillAndExpand,
+				OutlineColor = Color.Black,
+				HasShadow = true,
+						Content =
 					new StackLayout{
+						Padding = 20,
 						 Spacing = 0,
 						   Orientation = StackOrientation.Horizontal,
 						   Children =
-									{ barcode,
-
+									{
+							barcode,
 
 							new StackLayout{
 								Spacing = 5,
 						   		Orientation = StackOrientation.Vertical,
 								Children ={
-									
+
 									purchasedLabel,
 									passLabel,
 									passNameLabel,
@@ -104,10 +115,18 @@ namespace ParkPass
 								}
 
 								}
+							}
+
 					},
+					new Frame {
+						Padding = 0,
+				HorizontalOptions = LayoutOptions.FillAndExpand,
+				OutlineColor = Color.Black,
+				HasShadow = true,
+						Content=
 					new StackLayout{
 						   Spacing = 0,
-			               Orientation = StackOrientation.Vertical,
+						   Orientation = StackOrientation.Vertical,
 						   Children =
 									{
 
@@ -128,11 +147,13 @@ namespace ParkPass
 
 
 					}
+					}
+
+
+
 				}
-
-
-			};
-
+				};
 		}
+
 	}
 }
