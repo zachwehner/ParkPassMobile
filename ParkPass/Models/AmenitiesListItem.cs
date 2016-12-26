@@ -1,7 +1,7 @@
 ﻿using System;
 namespace ParkPass.Models
 {
-	public class AmenitiesListItem
+	public class AmenityCellAmenitiesListItem
 	{
 		public string Name { get; set; }
 

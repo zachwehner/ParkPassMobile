@@ -33,7 +33,7 @@ namespace ParkPass
 
 
 		public static readonly BindableProperty ImageFilenameProperty =
-		  BindableProperty.Create("ImageFilename", typeof(string), typeof(ParkPassCell), "");
+		  BindableProperty.Create("ImageFilename", typeof(string), typeof(HelpfulNumberCell), "");
 
 		public string ImageFilename
 		{

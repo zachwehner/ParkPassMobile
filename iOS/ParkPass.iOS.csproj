@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Xamarin.Build.Download.0.3.0\build\Xamarin.Build.Download.props" Condition="Exists('..\packages\Xamarin.Build.Download.0.3.0\build\Xamarin.Build.Download.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -185,10 +184,14 @@
     <Compile Include="Renderers\GoogleLoginViewRenderer.cs" />
     <Compile Include="Renderers\TextEntryRenderer.cs" />
     <Compile Include="Renderers\FacebookLoginViewRenderer.cs" />
-    <Compile Include="Renderers\ParkPassiOSCellRenderer.cs" />
     <Compile Include="Renderers\ParkPassiOSCell.cs" />
     <Compile Include="Renderers\HelpfulNumberiOSCell.cs" />
     <Compile Include="Renderers\HelpfulNumberiOSCellRenderer.cs" />
+    <Compile Include="Renderers\SurveyiOSCell.cs" />
+    <Compile Include="Renderers\SurveyiOSCellRenderer.cs" />
+    <Compile Include="Renderers\AmenityiOSCell.cs" />
+    <Compile Include="Renderers\AmenityiOSCellRenderer.cs" />
+    <Compile Include="Renderers\ParkPassiOSCellRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
@@ -220,6 +223,9 @@
     <BundleResource Include="Resources\ParkPassPreferred.png" />
     <BundleResource Include="Resources\QRcode_Placeholder.png" />
     <BundleResource Include="Images\QRcode_Placeholder.png" />
+    <BundleResource Include="Images\Grill.png" />
+    <BundleResource Include="Images\RV.png" />
+    <BundleResource Include="Images\Restrooms.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Build.Download.0.3.0\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.3.0\build\Xamarin.Build.Download.targets')" />

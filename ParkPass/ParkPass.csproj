@@ -148,6 +148,8 @@
       <DependentUpon>ParkPassListPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="HelpfulNumberCell.cs" />
+    <Compile Include="SurveyCell.cs" />
+    <Compile Include="AmenityCell.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Rg.Plugins.Popup">

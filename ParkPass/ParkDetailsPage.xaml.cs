@@ -25,20 +25,30 @@ namespace ParkPass
 
 			if (Application.Current.Properties.ContainsKey("currentPark"))
 			{
-				 selectedPark = Application.Current.Properties["currentPark"] as ParkListItem;
+				selectedPark = Application.Current.Properties["currentPark"] as ParkListItem;
 			}
+		
 
 			if (selectedPark == null)
 			{
 				parkNameValue = "Please Choose A Park";
+
 				parkDescriptionLbl.Text = "Get started by selecting a park above!";
+				parkDescriptionLbl.TextColor = Color.FromHex("FFFFFF");
 				parkDescriptionLbl.FontSize = 24;
 				btnFood.IsVisible = false;
 				btnPass.IsVisible = false;
 				btnHelpful.IsVisible = false;
 				btnAmenties.IsVisible = false;
+
+				blueHR.IsVisible = false;
+				bottombluehr.IsVisible = false;
+					passListView.IsVisible = false;
+					topwhiteHR.IsVisible = false;
+					bottomwhiteHR.IsVisible = false;
 			}
 			else {
+				ParkPassLogo.IsVisible = false;
 				image.Source = selectedPark.ImagePath;
 				imagesource = selectedPark.ImagePath;
 				parkLocationLbl.Text = selectedPark.State;
@@ -70,6 +80,12 @@ namespace ParkPass
 				btnPass.IsVisible = true;
 				btnHelpful.IsVisible = true;
 				btnAmenties.IsVisible = true;
+				ParkPassLogo.IsVisible = false;
+				blueHR.IsVisible = true;
+				bottombluehr.IsVisible = true;
+				passListView.IsVisible = true;
+				topwhiteHR.IsVisible = true;
+				bottomwhiteHR.IsVisible = true;
 				//lblImageName123.Source = park.ImagePath;
 			});
 

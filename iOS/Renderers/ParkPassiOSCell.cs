@@ -92,7 +92,7 @@ internal class ParkPassiOSCell : UITableViewCell, INativeElementView
 		SubheadingLabel.Text = cell.Category;
 		PriceLabel.Text = cell.PassPrice;
 		ParkNameLabel.Text = cell.ParkName;
-		if (cell.PurchasedDate != null)
+		if (cell.PurchasedDate.Length > 1)
 			PurchasedDateLabel.Text = "Purchased: " + cell.PurchasedDate;
 		CellImageView.Image = GetImage(cell.ImageFilename);
 		StatusLabel.Text = cell.Status;

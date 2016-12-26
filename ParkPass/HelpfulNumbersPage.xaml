@@ -4,13 +4,16 @@
 		<animations:ScaleAnimation PositionIn="Center" PositionOut="Center" ScaleIn="1.2" ScaleOut="0.8" DurationIn="400" DurationOut="300" EasingIn="SinOut" EasingOut="SinIn" HasBackgroundAnimation="True" />
 	</pages:PopupPage.Animation>
 		 <ListView x:Name="helpfulNumbersListView" CachingStrategy="RecycleElement" >
+		<ListView.Header>
+		<Label Text="Helpful Numbers" FontSize="24" BackgroundColor = "{ StaticResource facebookButtonBackgroundColor}" TextColor = "{ StaticResource whiteLabelTextColor}" />
+		</ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <local:HelpfulNumberCell  HelpfulNumberName="{Binding HelpfulNumberName}" Description= "{Binding Description}" Phone="{Binding Phone}"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
 		<ListView.Footer>
-		<Button Text="Close" Clicked="Close_Clicked" BackgroundColor="{ StaticResource facebookButtonBackgroundColor}" />
+		<Button Text="Close" Clicked="Close_Clicked" BackgroundColor="{ StaticResource facebookButtonBackgroundColor}" TextColor = "{ StaticResource whiteLabelTextColor}" />
 		</ListView.Footer>
             </ListView>
 </pages:PopupPage>

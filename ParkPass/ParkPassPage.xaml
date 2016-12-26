@@ -3,6 +3,9 @@
 	<ContentPage.Content>
 		<StackLayout>
 			<ListView x:Name="ParkPassListView" Header="Available ParkPasses:" HasUnevenRows="true">
+				<ListView.Header>
+		<Label Text="Available Passes" FontSize="24" BackgroundColor = "{ StaticResource facebookButtonBackgroundColor}" TextColor = "{ StaticResource whiteLabelTextColor}" />
+		</ListView.Header>
 				<ListView.ItemTemplate>
 					<DataTemplate>
                         <local:ParkPassCell Name="{Binding Name}" ParkName= "{Binding ParkName}" Category="{Binding Category}" Status="{Binding Status}" PurchasedDate="{Binding PurchasedDate}" PassPrice="{Binding PassPrice}" ImageFilename="{Binding ImageFilename}" />

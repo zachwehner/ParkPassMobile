@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.ParkDetailsPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.ParkDetailsPage" BackgroundColor="{StaticResource greenButtonBackgroundColor}" >
 	<ContentPage.Content>
-
-
+		
 		<Grid VerticalOptions="Start" Grid.Column="0" Grid.Row="0">
     <Grid.RowDefinitions>
       <RowDefinition Height="3*" />
@@ -47,25 +46,28 @@
     </RelativeLayout>
     	
        <StackLayout Padding="2,-4,2,4" Grid.Column="0" Grid.Row="1" VerticalOptions="Start">
-       <BoxView Color="White" HeightRequest="5"></BoxView>
-				<BoxView Color="{StaticResource blueLabelBackgroundColor}" HeightRequest="10"  ></BoxView>
-				<BoxView Color="White" HeightRequest="5" ></BoxView>
+				<StackLayout>
+	<Image x:Name="ParkPassLogo" Source="ParkPassPreferred.png"> </Image>
+	</StackLayout>
+       <BoxView x:Name="topwhiteHR" Color="White" HeightRequest="5"></BoxView>
+				<BoxView x:Name="blueHR" Color="{StaticResource blueLabelBackgroundColor}" HeightRequest="10"  ></BoxView>
+				<BoxView x:Name="bottomwhiteHR" Color="White" HeightRequest="5" ></BoxView>
 				<Label x:Name="parkDescriptionLbl" TextColor="{StaticResource defaultLabelTextColor}" FontSize="{StaticResource smallFontSize}" />
 			
         <Label x:Name="passTypeNameLbl2" FontSize="{StaticResource largeFontSize}" TextColor="{StaticResource whiteLabelTextColor}" HorizontalTextAlignment="Center" BackgroundColor="{StaticResource blueLabelBackgroundColor}"></Label>
 
 				<StackLayout>
-				<Button x:Name="btnAmenties" Text="Amenities" FontSize="{StaticResource medFontSize}" BackgroundColor="{StaticResource greenButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}" Clicked="Amenities_Clicked">
+				<Button x:Name="btnAmenties" Text="Amenities" BorderWidth= "2"  BorderColor="{StaticResource whiteLabelTextColor}" FontSize="{StaticResource medFontSize}" BackgroundColor="{StaticResource blueButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}" Clicked="Amenities_Clicked">
 				</Button>
-				<Button x:Name="btnHelpful" Text="Helpful Numbers" FontSize="{StaticResource medFontSize}" BackgroundColor="{StaticResource greenButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}" Clicked="HelpfulNumbers_Clicked">
+				<Button x:Name="btnHelpful" Text="Helpful Numbers" BorderWidth= "2"  BorderColor="{StaticResource whiteLabelTextColor}" FontSize="{StaticResource medFontSize}" BackgroundColor="{StaticResource blueButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}" Clicked="HelpfulNumbers_Clicked">
 				</Button>
-				<Button x:Name="btnFood" Text="Nearby Food" FontSize="{StaticResource medFontSize}" BackgroundColor="{StaticResource greenButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}">
+				<Button x:Name="btnFood" Text="Nearby "  BorderWidth= "2" BorderColor="{StaticResource whiteLabelTextColor}" FontSize="{StaticResource medFontSize}" BackgroundColor="{StaticResource blueButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}">
 				</Button>
-					<Button x:Name="btnPass"  Text="Buy Park Pass" FontSize="{StaticResource medFontSize}" BackgroundColor="{StaticResource greenButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}" Clicked="Purchase_Clicked">
+					<Button x:Name="btnPass"  Text="Buy Park Pass" BorderWidth= "2"  BorderColor="{StaticResource whiteLabelTextColor}" FontSize="{StaticResource medFontSize}" BackgroundColor="{StaticResource blueButtonBackgroundColor}" TextColor="{StaticResource defaultButtonTextColor}" Clicked="Purchase_Clicked">
 				</Button>
 					</StackLayout>
 
-	<ContentView Padding="5,5" BackgroundColor="{StaticResource blueLabelBackgroundColor}">
+	<ContentView x:Name="bottombluehr" Padding="5,5" BackgroundColor="{StaticResource blueLabelBackgroundColor}">
         <Label x:Name="passTypeNameLbl" FontSize="{StaticResource largeFontSize}" TextColor="{StaticResource whiteLabelTextColor}" HorizontalTextAlignment="Center" BackgroundColor="{StaticResource blueLabelBackgroundColor}"></Label>
       </ContentView>
 				
