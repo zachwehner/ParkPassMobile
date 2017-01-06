@@ -8,7 +8,7 @@
 
     <!--Background Colors-->
     <Color x:Key="defaultBackgroundColor">#FFFFFF</Color>
-
+			
     <!-- Label Colors-->
     <Color x:Key="defaultLabelTextColor">#979797</Color>
     <Color x:Key="blackLabelTextColor">#000000</Color>

@@ -28,52 +28,55 @@
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
-    <EmbeddedResource Include="LoginPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PurchasePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ParkPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ParkPassPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CheckoutPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BarcodePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ParkDetailsPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AmenitiesPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HelpfulNumbersPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AccountPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Include="SurveyPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="SettingsPage.xaml">
+    <EmbeddedResource Include="Pages\AccountPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="MySurveysPage.xaml">
+    <EmbeddedResource Include="Pages\AmenitiesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewPassPage.xaml">
+    <EmbeddedResource Include="Pages\BarcodePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="ParkPassListPage.xaml">
+    <EmbeddedResource Include="Pages\CheckoutPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\HelpfulNumbersPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\MySurveysPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\MenuPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ParkPassPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\PurchasePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SettingsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ParkDetailsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ParkPassListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ParkPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ViewPassPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\TestPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -82,74 +85,83 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="LoginPage.xaml.cs">
-      <DependentUpon>LoginPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MenuPage.xaml.cs">
-      <DependentUpon>MenuPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PurchasePage.xaml.cs">
-      <DependentUpon>PurchasePage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\ExternalLoginPage.cs" />
     <Compile Include="Views\FacebookLoginView.cs" />
     <Compile Include="Views\GoogleLoginView.cs" />
     <Compile Include="Views\StripeView.cs" />
     <Compile Include="Views\TextEntry.cs" />
-    <Compile Include="ParkPage.xaml.cs">
-      <DependentUpon>ParkPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ParkPassPage.xaml.cs">
-      <DependentUpon>ParkPassPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CheckoutPage.xaml.cs">
-      <DependentUpon>CheckoutPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="BarcodePage.xaml.cs">
-      <DependentUpon>BarcodePage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Models\ParkListItem.cs" />
-    <Compile Include="ParkDetailsPage.xaml.cs">
-      <DependentUpon>ParkDetailsPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MainPage.cs" />
     <Compile Include="NavigationMessage.cs" />
-    <Compile Include="AmenitiesPage.xaml.cs">
-      <DependentUpon>AmenitiesPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="HelpfulNumbersPage.xaml.cs">
-      <DependentUpon>HelpfulNumbersPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UserAnimation.cs" />
     <Compile Include="Models\ParkPassListItem.cs" />
     <Compile Include="Models\HelpfulNumbersListItem.cs" />
     <Compile Include="Models\AmenitiesListItem.cs" />
     <Compile Include="Models\GenerateBarcode.cs" />
     <Compile Include="IBarcodeService.cs" />
-    <Compile Include="AccountPage.xaml.cs">
-      <DependentUpon>AccountPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="SurveyPage.xaml.cs">
       <DependentUpon>SurveyPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SettingsPage.xaml.cs">
-      <DependentUpon>SettingsPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Models\MyPassesListItem.cs" />
     <Compile Include="Models\MySurveysListItem.cs" />
-    <Compile Include="MySurveysPage.xaml.cs">
-      <DependentUpon>MySurveysPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ViewPassPage.xaml.cs">
-      <DependentUpon>ViewPassPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ParkPassCell.cs" />
-    <Compile Include="ParkPassListPage.xaml.cs">
-      <DependentUpon>ParkPassListPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="HelpfulNumberCell.cs" />
     <Compile Include="SurveyCell.cs" />
     <Compile Include="AmenityCell.cs" />
+    <Compile Include="Pages\AccountPage.xaml.cs">
+      <DependentUpon>AccountPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AmenitiesPage.xaml.cs">
+      <DependentUpon>AmenitiesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BarcodePage.xaml.cs">
+      <DependentUpon>BarcodePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CheckoutPage.xaml.cs">
+      <DependentUpon>CheckoutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HelpfulNumbersPage.xaml.cs">
+      <DependentUpon>HelpfulNumbersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MySurveysPage.xaml.cs">
+      <DependentUpon>MySurveysPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MenuPage.xaml.cs">
+      <DependentUpon>MenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MainPage.cs" />
+    <Compile Include="Pages\ParkPassPage.xaml.cs">
+      <DependentUpon>ParkPassPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PurchasePage.xaml.cs">
+      <DependentUpon>PurchasePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ParkDetailsPage.xaml.cs">
+      <DependentUpon>ParkDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ParkPassListPage.xaml.cs">
+      <DependentUpon>ParkPassListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ParkPage.xaml.cs">
+      <DependentUpon>ParkPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Constants.cs" />
+    <Compile Include="GoogleLoginView.cs" />
+    <Compile Include="Pages\ViewPassPage.xaml.cs">
+      <DependentUpon>ViewPassPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TestPage.xaml.cs">
+      <DependentUpon>TestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ParkPassType.cs" />
+    <Compile Include="Models\ParkDetail.cs" />
+    <Compile Include="Models\ParkPassItem.cs" />
+    <Compile Include="Models\UserModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Rg.Plugins.Popup">
@@ -179,18 +191,29 @@
     <Reference Include="ZXing.Net.Mobile.Forms">
       <HintPath>..\packages\ZXing.Net.Mobile.Forms.2.1.47\lib\portable-net45+netcore45+wpa81+wp8\ZXing.Net.Mobile.Forms.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Stripe">
+      <HintPath>..\Components\stripe-1.0.7\lib\ios-unified\Stripe.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Scripts\jquery-2.1.1.min.map" />
-    <None Include="Scripts\jquery-2.1.1.min.js" />
-    <None Include="Scripts\jquery-2.1.1.js" />
-    <None Include="Scripts\jquery-2.1.1-vsdoc.js" />
     <None Include="Scripts\nugetexample.js" />
+    <None Include="RestClient.cs" />
+    <None Include="Scripts\jquery-3.1.1.slim.min.map" />
+    <None Include="Scripts\jquery-3.1.1.slim.min.js" />
+    <None Include="Scripts\jquery-3.1.1.slim.js" />
+    <None Include="Scripts\jquery-3.1.1.min.map" />
+    <None Include="Scripts\jquery-3.1.1.min.js" />
+    <None Include="Scripts\jquery-3.1.1.js" />
+    <None Include="Scripts\jquery-3.1.1-vsdoc.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
     <Folder Include="Models\" />
+    <Folder Include="Pages\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.3.175\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.3.175\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

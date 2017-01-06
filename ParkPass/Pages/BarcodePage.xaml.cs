@@ -7,6 +7,7 @@ using ZXing.Net.Mobile.Forms;
 using ZXing.Mobile;
 
 using ParkPass.Services;
+using ParkPass.Views;
 
 namespace ParkPass
 {
@@ -16,7 +17,7 @@ namespace ParkPass
 		ZXingBarcodeImageView barcode;
 
 
-		public BarcodePage()
+		public BarcodePage(ParkPassCell selectedPass)
 		{
 			InitializeComponent();
 
@@ -79,7 +80,9 @@ namespace ParkPass
 
 				}
 			};
-			                                      
+
+		
+
 		}
 		async void Wallet_Clicked(object sender, System.EventArgs e)
 		{

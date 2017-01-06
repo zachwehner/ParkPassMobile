@@ -41,9 +41,18 @@ namespace ParkPass
 
 		async void Handle_Clicked(object sender, System.EventArgs e)
 		{
-			var checkoutPage = new CheckoutPage();
+
+
+			var park = (ParkPassCell) ParkPassListView.SelectedItem;
+		
+
+		
+			var checkoutPage = new CheckoutPage(park);
+
 			Navigation.PopModalAsync();
 			await Navigation.PushModalAsync(checkoutPage);
 		}
+
+
 	}
 }

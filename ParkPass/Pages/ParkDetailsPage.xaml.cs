@@ -50,10 +50,10 @@ namespace ParkPass
 			}
 			else {
 				ParkPassLogo.IsVisible = false;
-				image.Source = selectedPark.ImagePath;
-				imagesource = selectedPark.ImagePath;
+				//image.Source = selectedPark.ImagePath;
+			//	imagesource = selectedPark.ImagePath;
 				//parkLocationLbl.Text = selectedPark.State;
-				parkDescriptionLbl.Text = selectedPark.Description;
+				//parkDescriptionLbl.Text = selectedPark.Description;
 				parkNameValue = selectedPark.Name;
 
 			}
@@ -73,10 +73,10 @@ namespace ParkPass
 			MessagingCenter.Subscribe<ParkPage, ParkListItem>(this, "ParkPassName", (page, park) =>
 			{
 
-				image.Source = park.ImagePath;
-				imagesource = park.ImagePath;
+				//image.Source = park.ImagePath;
+				//imagesource = park.ImagePath;
 				//parkLocationLbl.Text = park.State;
-				parkDescriptionLbl.Text = park.Description;
+				//parkDescriptionLbl.Text = park.Description;
 				parkDescriptionLbl.FontSize = 12;
 				descriptionFrame.IsVisible = true;
 				btnFrame.IsVisible = true;
@@ -100,7 +100,7 @@ namespace ParkPass
 			UserAnimation useranimation = new UserAnimation();
 
 			AmenitiesPage amenitiesPage = new AmenitiesPage();
-			amenitiesPage.WidthRequest = 50;
+			amenitiesPage.WidthRequest = 70;
 			amenitiesPage.Padding = 40;
 			amenitiesPage.HeightRequest = 100;
 			bool animate = true;
@@ -114,7 +114,7 @@ namespace ParkPass
 			UserAnimation useranimation = new UserAnimation();
 
 			HelpfulNumbersPage helpfulNumbersPage = new HelpfulNumbersPage();
-			helpfulNumbersPage.WidthRequest = 50;
+			helpfulNumbersPage.WidthRequest = 70;
 			helpfulNumbersPage.Padding = 40;
 			helpfulNumbersPage.HeightRequest = 100;
 			bool animate = true;

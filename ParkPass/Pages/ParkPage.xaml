@@ -5,7 +5,7 @@
             BackgroundColor="{StaticResource greenButtonBackgroundColor}"
              Title="Parks">
 
-	<Frame Padding = "0,0,0,0" Margin = "10" HorizontalOptions = "FillAndExpand" OutlineColor = "White" BackgroundColor="White" HasShadow = "true">
+	<Frame Padding = "0,0,0,0" Margin = "10" HorizontalOptions = "FillAndExpand" OutlineColor = "White" BackgroundColor="White" HasShadow = "true" >
 	<StackLayout Margin = "10">
 		<Label Text="Name" TextColor="{StaticResource defaultLabelTextColor}" />
         <coreviews:TextEntry x:Name="nameEntry" />

@@ -1,22 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using ParkPass.Models;
 
 namespace ParkPass.Models
 {
 	public class ParkListItem
 	{
-		public string Name { get; set;}
+		public int ID { get; set; }
 
-		public string State { get; set;}
+		public string Name { get; set; }
+
+		public string Address { get; set; }
 
 		public string City { get; set; }
 
-		public string Description { get; set; }
+		public string State { get; set; }
 
-		public List<string> Amenities { get; set; }
+		public string ZipCode { get; set; }
 
-		public string ImagePath { get; set; }
+		public string ParkDescription { get; set; }
 
-		public List<string> Passes { get; set; }
+		public List<ParkPassItem> ParkPasses { get; set; }
+
+		public List<ParkDetail> ParkDetails { get; set; }
+
 	}
 }

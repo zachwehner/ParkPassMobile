@@ -21,7 +21,7 @@ namespace ParkPass.iOS
 
 		SelectionStyle = UITableViewCellSelectionStyle.Gray;
 
-		ContentView.BackgroundColor = UIColor.FromRGB(255, 255, 224);
+		ContentView.BackgroundColor = UIColor.White;
 		CellImageView = new UIImageView();
 
 		NameLabel = new UILabel()

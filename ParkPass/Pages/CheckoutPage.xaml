@@ -7,8 +7,8 @@
        
 			<Label Text="Name" TextColor="{StaticResource whiteLabelTextColor}" />
         <coreviews:TextEntry x:Name="nameEntry" />
-
-
+        <coreviews:StripeView x:Name="stripeview" ></coreviews:StripeView>
+      
 		<Label Text="Credit Card Number" TextColor="{StaticResource blackLabelTextColor}" />
         <coreviews:TextEntry x:Name="creditcardEntry" />
 			<Label Text="Address" TextColor="{StaticResource blackLabelTextColor}" />

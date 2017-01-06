@@ -20,20 +20,19 @@ internal class HelpfulNumberiOSCell : UITableViewCell, INativeElementView
 
 		SelectionStyle = UITableViewCellSelectionStyle.Gray;
 
-		ContentView.BackgroundColor = UIColor.FromRGB(255, 255, 224);
+//		ContentView.BackgroundColor = UIColor.FromRGB(255, 255, 224);
 		CellImageView = new UIImageView();
-
 		NameLabel = new UILabel()
 		{
 			Font = UIFont.FromName("AmericanTypewriter", 22f),
-			TextColor = UIColor.FromRGB(127, 51, 0),
+			TextColor = UIColor.Black,
 			BackgroundColor = UIColor.Clear
 		};
 
 		DescriptionLabel = new UILabel()
 		{
 			Font = UIFont.FromName("AmericanTypewriter", 12f),
-			TextColor = UIColor.FromRGB(38, 127, 0),
+			TextColor = UIColor.Black,
 			TextAlignment = UITextAlignment.Center,
 			BackgroundColor = UIColor.Clear
 		};
@@ -41,7 +40,7 @@ internal class HelpfulNumberiOSCell : UITableViewCell, INativeElementView
 		PhoneLabel = new UILabel()
 		{
 			Font = UIFont.FromName("AmericanTypewriter", 12f),
-			TextColor = UIColor.FromRGB(38, 127, 0),
+			TextColor = UIColor.Black,
 			TextAlignment = UITextAlignment.Center,
 			BackgroundColor = UIColor.Clear
 
@@ -77,7 +76,7 @@ internal class HelpfulNumberiOSCell : UITableViewCell, INativeElementView
 		base.LayoutSubviews();
 
 		NameLabel.Frame = new CGRect(10, 4, ContentView.Bounds.Width - 63, 25);
-		DescriptionLabel.Frame = new CGRect(10, 18, ContentView.Bounds.Width - 50, 25);
+		DescriptionLabel.Frame = new CGRect(10, 25, ContentView.Bounds.Width - 63, 25);
 		PhoneLabel.Frame = new CGRect(ContentView.Bounds.Width - 100, 18, 100, 20);
 
 	}

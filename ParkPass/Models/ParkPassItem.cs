@@ -1,9 +1,9 @@
 ﻿using System;
-namespace ParkPass.Models
+namespace ParkPass
 {
-	public class ParkPassListItem
+	public class ParkPassItem
 	{
-
+		
 		public int ID { get; set; }
 
 		public int ParkReferenceID { get; set; }
@@ -20,4 +20,3 @@ namespace ParkPass.Models
 
 	}
 }
-

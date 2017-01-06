@@ -14,6 +14,9 @@ namespace ParkPass.iOS
 		{
 			global::Xamarin.Forms.Forms.Init();
 			global::ZXing.Net.Mobile.Forms.iOS.Platform.Init();
+
+			Stripe.StripeClient.DefaultPublishableKey = "sk_test_yfagzMr4NXypHZ66vJoe6Q34";
+
 			LoadApplication(new App());
 
 			return base.FinishedLaunching(app, options);

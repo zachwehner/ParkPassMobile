@@ -16,7 +16,7 @@
         <Label Text="Password" TextColor="{StaticResource defaultLabelTextColor}" />
         <Entry x:Name="passwordEntry" IsPassword="true"/>
         <Button Text="Sign In" TextColor="{StaticResource defaultButtonTextColor}" Clicked="Login_Clicked" BackgroundColor="{StaticResource greenButtonBackgroundColor}"/>
-        <Grid>
+       <Grid>
           <Grid.RowDefinitions>
             <RowDefinition Height="*" />
           </Grid.RowDefinitions>

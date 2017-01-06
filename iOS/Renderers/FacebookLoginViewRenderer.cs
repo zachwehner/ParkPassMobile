@@ -3,6 +3,8 @@ using Facebook.LoginKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 using ParkPass.Views;
+using Parkpass.iOS;
+
 namespace ParkPass.iOS
 {
 	public class FacebookLoginViewRenderer : ViewRenderer<FacebookLoginView, LoginButton>
@@ -21,9 +23,9 @@ namespace ParkPass.iOS
 			{
 				LoginButton loginButton = new LoginButton();
 				loginButton.LoginBehavior = LoginBehavior.Native;
-			//	loginButton.ReadPermissions = new Configuration().FacebookReadPermissions;
+				loginButton.ReadPermissions = ParkPass.Constants.FacebookReadPermissions;
 
-			//	ExternalLoginService externalLoginService = new ExternalLoginService();
+				ExternalLoginService externalLoginService = new ExternalLoginService();
 
 				//Login button callback.
 				loginButton.Completed += (sender, evt) =>
@@ -38,7 +40,7 @@ namespace ParkPass.iOS
 						return;
 					}
 
-			//		externalLoginService.ProcessFacebookLogin(evt.Result.Token.TokenString);
+					externalLoginService.ProcessFacebookLogin(evt.Result.Token.TokenString);
 				};
 
 				SetNativeControl(loginButton);

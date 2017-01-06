@@ -3,21 +3,32 @@ using System;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
+using Google.SignIn;
+using ParkPass;
+using ParkPassOS.Renderers;
 
+//[assembly: ExportRenderer(typeof(GoogleLoginView), typeof(GoogleLoginViewRenderer))]
 namespace ParkPassOS.Renderers
 {
-
-		public class TextEntryRenderer : EntryRenderer
+	
+		public class GoogleLoginViewRenderer : ViewRenderer<GoogleLoginView, SignInButton>
+	{
+		/// <summary>
+		/// Method used to instantiate the native view.
+		/// </summary>
+		protected override void OnElementChanged(ElementChangedEventArgs<GoogleLoginView> e)
 		{
-			protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
+			base.OnElementChanged(e);
+
+			if (Control == null)
 			{
-				base.OnElementChanged(e);
-				if (Control != null)
-				{
-					Control.AutocorrectionType = UITextAutocorrectionType.No;  // No Autocorrection
-				}
+				SignInButton signInButton = new SignInButton();
+				signInButton.Style = ButtonStyle.Standard;
+				signInButton.ColorScheme = ButtonColorScheme.Light;
+				SetNativeControl(signInButton);
 			}
 		}
+	}
 
 	}
 
