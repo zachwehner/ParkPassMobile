@@ -4,14 +4,52 @@ using ParkPass;
 using Xamarin.Forms;
 using ParkPass.Models;
 using System.Threading.Tasks;
+using System.ServiceModel;
 
 namespace ParkPass
 {
 	public partial class ParkPage : ContentPage
 	{
 		public string ParkNameValue2;
-		public ParkPage()
+
+        public void OnUseWebService(object sender, EventArgs e)
+        {
+            // Create the WCF client (created using SLSvcUtil.exe on Windows)
+            ParkWebServiceClient client = new ParkWebServiceClient(
+               new BasicHttpBinding(),
+               new EndpointAddress("http://parkpasspreferred20170104094844.azurewebsites.net/ParkWebService.svc"));
+
+            // Call the proxy - this should use the async versions
+            client.findAllCompleted += OnGotResults;
+            client.findAllAsync();
+     
+
+        }
+
+        private void OnGotResults(object sender, findAllCompletedEventArgs e)
+        {
+            Device.BeginInvokeOnMainThread(async () => {
+                string error = null;
+                if (e.Error != null)
+                    error = e.Error.Message;
+                else if (e.Cancelled)
+                    error = "Cancelled";
+
+                if (!string.IsNullOrEmpty(error))
+                {
+                    await DisplayAlert("Error", error, "OK", "Cancel");
+                }
+                else
+                {
+                    var x = e.Result;
+                }
+            });
+        }
+
+
+        public ParkPage()
 		{
+            
 			InitializeComponent();
 		
 
