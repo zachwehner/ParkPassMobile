@@ -4,13 +4,13 @@ using ParkPass;
 using Xamarin.Forms;
 using ParkPass.Models;
 using System.Threading.Tasks;
-using System.ServiceModel;
 
 namespace ParkPass
 {
 	public partial class ParkPage : ContentPage
 	{
 		public string ParkNameValue2;
+<<<<<<< HEAD
 
         public void OnUseWebService(object sender, EventArgs e)
         {
@@ -48,8 +48,10 @@ namespace ParkPass
 
 
         public ParkPage()
+=======
+		public ParkPage()
+>>>>>>> parent of 7c15c75... Added Web Service
 		{
-            
 			InitializeComponent();
 		
 

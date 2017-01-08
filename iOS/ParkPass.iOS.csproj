@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Xamarin.Build.Download.0.3.0\build\Xamarin.Build.Download.props" Condition="Exists('..\packages\Xamarin.Build.Download.0.3.0\build\Xamarin.Build.Download.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -8,7 +7,7 @@
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>ParkPass.iOS</RootNamespace>
-    <AssemblyName>ParkPassiOS</AssemblyName>
+    <AssemblyName>ParkPass.iOS</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
@@ -85,16 +84,7 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Stripe">
-      <HintPath>..\Components\stripe-1.0.7\lib\ios-unified\Stripe.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.EnterpriseServices, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=x86" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.ServiceModel" />
-    <Reference Include="System.ServiceModel.Web" />
-    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
@@ -140,6 +130,9 @@
     <Reference Include="ZXing.Net.Mobile.Forms.iOS">
       <HintPath>..\packages\ZXing.Net.Mobile.Forms.2.1.47\lib\Xamarin.iOS10\ZXing.Net.Mobile.Forms.iOS.dll</HintPath>
     </Reference>
+    <Reference Include="Stripe">
+      <HintPath>..\Components\stripe-1.0.7\lib\ios-unified\Stripe.dll</HintPath>
+    </Reference>
     <Reference Include="Firebase.Core">
       <HintPath>..\packages\Xamarin.Firebase.iOS.Core.3.4.4\lib\Xamarin.iOS10\Firebase.Core.dll</HintPath>
     </Reference>
@@ -160,36 +153,20 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\Contents.json">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-app-60pt%403x.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-app-60pt%402x.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-spotlight-settings-29pt%403x.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-spotlight-settings-29pt%402x.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-spotlight-40pt%403x.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-spotlight-40pt%402x.png">
-      <InProject>false</InProject>
-    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-app-60pt%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-app-60pt%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-spotlight-settings-29pt%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-spotlight-settings-29pt%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-spotlight-40pt%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-spotlight-40pt%402x.png" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferences Include="Web References\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Renderers\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -203,23 +180,6 @@
     <None Include="Scripts\jquery-2.1.1.js" />
     <None Include="Scripts\jquery-2.1.1-vsdoc.js" />
     <None Include="Scripts\nugetexample.js" />
-    <None Include="Web References\net.azurewebsites.parkpasspreferred20170104094844\Park.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\net.azurewebsites.parkpasspreferred20170104094844\ParkWebService.wsdl" />
-    <None Include="Web References\net.azurewebsites.parkpasspreferred20170104094844\ParkWebService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Web References\net.azurewebsites.parkpasspreferred20170104094844\ParkWebService0.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Web References\net.azurewebsites.parkpasspreferred20170104094844\ParkWebService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Web References\net.azurewebsites.parkpasspreferred20170104094844\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -240,11 +200,6 @@
     <Compile Include="Renderers\ParkPassiOSCellRenderer.cs" />
     <Compile Include="Renderers\StripeViewRenderer.cs" />
     <Compile Include="ExternalLoginRequestService.cs" />
-    <Compile Include="Web References\net.azurewebsites.parkpasspreferred20170104094844\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.map</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
@@ -283,21 +238,6 @@
       <Version>4.0.1.0</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WebReferenceUrl Include="http://parkpasspreferred20170104094844.azurewebsites.net/ParkWebService.svc%3fwsdl">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\net.azurewebsites.parkpasspreferred20170104094844\</RelPath>
-      <UpdateFromURL>http://parkpasspreferred20170104094844.azurewebsites.net/ParkWebService.svc%3fwsdl</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>
-      </CachedAppSettingsObjectName>
-      <CachedSettingsPropName>
-      </CachedSettingsPropName>
-    </WebReferenceUrl>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Build.Download.0.3.0\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.3.0\build\Xamarin.Build.Download.targets')" />
