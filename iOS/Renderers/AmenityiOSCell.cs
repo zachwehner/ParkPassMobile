@@ -19,6 +19,8 @@ namespace ParkPass.iOS
 	{
 		NativeCell = cell;
 
+
+
 		SelectionStyle = UITableViewCellSelectionStyle.Gray;
 
 		ContentView.BackgroundColor = UIColor.White;

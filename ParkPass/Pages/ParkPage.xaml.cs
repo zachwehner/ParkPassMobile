@@ -14,14 +14,14 @@ namespace ParkPass
 
         public void OnUseWebService(object sender, EventArgs e)
         {
-            // Create the WCF client (created using SLSvcUtil.exe on Windows)
-            ParkWebServiceClient client = new ParkWebServiceClient(
-               new BasicHttpBinding(),
-               new EndpointAddress("http://parkpasspreferred20170104094844.azurewebsites.net/ParkWebService.svc"));
+            //// Create the WCF client (created using SLSvcUtil.exe on Windows)
+            //ParkWebServiceClient client = new ParkWebServiceClient(
+            //   new BasicHttpBinding(),
+            //   new EndpointAddress("http://parkpasspreferred20170104094844.azurewebsites.net/ParkWebService.svc"));
 
             // Call the proxy - this should use the async versions
-            client.findAllCompleted += OnGotResults;
-            client.findAllAsync();
+            //client.findAllCompleted += OnGotResults;
+            //client.findAllAsync();
      
 
         }

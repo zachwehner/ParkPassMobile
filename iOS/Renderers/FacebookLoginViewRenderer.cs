@@ -3,10 +3,13 @@ using Facebook.LoginKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 using ParkPass.Views;
+using ParkPass.iOS;
 using Parkpass.iOS;
 
+[assembly: ExportRenderer(typeof(FacebookLoginView), typeof(FacebookLoginViewRenderer))]
 namespace ParkPass.iOS
 {
+
 	public class FacebookLoginViewRenderer : ViewRenderer<FacebookLoginView, LoginButton>
 	{
 		/// <summary>
@@ -26,7 +29,6 @@ namespace ParkPass.iOS
 				loginButton.ReadPermissions = ParkPass.Constants.FacebookReadPermissions;
 
 				ExternalLoginService externalLoginService = new ExternalLoginService();
-
 				//Login button callback.
 				loginButton.Completed += (sender, evt) =>
 				{
