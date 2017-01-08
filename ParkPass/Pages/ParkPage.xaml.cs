@@ -11,6 +11,7 @@ namespace ParkPass
 	{
 		public string ParkNameValue2;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         public void OnUseWebService(object sender, EventArgs e)
         {
@@ -48,6 +49,9 @@ namespace ParkPass
 
 
         public ParkPage()
+=======
+		public ParkPage()
+>>>>>>> parent of 7c15c75... Added Web Service
 =======
 		public ParkPage()
 >>>>>>> parent of 7c15c75... Added Web Service
