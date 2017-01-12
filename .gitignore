@@ -38,3 +38,9 @@ Thumbs.db
 
 # dotCover
 *.dotCover
+/Droid/app.config
+/iOS/Web References/ParkWebService/Park.datasource
+/iOS/Web References/ParkWebService/ParkasmxWebService.disco
+/iOS/Web References/ParkWebService/ParkasmxWebService.wsdl
+/iOS/Web References/ParkWebService/Reference.cs
+/iOS/Web References/ParkWebService/Reference.map
