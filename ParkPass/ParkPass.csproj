@@ -151,7 +151,6 @@
       <DependentUpon>ParkPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Constants.cs" />
-    <Compile Include="GoogleLoginView.cs" />
     <Compile Include="Pages\ViewPassPage.xaml.cs">
       <DependentUpon>ViewPassPage.xaml</DependentUpon>
     </Compile>
@@ -162,6 +161,10 @@
     <Compile Include="Models\ParkDetail.cs" />
     <Compile Include="Models\ParkPassItem.cs" />
     <Compile Include="Models\UserModel.cs" />
+    <Compile Include="ISoapService.cs" />
+    <Compile Include="Models\Park.cs" />
+    <Compile Include="IRestService.cs" />
+    <Compile Include="RestService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Rg.Plugins.Popup">
@@ -193,9 +196,6 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Stripe">
-      <HintPath>..\Components\stripe-1.0.7\lib\ios-unified\Stripe.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

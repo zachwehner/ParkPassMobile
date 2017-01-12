@@ -4,64 +4,25 @@ using ParkPass;
 using Xamarin.Forms;
 using ParkPass.Models;
 using System.Threading.Tasks;
+using System.Net;
+using System.IO;
 
 namespace ParkPass
 {
 	public partial class ParkPage : ContentPage
 	{
 		public string ParkNameValue2;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        public void OnUseWebService(object sender, EventArgs e)
-        {
-            //// Create the WCF client (created using SLSvcUtil.exe on Windows)
-            //ParkWebServiceClient client = new ParkWebServiceClient(
-            //   new BasicHttpBinding(),
-            //   new EndpointAddress("http://parkpasspreferred20170104094844.azurewebsites.net/ParkWebService.svc"));
-
-            // Call the proxy - this should use the async versions
-            //client.findAllCompleted += OnGotResults;
-            //client.findAllAsync();
-     
-
-        }
-
-        private void OnGotResults(object sender, findAllCompletedEventArgs e)
-        {
-            Device.BeginInvokeOnMainThread(async () => {
-                string error = null;
-                if (e.Error != null)
-                    error = e.Error.Message;
-                else if (e.Cancelled)
-                    error = "Cancelled";
-
-                if (!string.IsNullOrEmpty(error))
-                {
-                    await DisplayAlert("Error", error, "OK", "Cancel");
-                }
-                else
-                {
-                    var x = e.Result;
-                }
-            });
-        }
 
 
-        public ParkPage()
-=======
 		public ParkPage()
->>>>>>> parent of 7c15c75... Added Web Service
-=======
-		public ParkPage()
->>>>>>> parent of 7c15c75... Added Web Service
 		{
+
 			InitializeComponent();
-		
 
 
 			ParkListView.ItemsSource = new List<ParkListItem>
 			{
+				
 				new ParkListItem {
 					Name = "YellowStone",
 					City = "Wyoming",
@@ -86,14 +47,65 @@ namespace ParkPass
 			};
 		}
 
+		public async Task<Park[]> GetParksAsync()
+		{
+			var rxcui = "198440";
+			var request = HttpWebRequest.Create(string.Format(@"http://rxnav.nlm.nih.gov/REST/RxTerms/rxcui/{0}/allinfo", rxcui));
+			request.ContentType = "application/json";
+			request.Method = "GET";
+
+			using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+			{
+				if (response.StatusCode != HttpStatusCode.OK)
+					Console.Out.WriteLine("Error fetching data. Server returned status code: {0}", response.StatusCode);
+				using (StreamReader reader = new StreamReader(response.GetResponseStream()))
+				{
+					var content = reader.ReadToEnd();
+					if (string.IsNullOrWhiteSpace(content))
+					{
+						Console.Out.WriteLine("Response contained empty body...");
+					}
+					else {
+						Console.Out.WriteLine("Response Body: \r\n {0}", content);
+					}
+
+					Assert.NotNull(content);
+				}
+			}
+		}
+
+		private async Task<JsonValue> FetchWeatherAsync(string url)
+		{
+			// Create an HTTP web request using the URL:
+			HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(new Uri(url));
+			request.ContentType = "application/json";
+			request.Method = "GET";
+
+			// Send the request to the server and wait for the response:
+			using (WebResponse response = await request.GetResponseAsync())
+			{
+				// Get a stream representation of the HTTP web response:
+				using (Stream stream = response.GetResponseStream())
+				{
+					// Use this stream to build a JSON document object:
+					JsonValue jsonDoc = await Task.Run(() => JsonObject.Load(stream));
+					Console.Out.WriteLine("Response: {0}", jsonDoc.ToString());
+
+					// Return the JSON document:
+					return jsonDoc;
+				}
+			}
+		}
+
+
 		async void Handle_ItemTapped(object sender, Xamarin.Forms.ItemTappedEventArgs e)
 		{
-			var park = (ParkListItem) ParkListView.SelectedItem;
+			var park = (ParkListItem)ParkListView.SelectedItem;
 			Application.Current.Properties["currentPark"] = park;
 			MessagingCenter.Send<ParkPage, ParkListItem>(this, "ParkPassName", park);
 
 			await Navigation.PopModalAsync();
-	
+
 		}
 
 

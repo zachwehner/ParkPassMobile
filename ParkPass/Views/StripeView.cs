@@ -5,7 +5,7 @@
 // -----------------------------------------------------------------------
 using System;
 using Xamarin.Forms;
-using Stripe;
+//using Stripe;
 using System.Threading.Tasks;
 
 namespace ParkPass.Views
