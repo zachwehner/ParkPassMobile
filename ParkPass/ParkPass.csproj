@@ -165,6 +165,9 @@
     <Compile Include="Models\Park.cs" />
     <Compile Include="IRestService.cs" />
     <Compile Include="RestService.cs" />
+    <Compile Include="Service References\www.w3schools.com\Reference.cs">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Rg.Plugins.Popup">
@@ -197,6 +200,8 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -209,11 +214,23 @@
     <None Include="Scripts\jquery-3.1.1.min.js" />
     <None Include="Scripts\jquery-3.1.1.js" />
     <None Include="Scripts\jquery-3.1.1-vsdoc.js" />
+    <None Include="Service References\www.w3schools.com\tempconvert.wsdl" />
+    <None Include="Service References\www.w3schools.com\tempconvert.disco" />
+    <None Include="Service References\www.w3schools.com\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
     <Folder Include="Models\" />
     <Folder Include="Pages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\www.w3schools.com" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.3.175\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.3.175\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

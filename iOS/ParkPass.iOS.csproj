@@ -181,11 +181,6 @@
     <None Include="Scripts\jquery-2.1.1-vsdoc.js" />
     <None Include="Scripts\nugetexample.js" />
     <None Include="Renderers\StripeViewRenderer.cs" />
-    <None Include="Service References\ParkWebService\ParkasmxWebService.wsdl" />
-    <None Include="Service References\ParkWebService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -206,9 +201,6 @@
     <Compile Include="Renderers\ParkPassiOSCellRenderer.cs" />
     <Compile Include="ExternalLoginRequestService.cs" />
     <Compile Include="SoapService.cs" />
-    <Compile Include="Service References\ParkWebService\Reference.cs">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="RestService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -248,12 +240,6 @@
       <Version>4.0.1.0</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\ParkWebService" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Build.Download.0.3.0\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.3.0\build\Xamarin.Build.Download.targets')" />
