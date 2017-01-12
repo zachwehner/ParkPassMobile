@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using ParkPass.Views;
-using Stripe;
+//using Stripe;
 using Xamarin.Forms;
 
 namespace ParkPass

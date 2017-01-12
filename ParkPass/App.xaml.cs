@@ -15,6 +15,7 @@ namespace ParkPass
 			// MainPage = new NavigationPage(new HelpfulNumbersPage());
 	//		MainPage = new NavigationPage(new TestPage());
 		MainPage = new NavigationPage(new LoginPage());
+		//	MainPage = new NavigationPage(new SignUpPage());
 		//	MainPage = new NavigationPage(new MainPage());
 		//		MainPage = new NavigationPage(new ParkPassListPage());
 			//MainPage = new NavigationPage(new BarcodePage());

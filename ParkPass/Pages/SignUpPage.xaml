@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.SignUpPage"
+             xmlns:coreviews="clr-namespace:ParkPass.Views;assembly=ParkPass"
+             Padding="15, 20"
+             BackgroundColor="{StaticResource defaultBackgroundColor}"
+             Title="Create Account">
+  <ContentPage.Content>
+    <StackLayout VerticalOptions="StartAndExpand">
+      <Label Text="First Name" TextColor="{StaticResource defaultLabelTextColor}" />
+      <coreviews:TextEntry x:Name="fNameEntry" Text="{Binding FirstName, Mode=TwoWay}" />
+      <Label Text="Last Name" TextColor="{StaticResource defaultLabelTextColor}" />
+      <coreviews:TextEntry  x:Name="lNameEntry" Text="{Binding LastName}" />
+      <Label Text="Email" TextColor="{StaticResource defaultLabelTextColor}"/>
+      <coreviews:TextEntry  x:Name="emailEntry" Text="{Binding Email}"/>
+      <Label Text="Password" TextColor="{StaticResource defaultLabelTextColor}"/>
+      <Entry x:Name="passwordEntry" IsPassword="true" Text="{Binding Password}"/>
+      <Label Text="Confirm Password" TextColor="{StaticResource defaultLabelTextColor}"/>
+      <Entry x:Name="confirmPasswordEntry" IsPassword="true" Text="{Binding ConfirmPassword}" />
+      <Button Text="Create Account" TextColor="{StaticResource defaultButtonTextColor}" BackgroundColor="{StaticResource greenButtonBackgroundColor}"/>
+      <StackLayout Orientation="Horizontal">
+        <Label Text="By creating an account you agree to the" TextColor="{StaticResource defaultLabelTextColor}" FontSize="{StaticResource smallFontSize}"></Label>
+        <Label Text="Terms Of Use." x:Name ="termsOfUseLbl" TextColor="{StaticResource defaultLabelTextColor}" FontSize="{StaticResource smallFontSize}"></Label>
+      </StackLayout>
+      <Label Text="Already have an Account?" x:Name="alreadyHaveAccountLbl" TextColor="{StaticResource defaultLabelTextColor}" HorizontalTextAlignment="Center" FontSize="{StaticResource smallFontSize}"></Label>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
