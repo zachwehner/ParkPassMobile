@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController" storyboardIdentifier=" ">
+                <viewController storyboardIdentifier=" " id="01J-lp-oVM" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
@@ -16,14 +16,14 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <subviews/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
+        <!--View Controller-->
         <scene sceneID="104">
             <objects>
                 <viewController id="105" sceneMemberID="viewController">
@@ -34,28 +34,29 @@
                     <view key="view" contentMode="scaleToFill" id="106">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="107" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="867" y="123"/>
         </scene>
+        <!--Title-->
         <scene sceneID="108">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="109" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="111">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="114" rowHeight="0.0">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="0.0" id="114">
+                                <rect key="frame" x="0.0" y="28" width="600" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="114" id="115">
-                                    <autoresizingMask key="autoresizingMask"/>
                                     <rect key="frame" x="0.0" y="-0.5" width="600" height="0.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <rect key="frame" x="0.0" y="28" width="600" height="0.0"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -63,12 +64,13 @@
                             <outlet property="delegate" destination="109" id="113"/>
                         </connections>
                     </tableView>
-                    <navigationItem title="Title" id="136" key="navigationItem"/>
+                    <navigationItem key="navigationItem" title="Title" id="136"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="116" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1866" y="323"/>
         </scene>
+        <!--Navigation Controller-->
         <scene sceneID="117">
             <objects>
                 <navigationController id="118" sceneMemberID="viewController">
@@ -84,6 +86,7 @@
             </objects>
             <point key="canvasLocation" x="2088" y="-1063"/>
         </scene>
+        <!--Split View Controller-->
         <scene sceneID="122">
             <objects>
                 <splitViewController id="123" sceneMemberID="viewController">
@@ -97,4 +100,26 @@
             <point key="canvasLocation" x="586" y="-869"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Hamburger_Menu.png" width="48" height="48"/>
+        <image name="purchase.png" width="24" height="24"/>
+        <image name="Park_Placeholder.png" width="5464" height="3643"/>
+        <image name="GrandTeton.jpg" width="5392" height="1901"/>
+        <image name="Yosemite_Placeholder.png" width="1920" height="1080"/>
+        <image name="Account.png" width="128" height="128"/>
+        <image name="Settings.png" width="128" height="128"/>
+        <image name="Signout.png" width="128" height="128"/>
+        <image name="Passes.png" width="128" height="128"/>
+        <image name="Survey.png" width="110" height="128"/>
+        <image name="Tree.png" width="128" height="128"/>
+        <image name="ParkPassPreferred.png" width="2550" height="1138"/>
+        <image name="QRcode_Placeholder.png" width="1160" height="1160"/>
+        <image name="Images/QRcode_Placeholder.png" width="1160" height="1160"/>
+        <image name="Images/Grill.png" width="512" height="512"/>
+        <image name="Images/RV.png" width="64" height="64"/>
+        <image name="Images/Restrooms.png" width="64" height="64"/>
+        <image name="background.png" width="50" height="468"/>
+        <image name="page.png" width="240" height="380"/>
+        <image name="placeholder.png" width="200" height="200"/>
+    </resources>
 </document>

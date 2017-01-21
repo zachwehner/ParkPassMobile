@@ -4,7 +4,6 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 using ParkPass;
 using System.ComponentModel;
-using ParkPass.iOS;
 
 [assembly: ExportRenderer(typeof(HelpfulNumberCell), typeof(HelpfulNumberiOSCellRenderer))]
 namespace CustomRenderer.iOS

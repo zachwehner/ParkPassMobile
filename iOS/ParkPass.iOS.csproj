@@ -168,6 +168,7 @@
     <Folder Include="Resources\" />
     <Folder Include="Renderers\" />
     <Folder Include="Images\" />
+    <Folder Include="Fonts\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -182,6 +183,71 @@
     <None Include="Scripts\jquery-2.1.1-vsdoc.js" />
     <None Include="Scripts\nugetexample.js" />
     <None Include="Renderers\StripeViewRenderer.cs" />
+    <None Include="Renderers\CarouselRenderer.cs" />
+    <None Include="Renderers\CarouselViewiOSRenderer.cs" />
+    <None Include="Fonts\SanFranciscoDisplay-Black.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\SanFranciscoDisplay-Bold.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\SanFranciscoDisplay-Heavy.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\SanFranciscoDisplay-Light.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\SanFranciscoDisplay-Medium.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\SanFranciscoDisplay-Regular.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\SanFranciscoDisplay-Semibold.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\SanFranciscoDisplay-Thin.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\SanFranciscoDisplay-Ultralight.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\SanFranciscoText-Bold.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\SanFranciscoText-BoldItalic.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\SanFranciscoText-Heavy.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\SanFranciscoText-HeavyItalic.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\SanFranciscoText-Light.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\SanFranciscoText-LightItalic.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\SanFranciscoText-Medium.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\SanFranciscoText-MediumItalic.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\SanFranciscoText-Regular.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\SanFranciscoText-RegularItalic.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\SanFranciscoText-Semibold.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\SanFranciscoText-SemiboldItalic.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -193,16 +259,18 @@
     <Compile Include="Renderers\TextEntryRenderer.cs" />
     <Compile Include="Renderers\FacebookLoginViewRenderer.cs" />
     <Compile Include="Renderers\ParkPassiOSCell.cs" />
-    <Compile Include="Renderers\HelpfulNumberiOSCell.cs" />
-    <Compile Include="Renderers\HelpfulNumberiOSCellRenderer.cs" />
     <Compile Include="Renderers\SurveyiOSCell.cs" />
     <Compile Include="Renderers\SurveyiOSCellRenderer.cs" />
     <Compile Include="Renderers\AmenityiOSCell.cs" />
     <Compile Include="Renderers\AmenityiOSCellRenderer.cs" />
     <Compile Include="Renderers\ParkPassiOSCellRenderer.cs" />
     <Compile Include="ExternalLoginRequestService.cs" />
-    <Compile Include="SoapService.cs" />
-    <Compile Include="RestService.cs" />
+    <Compile Include="Renderers\HelpfulNumberiOSCell.cs" />
+    <Compile Include="Renderers\HelpfulNumberiOSCellRenderer.cs" />
+    <Compile Include="UserPreferences.cs" />
+    <Compile Include="Renderers\ExternalLoginPageRenderer.cs" />
+    <Compile Include="iOSDisplaySettings.cs" />
+    <Compile Include="Constants.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
@@ -227,6 +295,11 @@
     <BundleResource Include="Images\Grill.png" />
     <BundleResource Include="Images\RV.png" />
     <BundleResource Include="Images\Restrooms.png" />
+    <BundleResource Include="Resources\background.png" />
+    <BundleResource Include="Resources\page.png" />
+    <BundleResource Include="Resources\placeholder.png" />
+    <BundleResource Include="Images\Yosemite_Placeholder.png" />
+    <BundleResource Include="Images\Park_Placeholder.png" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="stripe">
@@ -241,6 +314,12 @@
       <Version>4.0.1.0</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ParkPass\ParkPass.csproj">
+      <Project>{DCF4439B-BBF8-4304-9BCF-82D1E76CE3EB}</Project>
+      <Name>ParkPass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Build.Download.0.3.0\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.3.0\build\Xamarin.Build.Download.targets')" />

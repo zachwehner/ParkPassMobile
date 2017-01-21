@@ -53,9 +53,6 @@
     <EmbeddedResource Include="Pages\MenuPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pages\LoginPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Include="Pages\ParkPassPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -78,6 +75,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\TestPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ProfilePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -129,9 +129,6 @@
     <Compile Include="Pages\MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\LoginPage.xaml.cs">
-      <DependentUpon>LoginPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\MainPage.cs" />
     <Compile Include="Pages\ParkPassPage.xaml.cs">
       <DependentUpon>ParkPassPage.xaml</DependentUpon>
@@ -165,7 +162,20 @@
     <Compile Include="ISoapService.cs" />
     <Compile Include="Models\Park.cs" />
     <Compile Include="IRestService.cs" />
-    <Compile Include="RestService.cs" />
+    <Compile Include="IParkService.cs" />
+    <Compile Include="ParkService.cs" />
+    <Compile Include="ParkManager.cs" />
+    <Compile Include="Views\CarouselPage.cs" />
+    <Compile Include="IUserPreferencesStore.cs" />
+    <Compile Include="CarouselLayout.cs" />
+    <Compile Include="PagerIndicatorDots.cs" />
+    <Compile Include="HomeView.cs" />
+    <Compile Include="Models\SwitcherPageViewModel.cs" />
+    <Compile Include="Models\BaseViewModel.cs" />
+    <Compile Include="Pages\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IDisplaySettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Rg.Plugins.Popup">
@@ -224,6 +234,12 @@
     <None Include="Scripts\jquery-3.1.1.min.js" />
     <None Include="Scripts\jquery-3.1.1.js" />
     <None Include="Scripts\jquery-3.1.1-vsdoc.js" />
+    <None Include="Pages\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </None>
+    <None Include="Pages\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

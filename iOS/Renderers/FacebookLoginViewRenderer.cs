@@ -2,9 +2,9 @@
 using Facebook.LoginKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
-using ParkPass.Views;
 using ParkPass.iOS;
 using Parkpass.iOS;
+using ParkPass.Views;
 
 [assembly: ExportRenderer(typeof(FacebookLoginView), typeof(FacebookLoginViewRenderer))]
 namespace ParkPass.iOS

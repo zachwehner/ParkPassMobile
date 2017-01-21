@@ -6,24 +6,24 @@ namespace ParkPass.Models
 	{
 
 		/// <remarks/>
-		public int ID;
+		public int ID { get; set; }
 
 		/// <remarks/>
-		public string Name;
+		public string Name { get; set; }
 
 		/// <remarks/>
-		public string Address;
+		public string Address { get; set; }
 
 		/// <remarks/>
-		public string City;
+		public string City { get; set; }
 
 		/// <remarks/>
-		public string State;
+		public string State { get; set; }
 
 		/// <remarks/>
-		public int Zipcode;
+		public int Zipcode { get; set; }
 
 		/// <remarks/>
-		public string ParkDescription;
+		public string ParkDescription { get; set; }
 	}
 }

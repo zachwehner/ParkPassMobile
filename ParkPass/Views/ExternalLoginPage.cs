@@ -6,7 +6,7 @@
 
 using Xamarin.Forms;
 
-namespace ATN.ParkPassPreferred.Views
+namespace ParkPass.Views
 {
     /// <summary>
     /// The xamarin forms page for external login being natively rendered.

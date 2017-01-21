@@ -11,9 +11,9 @@
     <StackLayout Margin = "10" VerticalOptions="FillAndExpand">
       <StackLayout x:Name="contentLayout" VerticalOptions="CenterAndExpand">
         <Image  Source="ParkPassPreferred.png"/>
-        <Label Text="Email" TextColor="{StaticResource defaultLabelTextColor}" />
+        <Label x:Name="emailLbl" Text="Email" TextColor="{StaticResource defaultLabelTextColor}" />
         <coreviews:TextEntry x:Name="emailEntry" />
-        <Label Text="Password" TextColor="{StaticResource defaultLabelTextColor}" />
+        <Label Text="Password" TextColor="{StaticResource defaultLabelTextColor}" Style=" {StaticResource defaultlabelStyle}" />
         <Entry x:Name="passwordEntry" IsPassword="true"/>
         <Button Text="Sign In" TextColor="{StaticResource defaultButtonTextColor}" Clicked="Login_Clicked" BackgroundColor="{StaticResource greenButtonBackgroundColor}"/>
        <Grid>

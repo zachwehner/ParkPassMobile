@@ -31,11 +31,11 @@ namespace CustomRenderer.iOS
 			var nativeCell = (ParkPassCell)sender;
 			if (e.PropertyName == ParkPassCell.NameProperty.PropertyName)
 			{
-				cell.HeadingLabel.Text = nativeCell.Name;
+				cell.PassNameLabel.Text = nativeCell.Name;
 			}
 			else if (e.PropertyName == ParkPassCell.CategoryProperty.PropertyName)
 			{
-				cell.SubheadingLabel.Text = nativeCell.Category;
+				cell.UsedLabel.Text = nativeCell.Category;
 			}
 			else if (e.PropertyName == ParkPassCell.ImageFilenameProperty.PropertyName)
 			{

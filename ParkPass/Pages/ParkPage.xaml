@@ -3,7 +3,7 @@
 		xmlns:coreviews="clr-namespace:ParkPass.Views;assembly=ParkPass" 
 		Padding="25, 20, 25, 10"
             BackgroundColor="{StaticResource greenButtonBackgroundColor}"
-             Title="Parks">
+             Title="Parks" >
 
 	<Frame Padding = "0,0,0,0" Margin = "10" HorizontalOptions = "FillAndExpand" OutlineColor = "White" BackgroundColor="White" HasShadow = "true" >
 	<StackLayout Margin = "10">
@@ -15,21 +15,25 @@
 		</Button>
 		<Button TextColor="{StaticResource defaultButtonTextColor}" FontSize="{StaticResource medFontSize}" Text="Find Parks Near Me" BackgroundColor="{StaticResource greenButtonBackgroundColor}">
 		</Button>
-		<ListView x:Name="ParkListView" Header="Available Parks:" HasUnevenRows="true" SelectedItem="{Binding objItemSelected, Mode=TwoWay}" ItemTapped="Handle_ItemTapped">
+	
+			<ListView x:Name="ParkListView" Header="Available Parks:" HasUnevenRows="true" ItemTapped="Handle_ItemTapped">
 
 			<ListView.ItemTemplate>
 				<DataTemplate>
 					<ViewCell>
 						<StackLayout Orientation="Vertical"  BackgroundColor="Gray" Spacing = "10">
-							<Image VerticalOptions="Start" Source="{Binding ImagePath}" x:Name="image" Aspect="AspectFill" />
-							<Label Text="{Binding Name}"
+
+								<!--<Image VerticalOptions="Start" Source="{Binding ImagePath}" x:Name="image" Aspect="AspectFill" />-->
+							<Label Text="{Binding Name}" TextColor = "White"
 								Font="Large"/>
-							<!--<Label Text="{Binding City}" 
-								Font="Small"/>-->
+							
+						
 							<Label Text="{Binding State}" 
 								Font="Small"/>
 						</StackLayout>
 					</ViewCell>
+
+						
 				</DataTemplate>
 			</ListView.ItemTemplate>
 		</ListView>

@@ -4,9 +4,10 @@ using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 using Google.SignIn;
-using ParkPass.Views;
+
 using ParkPass;
 using ParkPassOS.Renderers;
+using ParkPass.Views;
 
 [assembly: ExportRenderer(typeof(GoogleLoginView), typeof(GoogleLoginViewRenderer))]
 namespace ParkPassOS.Renderers

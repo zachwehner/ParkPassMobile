@@ -9,11 +9,18 @@ namespace ParkPass
 	public partial class ViewPassPage : ContentPage
 	{
 		ZXingBarcodeImageView barcode;
-
-		public ViewPassPage(string passName, string passDescription, string passStatus, string passCode, string passPurchasedDate)
+		//public ViewPassPage(string passName, string passDescription, string passStatus, string passCode, string passPurchasedDate)
+		public ViewPassPage()
 		{
 			InitializeComponent();
 
+
+
+			string passName = "Annual Pass";
+			string passDescription = "Test";
+			string passStatus = "Unused";
+			//string passCode
+			string passPurchasedDate = "01/07/2017";
 			barcode = new ZXingBarcodeImageView
 			{
 				HorizontalOptions = LayoutOptions.FillAndExpand,
@@ -40,7 +47,9 @@ namespace ParkPass
 			};
 			var passNameLabel = new Label
 			{
-				Text = passName
+				Text = passName,
+				FontSize = 36,
+				TextColor = Color.FromHex("555555")
 			};
 			var passType = new Label
 			{
@@ -79,7 +88,7 @@ namespace ParkPass
 			Content =
 				new StackLayout
 				{
-					
+
 					Opacity = 10,
 					Spacing = 10,
 					Children = {
@@ -87,66 +96,40 @@ namespace ParkPass
 					new Frame
 					{
 				Padding = 0,
-				HorizontalOptions = LayoutOptions.FillAndExpand,
+						VerticalOptions = LayoutOptions.FillAndExpand,
 				OutlineColor = Color.Black,
 				HasShadow = true,
 						Content =
 					new StackLayout{
+							HeightRequest = 100,
 						Padding = 20,
 						 Spacing = 0,
 						   Orientation = StackOrientation.Horizontal,
 						   Children =
 									{
-							barcode,
-
-							new StackLayout{
-								Spacing = 5,
-						   		Orientation = StackOrientation.Vertical,
-								Children ={
-
-									purchasedLabel,
-									passLabel,
-									passNameLabel,
-									passType,
-									passDescriptionLabel,
-									passPurchasedLabel,
-									passPurchasedDateLabel
-									}
-								}
+							barcode
 
 								}
 							}
 
 					},
-					new Frame {
-						Padding = 0,
-				HorizontalOptions = LayoutOptions.FillAndExpand,
-				OutlineColor = Color.Black,
-				HasShadow = true,
-						Content=
+
 					new StackLayout{
 						   Spacing = 0,
 						   Orientation = StackOrientation.Vertical,
 						   Children =
 									{
-
-										new Label
-										{
-											Text = disclaimer1,
-										},
-										new Label
-										{
-											Text = disclaimer2,
-											HorizontalOptions = LayoutOptions.CenterAndExpand
-										},
-										new Label
-										{
-											Text = disclaimer3,
-										},
+								purchasedLabel,
+									passLabel,
+							passNameLabel,
+								passPurchasedLabel,
+									passPurchasedDateLabel,
+								passType,
+									passDescriptionLabel,
 									}
 
 
-					}
+				
 					}
 
 

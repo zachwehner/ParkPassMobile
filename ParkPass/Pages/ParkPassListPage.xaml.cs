@@ -10,14 +10,17 @@ namespace ParkPass
 		public ParkPassListPage()
 		{
 			InitializeComponent();
+
+			myPassesListView.RowHeight = 568/2 ;
+
 			myPassesListView.ItemsSource = new List<ParkPassCell>
 			{
 				new ParkPassCell{
-					ParkName= "YellowStone",
-					Name="Adult",
+					ParkName= "",
+					Name="ANNUAL PASS",
 					Category = "Daily Pass",
 					Status = "Unused",
-					ImageFilename ="QRcode_Placeholder.png",
+					ImageFilename ="Park_Placeholder.png",
 					PassPrice = "100.00",
 					PurchasedDate = "01/10/2016"
 				},
@@ -25,10 +28,10 @@ namespace ParkPass
 
 					new ParkPassCell{
 					ParkName= "GrandTetons",
-					Name="Adult",
+					Name="DAY PASS",
 					Category = "Daily Pass",
 					Status = "Used",
-					ImageFilename ="QRcode_Placeholder.png",
+					ImageFilename ="Yosemite_Placeholder.png",
 					PassPrice = "15.00",
 					PurchasedDate = "01/10/2015"
 					},
@@ -37,7 +40,7 @@ namespace ParkPass
 					Name="Child",
 					Category = "Daily Pass",
 					Status = "Used",
-					ImageFilename ="QRcode_Placeholder.png",
+					ImageFilename ="Park_Placeholder.png",
 					PassPrice = "76.00",
 					PurchasedDate = "05/10/2015"
 					}
@@ -54,15 +57,15 @@ namespace ParkPass
 			string passStatus;
 			string passCode;
 			string passPurchasedDate;
-
+			var x = App.DisplaySettings.GetHeight();
 			passName = pass.Name;
 			passDescription = pass.Category;
 			passStatus = pass.Status;
 			passPurchasedDate = pass.PurchasedDate;
 			passCode = "0101011";
 			//MessagingCenter.Send<ParkPage, ParkListItem>(this, "ParkPassName", park);
-
-			await Navigation.PushAsync(new ViewPassPage(passName, passDescription, passStatus, passCode, passPurchasedDate));
+			await Navigation.PushAsync(new ViewPassPage());
+		//	await Navigation.PushAsync(new ViewPassPage(passName, passDescription, passStatus, passCode, passPurchasedDate));
 		}
 	}
 }

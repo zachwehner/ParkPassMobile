@@ -2,14 +2,15 @@
 using UIKit;
 using Xamarin.Forms;
 using ParkPass;
+
 internal class ParkPassiOSCell : UITableViewCell, INativeElementView
 {
-	public UILabel HeadingLabel { get; set; }
-	public UILabel SubheadingLabel { get; set; }
-	public UILabel PriceLabel { get; set; }
-	public UILabel PurchasedDateLabel { get; set; }
-	public UILabel ParkNameLabel { get; set; }
-	public UILabel StatusLabel { get; set; }
+	public UILabel PassNameLabel { get; set; }
+	public UILabel lblExpirationLabel { get; set; }
+	public UILabel ExpirationLabel { get; set; }
+	public UILabel lblUsedLabel { get; set; }
+	public UILabel UsedLabel { get; set; }
+
 
 	public UIImageView CellImageView { get; set; }
 
@@ -25,84 +26,77 @@ internal class ParkPassiOSCell : UITableViewCell, INativeElementView
 		ContentView.BackgroundColor = UIColor.FromRGB(255, 255, 224);
 		CellImageView = new UIImageView();
 
-		HeadingLabel = new UILabel()
+		CellImageView.Layer.ShadowColor = new CGColor(255, 255, 224);
+		CellImageView.Layer.ShadowOffset = new CGSize(0, 1);
+		CellImageView.Layer.ShadowOpacity = 1;
+		CellImageView.Layer.ShadowRadius = (System.nfloat)1.0;
+		CellImageView.Layer.BorderWidth = (System.nfloat)2.0;
+		CellImageView.Layer.BorderColor = new CGColor(255, 255, 224);
+		CellImageView.Layer.CornerRadius = 20;
+		CellImageView.ClipsToBounds = true;
+		PassNameLabel = new UILabel()
 		{
-			Font = UIFont.FromName("AmericanTypewriter", 22f),
-			TextColor = UIColor.FromRGB(127, 51, 0),
+			TextColor = ParkPass.iOS.Constants.Constants.DefaultText,
 			BackgroundColor = UIColor.Clear
 		};
 
-		SubheadingLabel = new UILabel()
+		lblExpirationLabel = new UILabel()
 		{
-			Font = UIFont.FromName("AmericanTypewriter", 12f),
-			TextColor = UIColor.FromRGB(38, 127, 0),
+			
+			TextColor = ParkPass.iOS.Constants.Constants.DefaultText,
+			Text = "Expires:"
+		};
+		ExpirationLabel = new UILabel()
+		{
+	
+			TextColor = ParkPass.iOS.Constants.Constants.DefaultText,
+		};
+
+		lblUsedLabel = new UILabel()
+		{
+			
+			TextColor = ParkPass.iOS.Constants.Constants.DefaultText,
+			Text = "Last Used:"
+		};
+
+		UsedLabel = new UILabel()
+		{
+			
+			TextColor = ParkPass.iOS.Constants.Constants.DefaultText,
 			TextAlignment = UITextAlignment.Center,
 			BackgroundColor = UIColor.Clear
-		};
-
-		PurchasedDateLabel = new UILabel()
-		{
-			Font = UIFont.FromName("AmericanTypewriter", 12f),
-			TextColor = UIColor.FromRGB(38, 127, 0),
-			TextAlignment = UITextAlignment.Center,
-			BackgroundColor = UIColor.Clear
 
 		};
 
-		PriceLabel = new UILabel()
-		{
-			Font = UIFont.FromName("AmericanTypewriter", 12f),
-			TextColor = UIColor.FromRGB(0, 0, 0),
-			TextAlignment = UITextAlignment.Center,
-			BackgroundColor = UIColor.Clear
-
-		};
-
-		ParkNameLabel = new UILabel()
-		{
-			Font = UIFont.FromName("AmericanTypewriter", 12f),
-			TextColor = UIColor.FromRGB(38, 127, 0),
-			BackgroundColor = UIColor.Clear
-
-
-		};
-
-		StatusLabel = new UILabel()
-		{
-			Font = UIFont.FromName("AmericanTypewriter", 12f),
-			TextColor = UIColor.FromRGB(38, 127, 0),
-			BackgroundColor = UIColor.Clear
-
-
-		};
 
 		ContentView.Add(CellImageView);
-		ContentView.Add(HeadingLabel);
-		ContentView.Add(SubheadingLabel);
-		ContentView.Add(PriceLabel);
-		ContentView.Add(ParkNameLabel);
-		ContentView.Add(PurchasedDateLabel);
-		ContentView.Add(StatusLabel);
+		ContentView.Add(PassNameLabel);
+		ContentView.Add(lblExpirationLabel);
+		ContentView.Add(ExpirationLabel);
+		ContentView.Add(lblUsedLabel);
+		ContentView.Add(UsedLabel);
+
 	
 	}
 
 	public void UpdateCell(ParkPassCell cell)
 	{
-		HeadingLabel.Text = cell.Name;
-		SubheadingLabel.Text = cell.Category;
-		PriceLabel.Text = cell.PassPrice;
-		ParkNameLabel.Text = cell.ParkName;
+		PassNameLabel.Text = cell.Name;
+
 		if (cell.PurchasedDate.Length > 1)
-			PurchasedDateLabel.Text = "Purchased: " + cell.PurchasedDate;
+			UsedLabel.Text = cell.PurchasedDate;
+
+		ExpirationLabel.Text = cell.PurchasedDate;
 		CellImageView.Image = GetImage(cell.ImageFilename);
-		StatusLabel.Text = cell.Status;
-		if (cell.Status == "Unused")
-		{
-			StatusLabel.TextColor = UIColor.FromRGB(38, 127, 0);
-		}
-		else {
-			StatusLabel.TextColor = UIColor.FromRGB(220, 20, 60);
-		}
+
+
+		//if (cell.Status == "Unused")
+		//{
+		//	StatusLabel.TextColor = UIColor.FromRGB(38, 127, 0);
+		//}
+		//else {
+		//	StatusLabel.TextColor = UIColor.FromRGB(220, 20, 60);
+		//}
 	}
 
 	public UIImage GetImage(string filename)
@@ -114,12 +108,13 @@ internal class ParkPassiOSCell : UITableViewCell, INativeElementView
 	{
 		base.LayoutSubviews();
 
-		HeadingLabel.Frame = new CGRect(50, 4, ContentView.Bounds.Width - 63, 25);
-		SubheadingLabel.Frame = new CGRect(50, 4, ContentView.Bounds.Width - 50, 25);
-		PriceLabel.Frame = new CGRect(ContentView.Bounds.Width - 140, 18, 100, 20);
-		ParkNameLabel.Frame = new CGRect(50, 18, ContentView.Bounds.Width - 63, 25);
-		PurchasedDateLabel.Frame = new CGRect(40, 18, ContentView.Bounds.Width - 50, 25);
-		CellImageView.Frame = new CGRect(5,4, 30, 35);
-		StatusLabel.Frame = new CGRect(ContentView.Bounds.Width - 50, 18, 100, 20);
+		PassNameLabel.Frame = new CGRect(ContentView.Bounds.Width / 2 , 15, ContentView.Bounds.Width, 25);
+		lblExpirationLabel.Frame = new CGRect(ContentView.Bounds.Width / 2 , 40, 150, 25);
+		ExpirationLabel.Frame = new CGRect(ContentView.Bounds.Width / 2 + 90, 40, 100, 25);
+
+		lblUsedLabel.Frame = new CGRect(ContentView.Bounds.Width / 2 , 100, 150, 25);
+		UsedLabel.Frame = new CGRect(ContentView.Bounds.Width / 2 + 90, 100, 100, 25);
+		CellImageView.Frame = new CGRect(20, 20, ContentView.Bounds.Width / 2 - 40, ContentView.Bounds.Height-40);
+
 	}
 }

@@ -230,7 +230,7 @@ namespace ParkPass
 		}
 		public async void Signout_Clicked(object sender, System.EventArgs e)
 		{
-			await Navigation.PushAsync(new LoginPage());
+	//		await Navigation.PushAsync(new LoginPage());
 
 		}
 	
