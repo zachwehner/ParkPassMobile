@@ -55,8 +55,8 @@
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"  />
           </Grid.ColumnDefinitions>
-        <Button Text="Don't Have An Account" TextColor="{StaticResource defaultLabelTextColor}" Grid.Row="0"/>
-		<Button Text="Create New Account" x:Name="createAccountLbl1" TextColor="{StaticResource orangeLabelColor}" FontSize="{StaticResource smallFontSize}" Grid.Row="1"/>
+        <Button Text="Don't Have An Account" TextColor="{StaticResource defaultLabelTextColor}" Clicked="NewAccount_Clicked" Grid.Row="0"/>
+		<Button Text="Create New Account" x:Name="createAccountLbl1" TextColor="{StaticResource orangeLabelColor}" Clicked="NewAccount_Clicked" FontSize="{StaticResource smallFontSize}" Grid.Row="1"/>
 				</Grid>
         
       </StackLayout>

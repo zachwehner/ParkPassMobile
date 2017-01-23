@@ -1,12 +1,60 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.AccountPage" BackgroundColor = "{StaticResource greenButtonBackgroundColor}">
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" Padding="25, 60, 25, 10" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.AccountPage" BackgroundImage="BackgroundImage.png" xmlns:coreviews="clr-namespace:ParkPass.Views;assembly=ParkPass">
 	<ContentPage.Content>
-	<Frame Padding = "0,0,0,0" Margin = "10" HorizontalOptions = "FillAndExpand" OutlineColor = "White" BackgroundColor="White" HasShadow = "true">
-		<StackLayout Margin = "2">
 
-		<Button Text="Change Password" BackgroundColor="{ StaticResource facebookButtonBackgroundColor}" TextColor="{StaticResource whiteLabelTextColor}"/>
-		<Button Text="Manage Credit Cards" BackgroundColor="{ StaticResource facebookButtonBackgroundColor}" TextColor="{StaticResource whiteLabelTextColor}"/>
-		</StackLayout>
-			</Frame>
+		<StackLayout Margin = "2">
+		<Grid Margin="0,0,0,0" Padding="0,0,0,0" RowSpacing="0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+			<RowDefinition Height="50" />
+			<RowDefinition Height="30" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"  />
+          </Grid.ColumnDefinitions>
+		 <Label HorizontalTextAlignment="Center" Text="Create New" FontFamily="Open Sans" FontSize="16" TextColor="{StaticResource loginGreyColor}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1"/>
+		  <Label HorizontalTextAlignment="Center" Text="Account" FontSize="16" TextColor="{StaticResource loginGreyColor}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1"/>
+				 <Label HorizontalTextAlignment="Center" Text="Profile and Settings" FontAttributes="Bold" FontSize="17" TextColor="{StaticResource loginGreyColor}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1"/>
+			</Grid>
+
+			
+
+
+
+			<Grid Margin="0,0,0,0" Padding="0,0,0,0" RowSpacing="0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+			<RowDefinition Height="50" />
+			<RowDefinition Height="50" />
+			<RowDefinition Height="50" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"  />
+			 <ColumnDefinition Width="*"  />
+			 <ColumnDefinition Width="*"  />
+			 <ColumnDefinition Width="*"  />
+          </Grid.ColumnDefinitions>
+					<coreviews:TextEntry Placeholder="First Name" x:Name="firstNameEntry" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" />
+					<coreviews:TextEntry Placeholder="Last Name" x:Name="lastNameEntry" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" />
+					<coreviews:TextEntry Placeholder="Username" x:Name="userNameEntry" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" />
+					<coreviews:TextEntry Placeholder="Email Address" x:Name="emailNameEntry" Grid.Row="2" Grid.ColumnSpan="4" />
+					<coreviews:TextEntry Placeholder="Password" x:Name="passEntry" Grid.Row="3" IsPassword="true" Grid.ColumnSpan="4" />
+			</Grid>
+
+
+			<Grid Margin="0,0,0,0" Padding="0,0,0,0" RowSpacing="0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+			<RowDefinition Height="20" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"  />
+          </Grid.ColumnDefinitions>
+		 <Label HorizontalTextAlignment="Center" Text="By tapping Sign Up you agree to the" FontSize="12" TextColor="{StaticResource loginGreyColor}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1"/>
+		<Button Text="terms conditions" x:Name="createAccountLbl1" TextColor="{StaticResource orangeLabelColor}" FontSize="{StaticResource smallFontSize}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1"/>
+			</Grid>
+			
+				<Button Text="CREATE NEW ACCOUNT" Clicked="CreateAccount_Clicked" FontSize="12" BorderRadius= "20" BorderColor="{StaticResource brownLabelColor}" TextColor="{StaticResource defaultButtonTextColor}" BackgroundColor="{StaticResource brownLabelColor}"/>
+			</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

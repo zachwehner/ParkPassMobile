@@ -14,6 +14,11 @@ namespace ParkPass
 
 		}
 
+		async void NewAccount_Clicked(object sender, System.EventArgs e)
+		{
+			await Navigation.PushAsync(new AccountPage(), true);
+		}
+
 		public LogPage()
 		{
 			
