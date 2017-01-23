@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace ParkPass
 {
-	public partial class LoginPage : ExternalLoginPage
+	public partial class LoginPage : ContentPage
 	{
 		private  void Login_Clicked(object sender, System.EventArgs e)
 		{

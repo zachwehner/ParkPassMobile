@@ -169,6 +169,7 @@
     <Folder Include="Renderers\" />
     <Folder Include="Images\" />
     <Folder Include="Fonts\" />
+    <Folder Include="Resources\Fonts\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -271,6 +272,7 @@
     <Compile Include="Renderers\ExternalLoginPageRenderer.cs" />
     <Compile Include="iOSDisplaySettings.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="Renderers\ProfileHeaderLabelRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
@@ -300,6 +302,14 @@
     <BundleResource Include="Resources\placeholder.png" />
     <BundleResource Include="Images\Yosemite_Placeholder.png" />
     <BundleResource Include="Images\Park_Placeholder.png" />
+    <BundleResource Include="Resources\BackgroundImage.png" />
+    <BundleResource Include="Resources\Fonts\SanFranciscoDisplay-Light.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\SanFranciscoDisplay-Light.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Fonts\SanFranciscoText-Light.otf" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="stripe">

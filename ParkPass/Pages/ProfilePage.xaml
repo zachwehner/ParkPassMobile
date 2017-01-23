@@ -1,6 +1,92 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.ProfilePage">
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" BackgroundImage="BackgroundImage.png" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.ProfilePage" xmlns:coreviews="clr-namespace:ParkPass.Views;assembly=ParkPass" Title="PROFILE INFORMATION">
 	<ContentPage.Content>
+		<StackLayout>
+			<Button Text="Log Out" HorizontalOptions="End" TextColor="{StaticResource greyLabelColor }" Margin ="0,0,30,0" FontSize = "14">
+			</Button>
+			<StackLayout Spacing="20" Orientation="Vertical" VerticalOptions="FillAndExpand" Margin="30,10,30,10">
+				<Frame HorizontalOptions="FillAndExpand" BackgroundColor="White" HasShadow="true" Padding="0,0,0,10">
+					<StackLayout>
+						
+						<coreviews:ProfileHeaderLabel Margin = "0,0,0,0" TextColor="White" Text="Basic Info"></coreviews:ProfileHeaderLabel>
+					<!--	<Label Text="Basic Info" HorizontalOptions="FillAndExpand" BackgroundColor="#3B2313" TextColor="White" Margin = "0,0,0,0"  />-->
+							<StackLayout Spacing="5" Margin="10,0,0,0">
+						
+						<Grid Padding="0,0,0,0">
+							<Grid.RowDefinitions>
+								<RowDefinition Height="*" />
+								<RowDefinition Height="*" />
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*" />
+							</Grid.ColumnDefinitions> 
+							<Label Text="NAME" Grid.Row="0" Grid.Column="0" FontSize="{StaticResource smallFontSize}" TextColor="{StaticResource brownLabelColor }" />
+							<Label Text="Danny Holland" Grid.Row="1" Grid.Column="0" TextColor="{StaticResource orangeLabelColor }" />
+						</Grid>
+								
+						<BoxView Color="#E7EBED" HeightRequest="1" WidthRequest=".5" VerticalOptions="End"></BoxView>
+						<Grid Padding="0,0,0,0">
+							<Grid.RowDefinitions>
+								<RowDefinition Height="*" />
+								<RowDefinition Height="*" />
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*" />
+							</Grid.ColumnDefinitions>
+							<Label Text="GENDER" Grid.Row="0" Grid.Column="0" FontSize="{StaticResource smallFontSize}" TextColor="{StaticResource brownLabelColor }" />
+							<Label Text="Male" Grid.Row="1" Grid.Column="0" TextColor="{StaticResource orangeLabelColor }" />
+						</Grid>
+						<BoxView Color="#E7EBED" HeightRequest="1" WidthRequest=".5" VerticalOptions="End"></BoxView>
+						<Grid Padding="0,0,0,0">
+							<Grid.RowDefinitions>
+								<RowDefinition Height="*" />
+								<RowDefinition Height="*" />
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*" />
+							</Grid.ColumnDefinitions>
+							<Label Text="DATE OF BIRTH" Grid.Row="0" Grid.Column="0" FontSize="{StaticResource smallFontSize}" TextColor="{StaticResource brownLabelColor }" />
+							<Label Text="October 16th, 2017" Grid.Row="1" Grid.Column="0" TextColor="{StaticResource orangeLabelColor }" />
+						</Grid>
+								</StackLayout>
+					</StackLayout>
+				</Frame>
+				<Frame Padding="0,0,0,0">
+					<StackLayout>
+						<coreviews:ProfileHeaderLabel HeightRequest = "20" Margin = "0,0,0,0" Text="Contact Info" TextColor="White" />
+						<StackLayout Margin="10,0,0,10" Spacing="5">
+						<Grid Padding="0,0,0,0">
+							<Grid.RowDefinitions>
+								<RowDefinition Height="*" />
+								<RowDefinition Height="*" />
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*" />
+							</Grid.ColumnDefinitions>
+							<Label Text="ADDRESS" Grid.Row="0" Grid.Column="0" FontSize="{StaticResource smallFontSize}" TextColor="{StaticResource brownLabelColor }" />
+							<Label Text="PO Box 1188, Wilson, WY, 83001" Grid.Row="1" Grid.Column="0" TextColor="{StaticResource orangeLabelColor }" />
+						</Grid>
+
+						<BoxView Color="#E7EBED" HeightRequest="1" WidthRequest=".5" VerticalOptions="End"></BoxView>
+						<Grid Padding="0,0,0,0">
+							<Grid.RowDefinitions>
+								<RowDefinition Height="*" />
+								<RowDefinition Height="*" />
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*" />
+							</Grid.ColumnDefinitions>
+							<Label Text="Phone" Grid.Row="0" Grid.Column="0" FontSize="{StaticResource smallFontSize}" TextColor="{StaticResource brownLabelColor }" />
+							<Label Text="720-628-2205" Grid.Row="1" Grid.Column="0" TextColor="{StaticResource orangeLabelColor }" />
+						</Grid>
+							</StackLayout>
+					</StackLayout>
+				</Frame>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
+<!--<ContentPage.Content>
 	<Grid>
   <Grid.RowDefinitions>
     <RowDefinition Height="100" />
@@ -23,5 +109,4 @@
   <Label Text="Bottom Right" Grid.Row="2" Grid.Column="1" BackgroundColor = "Maroon" />
 				</Frame>
 </Grid>
-	</ContentPage.Content>
-</ContentPage>
+	</ContentPage.Content>-->

@@ -121,5 +121,8 @@
         <image name="background.png" width="50" height="468"/>
         <image name="page.png" width="240" height="380"/>
         <image name="placeholder.png" width="200" height="200"/>
+        <image name="Images/Yosemite_Placeholder.png" width="1920" height="1080"/>
+        <image name="Images/Park_Placeholder.png" width="5464" height="3643"/>
+        <image name="BackgroundImage.png" width="1125" height="2001"/>
     </resources>
 </document>

@@ -26,6 +26,7 @@ namespace ParkPass.iOS
 			{
 				LoginButton loginButton = new LoginButton();
 				loginButton.LoginBehavior = LoginBehavior.Native;
+
 				loginButton.ReadPermissions = ParkPass.Constants.FacebookReadPermissions;
 
 				ExternalLoginService externalLoginService = new ExternalLoginService();

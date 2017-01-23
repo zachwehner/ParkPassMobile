@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" Title="YOUR PASSES" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.ParkPassListPage"  xmlns:local="clr-namespace:ParkPass;assembly=ParkPass" BackgroundColor = "{StaticResource BeigeBackgroundColor}">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" BackgroundImage="BackgroundImage.png" Title="YOUR PASSES" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.ParkPassListPage"  xmlns:local="clr-namespace:ParkPass;assembly=ParkPass" >
 	    <ContentPage.Content>
 		<StackLayout Margin = "2">      
-            <ListView x:Name="myPassesListView" CachingStrategy="RecycleElement" >
+            <ListView x:Name="myPassesListView" CachingStrategy="RecycleElement" BackgroundColor= "Transparent">
 			<ListView.Header>
 		</ListView.Header>
                 <ListView.ItemTemplate>

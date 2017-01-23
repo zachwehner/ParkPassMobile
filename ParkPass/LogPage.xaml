@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.LogPage"
+		BackgroundImage="BackgroundImage.png"
+		NavigationPage.HasNavigationBar="{Binding IsFullScreen}"
+		xmlns:coreviews="clr-namespace:ParkPass.Views;assembly=ParkPass"
+             Padding="10,0, 25, 10"> 
+	 <ContentPage.Content>
+    <StackLayout VerticalOptions="FillAndExpand">
+      <StackLayout x:Name="contentLayout" VerticalOptions="CenterAndExpand" Spacing="10">
+        <Image  Source="ParkPassPreferred.png"/>
+        <Label HorizontalTextAlignment="Center" Text="WELCOME" TextColor="{StaticResource brownLabelColor}"  FontFamily="SanFranciscoText-Light" FontSize="24"></Label>
+		<Button Text="LOG IN WITH FACEBOOK" FontSize="12"  BorderRadius= "20" BorderColor="{StaticResource brownLabelColor}" TextColor="{StaticResource defaultButtonTextColor}" Clicked="Login_Clicked" BackgroundColor="{StaticResource facebookButtonBackgroundColor}"/>
+		     <Grid >
+          <Grid.RowDefinitions>
+            <RowDefinition Height="1" />
+			<RowDefinition Height="4" />
+			<RowDefinition Height="1" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"  />
+		   <ColumnDefinition Width="20"  />
+            <ColumnDefinition Width="*"  />
+          </Grid.ColumnDefinitions>
+    		<BoxView HeightRequest="1" Color="{StaticResource brownLabelColor}" Grid.Row="1" Grid.RowSpan="1" Grid.Column="0" ></BoxView>
+					<Label HeightRequest="10" Text="or" VerticalTextAlignment="Center"  HorizontalTextAlignment="Center" Grid.RowSpan="3" Grid.Row="0" Grid.Column="1" FontSize="12"></Label>
+					<BoxView HeightRequest="1" Color="{StaticResource brownLabelColor}" Grid.Row="1" Grid.Column="2"></BoxView>
+        </Grid>
+
+		 <Grid Margin="0,0,0,0" Padding="0,0,0,0" RowSpacing="0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+			<RowDefinition Height="50" />
+		
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"  />
+          </Grid.ColumnDefinitions>
+					 <coreviews:TextEntry Placeholder="Email" x:Name="emailEntry" Grid.Row="0" />
+			<coreviews:TextEntry x:Name="passwordEntry" Placeholder="Password" Grid.Row="1" IsPassword="true"/>
+    		
+      	
+				</Grid>
+       
+         <Button Text="Forgot Password?" x:Name="forgotPasswordLbl" TextColor="{StaticResource loginGreyColor}" FontSize="{StaticResource smallFontSize}" />
+				<Button Text="LOG IN" FontSize="12" BorderRadius= "20" BorderColor="{StaticResource brownLabelColor}" TextColor="{StaticResource defaultButtonTextColor}" Clicked="Login_Clicked" BackgroundColor="{StaticResource brownLabelColor}"/>
+   
+	
+       
+        <Grid Margin="0,0,0,0" Padding="0,0,0,0" RowSpacing="0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
+			<RowDefinition Height="20" />
+		
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"  />
+          </Grid.ColumnDefinitions>
+        <Button Text="Don't Have An Account" TextColor="{StaticResource defaultLabelTextColor}" Grid.Row="0"/>
+		<Button Text="Create New Account" x:Name="createAccountLbl1" TextColor="{StaticResource orangeLabelColor}" FontSize="{StaticResource smallFontSize}" Grid.Row="1"/>
+				</Grid>
+        
+      </StackLayout>
+    </StackLayout>
+		  </ContentPage.Content>
+</ContentPage>

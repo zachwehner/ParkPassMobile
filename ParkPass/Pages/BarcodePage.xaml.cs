@@ -76,19 +76,6 @@ namespace ParkPass
 		{
 			InitializeComponent();
 
-			//barcode = new ZXingBarcodeImageView
-			//{
-			//	HorizontalOptions = LayoutOptions.FillAndExpand,
-			//	VerticalOptions = LayoutOptions.FillAndExpand,
-
-			//};
-			//barcode.Margin = 20;
-			//barcode.BarcodeFormat = ZXing.BarcodeFormat.QR_CODE;
-
-			//barcode.BarcodeOptions.Width = 100;
-			//barcode.BarcodeOptions.Height = 100;
-			//barcode.BarcodeOptions.Margin = 10;
-			//barcode.BarcodeValue = "ZXing.Net.Mobile";
 			Image barcode = new Image
 			{
 				Source = "QRcode_Placeholder.png"

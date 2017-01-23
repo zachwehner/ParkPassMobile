@@ -10,7 +10,7 @@ namespace ParkPass
 	{
 		ZXingBarcodeImageView barcode;
 		//public ViewPassPage(string passName, string passDescription, string passStatus, string passCode, string passPurchasedDate)
-		public ViewPassPage()
+		public ViewPassPage(int displayHeight, int displayWidth)
 		{
 			InitializeComponent();
 
@@ -23,17 +23,18 @@ namespace ParkPass
 			string passPurchasedDate = "01/07/2017";
 			barcode = new ZXingBarcodeImageView
 			{
-				HorizontalOptions = LayoutOptions.FillAndExpand,
-				VerticalOptions = LayoutOptions.FillAndExpand,
+				HorizontalOptions = LayoutOptions.Center,
+				VerticalOptions = LayoutOptions.Center,
 
 			};
-			barcode.Margin = 0;
+			//barcode.Margin = displayWidth * .05;
 			barcode.BarcodeFormat = ZXing.BarcodeFormat.QR_CODE;
-
-			barcode.BarcodeOptions.Width = 400;
-			barcode.BarcodeOptions.Height = 300;
-			barcode.BarcodeOptions.Margin = 0;
-			barcode.BarcodeValue = "ZXing.Net.Mobile";
+			barcode.WidthRequest = displayWidth ;
+			barcode.HeightRequest = displayWidth * .67;
+			barcode.BarcodeOptions.Width = displayWidth ;
+			barcode.BarcodeOptions.Height = displayWidth;
+			//barcode.BarcodeOptions.Margin = 0;
+			barcode.BarcodeValue = "I Generated this Park Pass Code This is Ticket # 1001010101 With Expiration date 10/19";
 			var purchasedLabel = new Label
 			{
 				Text = "Purchased",
@@ -49,12 +50,15 @@ namespace ParkPass
 			{
 				Text = passName,
 				FontSize = 36,
-				TextColor = Color.FromHex("555555")
+				TextColor = Color.FromHex("555555"),
+				FontFamily = "SanFranciscoDisplay - Light",
+
 			};
 			var passType = new Label
 			{
-				Text = "Type Of Pass",
-				FontSize = 10,
+				Text = passName,
+				FontSize = 36,
+				TextColor = Color.FromHex("555555"),
 			};
 
 			var passPurchasedLabel = new Label
@@ -69,21 +73,12 @@ namespace ParkPass
 			};
 			var passDescriptionLabel = new Label
 			{
-				Text = passDescription
+	
+					Text = passDescription,
+				FontSize = 36,
+				TextColor = Color.FromHex("555555"),
+				FontFamily = "SanFranciscoDisplay - Light",
 			};
-
-
-
-
-
-
-			var disclaimer1 = "- Pass is valid for ENTRANCE FEES only";
-			var disclaimer2 = "- Admits the pass holder and occupants of a single, private non-commercial vehicle OR pass holder and three persons " +
-				"(16 and older where individual ENTRANCE FEES are charged.";
-			var disclaimer3 = "- May be upgraded to park specific annual pass at this park or Inter-agency Annual Pass at any National Park.";
-			var disclaimer4 = " -Non Refundable";
-
-
 
 			Content =
 				new StackLayout
@@ -95,22 +90,11 @@ namespace ParkPass
 
 					new Frame
 					{
-				Padding = 0,
-						VerticalOptions = LayoutOptions.FillAndExpand,
-				OutlineColor = Color.Black,
+						
+				OutlineColor = Color.Gray,
 				HasShadow = true,
 						Content =
-					new StackLayout{
-							HeightRequest = 100,
-						Padding = 20,
-						 Spacing = 0,
-						   Orientation = StackOrientation.Horizontal,
-						   Children =
-									{
 							barcode
-
-								}
-							}
 
 					},
 
@@ -119,9 +103,9 @@ namespace ParkPass
 						   Orientation = StackOrientation.Vertical,
 						   Children =
 									{
+							passNameLabel,
 								purchasedLabel,
 									passLabel,
-							passNameLabel,
 								passPurchasedLabel,
 									passPurchasedDateLabel,
 								passType,

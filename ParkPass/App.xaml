@@ -15,7 +15,11 @@
     <Color x:Key="blackLabelTextColor">#000000</Color>
     <Color x:Key="whiteLabelTextColor">#FFFFFF</Color>
     <Color x:Key="blueLabelBackgroundColor">#4A90E2</Color>
-
+    <Color x:Key="orangeLabelColor">#C46221</Color>
+	<Color x:Key="brownLabelColor">#3B2313</Color>
+	<Color x:Key="greyLabelColor">#555555</Color>	
+	<Color x:Key="loginGreyColor">#5B5A5A</Color>	
+			
     <!-- Entry Colors-->
     <Color x:Key="defaultEntryTextColor">#979797</Color>
     <Color x:Key="defaultEntryPlaceholderColor">#979797</Color>
@@ -25,7 +29,7 @@
     <Color x:Key="greenButtonBackgroundColor">#7ED321</Color>
     <Color x:Key="blueButtonBackgroundColor">#3AA2E1</Color>
     <Color x:Key="googleButtonBackgroundColor">#DD4B39</Color>
-    <Color x:Key="facebookButtonBackgroundColor">#3B5999</Color>
+    <Color x:Key="facebookButtonBackgroundColor">#3452B4</Color>
     <Color x:Key="cancelButtonBackgroundColor">#E40613</Color>
     <Color x:Key="defaultButtonTextColor">#FFFFFF</Color>
 

@@ -1,14 +1,61 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.TestPage" xmlns:coreviews="clr-namespace:ParkPass.Views;assembly=ParkPass">
 	<ContentPage.Content>
-	 <Frame Padding = "0,0,0,0" HorizontalOptions = "FillAndExpand" OutlineColor = "White"   HasShadow = "true">
-		<StackLayout Margin = "10">
+
+		<StackLayout>
+			 <Frame Padding = "0,0,0,0" HorizontalOptions = "FillAndExpand" OutlineColor = "White"   HasShadow = "true">
+				<StackLayout>
         <coreviews:TextEntry x:Name="nameEntry" />
         <coreviews:StripeView x:Name="stripeview" ></coreviews:StripeView>
-      
+     
+				<Label Text="Basic Info" BackgroundColor = "#3B2313" TextColor="Black"/>
+
+			
+			<Label Text="NAME"/>
+				
+			<Label Text="GENDER"/>
+					
+			<Label Text="DATE OF BIRTH"/>
+			</StackLayout></Frame>
+	
+	 <Grid Margin="0,0,0,0" Padding="0,0,0,0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+			<RowDefinition Height="50" />
+		
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"  />
+          </Grid.ColumnDefinitions>
+					 <Entry Placeholder="Email" x:Name="emailEntry" Grid.Row="0" />
+			<Entry x:Name="passwordEntry" Placeholder="Password" Grid.Row="1" IsPassword="true"/>
+    		
+      	
+				</Grid>
 
 	</StackLayout>
+
+		<!--	<StackLayout Spacing = "10" Orientation = "Vertical" VerticalOptions = "FillAndExpand">
+			<Frame Padding = "0,0,0,0"  HorizontalOptions = "FillAndExpand" VerticalOptions = "FillAndExpand" OutlineColor = "White" BackgroundColor="White" HasShadow = "true">
+
+				<Label Text="Basic Info" BackgroundColor = "#3B2313" TextColor="Black"/>
+
+			
+			<Label Text="NAME"/>
+				
+			<Label Text="GENDER"/>
+					
+			<Label Text="DATE OF BIRTH"/>
+
+		
+	
 			</Frame>
+		<Frame BackgroundColor = "#3B2313">
+			<Label Text="Contact Info" BackgroundColor = "#3B2313" TextColor = "White"  />
+				<Label Text="Address"/>
+			</Frame>
+		</StackLayout>-->
+
 	</ContentPage.Content>
 </ContentPage>
 

@@ -45,6 +45,9 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Fonts/SanFranciscoDisplay-Light.otf</string>
+		<string>SanFranciscoDisplay-Light.otf</string>
+		<string>SanFranciscoText-Light</string>
+		<string>Fonts/SanFranciscoText-Light</string>
 	</array>
 </dict>
 </plist>
