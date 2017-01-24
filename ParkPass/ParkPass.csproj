@@ -5,12 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{DCF4439B-BBF8-4304-9BCF-82D1E76CE3EB}</ProjectGuid>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <UseMSBuildEngine>true</UseMSBuildEngine>
     <OutputType>Library</OutputType>
     <RootNamespace>ParkPass</RootNamespace>
     <AssemblyName>ParkPass</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -183,6 +182,7 @@
     <Compile Include="LogPage.xaml.cs">
       <DependentUpon>LogPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IAuthenticator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Rg.Plugins.Popup">
