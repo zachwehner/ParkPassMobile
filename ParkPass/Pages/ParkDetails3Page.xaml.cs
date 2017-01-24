@@ -5,12 +5,11 @@ using Xamarin.Forms;
 
 namespace ParkPass
 {
-	public partial class ProfilePage : ContentPage
+	public partial class ParkDetails3Page : ContentPage
 	{
-		public ProfilePage()
+		public ParkDetails3Page()
 		{
 			InitializeComponent();
-			NavigationPage.SetHasNavigationBar(this, true);
 		}
 	}
 }

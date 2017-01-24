@@ -8,10 +8,14 @@
 				<Frame HorizontalOptions="FillAndExpand" BackgroundColor="White" HasShadow="true" Padding="0,0,0,10">
 					<StackLayout>
 						
-						<coreviews:ProfileHeaderLabel Margin = "0,0,0,0" TextColor="White" Text="Basic Info"></coreviews:ProfileHeaderLabel>
-					<!--	<Label Text="Basic Info" HorizontalOptions="FillAndExpand" BackgroundColor="#3B2313" TextColor="White" Margin = "0,0,0,0"  />-->
-							<StackLayout Spacing="5" Margin="10,0,0,0">
+
+							<coreviews:ProfileHeaderLabel Margin = "0,0,0,0" TextColor="White" Text="Basic Info"></coreviews:ProfileHeaderLabel>
 						
+
+
+						<StackLayout Spacing="5" Margin="10,0,0,0">
+
+							
 						<Grid Padding="0,0,0,0">
 							<Grid.RowDefinitions>
 								<RowDefinition Height="*" />

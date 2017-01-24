@@ -17,6 +17,8 @@
     <Color x:Key="blueLabelBackgroundColor">#4A90E2</Color>
     <Color x:Key="orangeLabelColor">#C46221</Color>
 	<Color x:Key="brownLabelColor">#3B2313</Color>
+	<Color x:Key="termsgreyLabelColor">#8E8E93</Color>
+	<Color x:Key="faintgreyLabelColor">#7798aa</Color>	
 	<Color x:Key="greyLabelColor">#555555</Color>	
 	<Color x:Key="loginGreyColor">#5B5A5A</Color>	
 			

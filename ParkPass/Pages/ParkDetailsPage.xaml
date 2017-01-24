@@ -26,6 +26,7 @@
         RelativeLayout.HeightConstraint="{ConstraintExpression
             Type=RelativeToParent,Property=Height,Factor=1,Constant=0}" />
 					</Frame>
+				  </RelativeLayout>
       <!--<Grid VerticalOptions="StartAndExpand"
                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
             ElementName=image,Property=Y,Factor=0,Constant=20}"
@@ -51,7 +52,7 @@
         </StackLayout>
       </Grid>-->
 			
-    </RelativeLayout>
+  
     	
        <StackLayout Padding="2,-4,2,4" Grid.Column="0" Grid.Row="1" VerticalOptions="Start">
      

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" BackgroundImage="BackgroundImage.png" Title="Pass Information" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.ParkDetails3Page">
+	<ContentPage.Content>
+		<StackLayout>
+			<Frame x:Name="imageFrame" Margin="0,10,0,0" Padding = "0,0,0,0" OutlineColor = "Gray"   HasShadow = "true">
+		<Image Source="Yosemite_Placeholder.png" HeightRequest="100" Aspect="AspectFill" HorizontalOptions="FillAndExpand" ></Image>
+					</Frame>
+		<Frame x:Name="btnFrame" Margin="20,10,20,0" Padding = "0,0,0,0" OutlineColor = "White"   HasShadow = "true">
+		<Grid Margin="0,0,0,0" Padding="0,0,0,0" RowSpacing="0" BackgroundColor="White">
+          <Grid.RowDefinitions>
+			<RowDefinition Height="20" />
+			<RowDefinition Height="30" />
+			<RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"  />
+			<ColumnDefinition Width="*"  />
+          </Grid.ColumnDefinitions> 
+		 <Label HorizontalTextAlignment="Start" Margin="10,0,0,0" Text="Annual Pass" FontFamily="Open Sans" FontSize="18" FontAttributes="Bold" TextColor="{StaticResource brownLabelColor}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1"/>
+		  <Label HorizontalTextAlignment="End" Margin="0,0,10,0" Text="$80.00" FontSize="18" TextColor="{StaticResource brownLabelColor}" FontAttributes="Bold" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1"/>
+				 <Label HorizontalTextAlignment="Start" LineBreakMode="WordWrap" Margin="10,0,0,10" Text="Annual pass providing free entrance to Yosemite for 12 months from the date of purchase."  FontSize="14" TextColor="{StaticResource faintgreyLabelColor}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+			</Grid>
+				</Frame>
+				<StackLayout Margin="20,10,20,0">
+		<Label Margin="0,30,0,0" Text= "Terms:" TextColor="{StaticResource brownLabelColor}" FontAttributes="Bold"></Label>
+		<Label FontSize="14" TextColor="{StaticResource termsgreyLabelColor}"  Text= "Valid for one full year from month of purchase (through last day of that month)."> </Label>
+		<Label FontSize="14" TextColor="{StaticResource termsgreyLabelColor}"  Text= "Allows pass owner and accompanying passengers in a single, private, non-commercial vehicle to enter Federally operated recreation sites across the country."> </Label>
+		<Label FontSize="14" TextColor="{StaticResource termsgreyLabelColor}" Text= "Covers the pass owner and three (3) accompanying adults age 16 and older at sites where per person entrance fees are charged. No entry fee charged for children 15 and under."> </Label>
+		<Label FontSize="14" TextColor="{StaticResource termsgreyLabelColor}" Text= "Passes are non-refundable, non-transferable and cannot be replaced if lost or stolen."> </Label>
+		<Label FontSize="14" TextColor="{StaticResource termsgreyLabelColor}" Text= "Covers the pass owner and three (3) accompanying adults age 16 and older at sites where per person entrance fees are charged. No entry fee charged for children 15 and under."> </Label>
+		</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

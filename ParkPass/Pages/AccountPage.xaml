@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" Padding="25, 60, 25, 10" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.AccountPage" BackgroundImage="BackgroundImage.png" xmlns:coreviews="clr-namespace:ParkPass.Views;assembly=ParkPass">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" Padding="25, 150, 25, 10" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.AccountPage" BackgroundImage="BackgroundImage.png" xmlns:coreviews="clr-namespace:ParkPass.Views;assembly=ParkPass">
 	<ContentPage.Content>
 
 		<StackLayout Margin = "2">
@@ -12,8 +12,8 @@
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"  />
           </Grid.ColumnDefinitions>
-		 <Label HorizontalTextAlignment="Center" Text="Create New" FontFamily="Open Sans" FontSize="16" TextColor="{StaticResource loginGreyColor}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1"/>
-		  <Label HorizontalTextAlignment="Center" Text="Account" FontSize="16" TextColor="{StaticResource loginGreyColor}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1"/>
+		 <Label HorizontalTextAlignment="Center" Text="CREATE NEW" FontFamily="Open Sans" FontSize="16" TextColor="{StaticResource loginGreyColor}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1"/>
+		  <Label HorizontalTextAlignment="Center" Text="ACCOUNT" FontSize="16" TextColor="{StaticResource loginGreyColor}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1"/>
 				 <Label HorizontalTextAlignment="Center" Text="Profile and Settings" FontAttributes="Bold" FontSize="17" TextColor="{StaticResource loginGreyColor}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1"/>
 			</Grid>
 
@@ -54,7 +54,7 @@
 		<Button Text="terms conditions" x:Name="createAccountLbl1" TextColor="{StaticResource orangeLabelColor}" FontSize="{StaticResource smallFontSize}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1"/>
 			</Grid>
 			
-				<Button Text="CREATE NEW ACCOUNT" Clicked="CreateAccount_Clicked" FontSize="12" BorderRadius= "20" BorderColor="{StaticResource brownLabelColor}" TextColor="{StaticResource defaultButtonTextColor}" BackgroundColor="{StaticResource brownLabelColor}"/>
+				<Button Margin="0,30,0,0" Text="CREATE NEW ACCOUNT" Clicked="CreateAccount_Clicked" FontSize="12" BorderRadius= "20" BorderColor="{StaticResource brownLabelColor}" TextColor="{StaticResource defaultButtonTextColor}" BackgroundColor="{StaticResource brownLabelColor}"/>
 			</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

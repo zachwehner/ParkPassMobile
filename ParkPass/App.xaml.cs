@@ -27,8 +27,8 @@ namespace ParkPass
 
 			//MainPage = new NavigationPage(new HelpfulNumbersPage());
 			NavigationPage.SetHasNavigationBar(this, false);
-			//MainPage = new NavigationPage(new ProfilePage());
 			MainPage = new NavigationPage(new LogPage());
+			//MainPage = new NavigationPage(new LogPage());
 		//	MainPage = new NavigationPage(new ParkPass.Views.CarouselPage(CarouselLayout.IndicatorStyleEnum.Dots));
 		//	MainPage = new NavigationPage(new SignUpPage());
 		//	MainPage = new NavigationPage(new MainPage());

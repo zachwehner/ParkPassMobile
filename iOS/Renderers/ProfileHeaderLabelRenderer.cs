@@ -24,7 +24,7 @@ namespace ParkPass.iOS
 			this.Control.Layer.CornerRadius = 2;
 			this.Control.Layer.BorderColor =  new CGColor(59, 35, 19);
 			this.Control.Layer.MasksToBounds = true;
-	
+			this.Control.GetSizeRequest(10.0, 10.0);
 			this.Control.ClipsToBounds = true;
 			base.OnElementChanged(e);
 		}
