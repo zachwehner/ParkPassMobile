@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage Padding="10,0,10,00" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:coreviews="clr-namespace:ParkPass.Views;assembly=ParkPass" xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.BillingAddressPage">
+	<Grid Margin="10,0,10,0" Padding="0,0,0,0" RowSpacing="0" VerticalOptions="Center">
+          <Grid.RowDefinitions>
+			   <RowDefinition Height="Auto" />
+            <RowDefinition Height="50" />
+			<RowDefinition Height="50" />
+			<RowDefinition Height="50" />
+			<RowDefinition Height="50" />
+			<RowDefinition Height="50" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"  />
+          </Grid.ColumnDefinitions>
+					<Label Text="ENTER BILLING ADDRESS" FontAttributes="Bold" TextColor="White"  HorizontalOptions="Center"  Grid.Row="0"/>
+					<coreviews:TextEntry Placeholder="Name" x:Name="nameEntry" Grid.Row="1" Grid.Column="0" />
+					<coreviews:TextEntry Placeholder="Address 1" x:Name="Address1Entry" Grid.Row="2" Grid.Column="0" />
+					<coreviews:TextEntry Placeholder="Address 2" x:Name="Address2Entry" Grid.Row="3" Grid.Column="0" />
+					<coreviews:TextEntry Placeholder="Zip" x:Name="zipEntry" Grid.Row="4" />
+					<coreviews:TextEntry Placeholder="State" x:Name="stateEntry" Grid.Row="5" IsPassword="true" />
+					<Button Margin="20" Grid.Row="6" Text="CLOSE" FontSize="12" BorderRadius= "20" BorderColor="{StaticResource brownLabelColor}" TextColor="{StaticResource defaultButtonTextColor}" Clicked="Close_Clicked" BackgroundColor="{StaticResource brownLabelColor}"/>
+	</Grid>
+</pages:PopupPage>

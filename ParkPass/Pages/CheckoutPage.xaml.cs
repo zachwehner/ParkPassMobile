@@ -11,18 +11,18 @@ namespace ParkPass
 	{
 		ParkPassCell selectedPass;
 
-		public CheckoutPage(ParkPassCell pass)
+		public CheckoutPage()
 		{
 			 
 
-			if (pass != null)
-			{
-				selectedPass = pass;
-			}
-			else {
-				Invalid_PassSelected();
-				Navigation.PopModalAsync();
-			}
+			//if (pass != null)
+			//{
+			//	selectedPass = pass;
+			//}
+			//else {
+			//	Invalid_PassSelected();
+			//	Navigation.PopModalAsync();
+			//}
 			InitializeComponent();
 		}
 

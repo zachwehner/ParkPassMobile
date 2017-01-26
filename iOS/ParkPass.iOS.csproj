@@ -115,9 +115,6 @@
     <Reference Include="ZXing.Net.Mobile.Forms.iOS">
       <HintPath>..\packages\ZXing.Net.Mobile.Forms.2.1.47\lib\Xamarin.iOS10\ZXing.Net.Mobile.Forms.iOS.dll</HintPath>
     </Reference>
-    <Reference Include="Stripe">
-      <HintPath>..\Components\stripe-1.0.7\lib\ios-unified\Stripe.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.Services" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Runtime.Serialization" />
@@ -259,6 +256,7 @@
     <None Include="Scripts\jquery-3.1.1.min.js" />
     <None Include="Scripts\jquery-3.1.1.js" />
     <None Include="Scripts\jquery-3.1.1-vsdoc.js" />
+    <None Include="Renderers\GoogleLoginViewRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -266,7 +264,6 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Renderers\GoogleLoginViewRenderer.cs" />
     <Compile Include="Renderers\TextEntryRenderer.cs" />
     <Compile Include="Renderers\FacebookLoginViewRenderer.cs" />
     <Compile Include="Renderers\ParkPassiOSCell.cs" />
@@ -322,18 +319,16 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </BundleResource>
     <BundleResource Include="Resources\Fonts\SanFranciscoText-Light.otf" />
+    <BundleResource Include="Images\ForwardArrow.png" />
   </ItemGroup>
   <ItemGroup>
-    <XamarinComponentReference Include="stripe">
-      <Version>1.0.7</Version>
-      <Visible>False</Visible>
-    </XamarinComponentReference>
     <XamarinComponentReference Include="facebookios">
       <Version>4.16.1.0</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
-    <XamarinComponentReference Include="googleiossignin">
-      <Version>4.0.1.0</Version>
+    <XamarinComponentReference Include="stripe">
+      <InstallationInProgress>True</InstallationInProgress>
+      <Version>1.0.7</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>

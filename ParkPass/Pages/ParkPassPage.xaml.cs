@@ -47,7 +47,7 @@ namespace ParkPass
 		
 
 		
-			var checkoutPage = new CheckoutPage(park);
+			var checkoutPage = new CheckoutPage();
 
 			Navigation.PopModalAsync();
 			await Navigation.PushModalAsync(checkoutPage);

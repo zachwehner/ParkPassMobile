@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:coreviews="clr-namespace:ParkPass.Views;assembly=ParkPass" xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.CardPage">
+	<Grid Margin="10,0,10,0" Padding="0,0,0,0" RowSpacing="0" VerticalOptions="Center">
+          <Grid.RowDefinitions>
+			<RowDefinition Height="50" />
+			   <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"  />
+		  <ColumnDefinition Width="*"  />
+          </Grid.ColumnDefinitions>
+			<Label Text="ENTER CARD INFO" FontAttributes="Bold" TextColor="White"  HorizontalOptions="Center"  Grid.Row="0" Grid.ColumnSpan="2"/>
+				
+					<coreviews:TextEntry Placeholder="CC" x:Name="nameEntry" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" />
+					<coreviews:TextEntry Placeholder="Exp" x:Name="Address1Entry" Grid.Row="2" Grid.Column="0" />
+					<coreviews:TextEntry Placeholder="CVV" x:Name="Address2Entry" Grid.Row="2" Grid.Column="1" />
+
+					<!--<Button Margin="20" Grid.Row="4" Text="CLOSE" FontSize="12" BorderRadius= "20" BorderColor="{StaticResource brownLabelColor}" TextColor="{StaticResource defaultButtonTextColor}" Clicked="Close_Clicked" BackgroundColor="{StaticResource brownLabelColor}"/>-->
+	</Grid>
+</pages:PopupPage>

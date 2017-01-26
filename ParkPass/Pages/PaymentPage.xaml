@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.PaymentPage" BackgroundImage="BackgroundImage.png">
+	<ContentPage.Content>
+		<StackLayout>
+				
+		
+			 <Grid Margin="0,0,0,0" Padding="0,0,0,0" RowSpacing="0" HorizontalOptions="End">
+          <Grid.RowDefinitions>
+			 <RowDefinition Height="*" />
+			<RowDefinition Height="50" />
+            <RowDefinition Height="Auto" />
+			 <RowDefinition Height="Auto" />
+			<RowDefinition Height="20" />
+		<RowDefinition Height="*" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+			<ColumnDefinition Width="*"  />
+			<ColumnDefinition Width="10"  />
+          </Grid.ColumnDefinitions>
+				<!-- Column 1 -->
+					<Image Source="Images/Yosemite_Placeholder.png"  Grid.RowSpan ="6" Grid.ColumnSpan ="3" />
+					<Label Text="You are purchasing:" TextColor="{StaticResource greyLabelColor}" Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Center" Grid.ColumnSpan="3" Grid.RowSpan="2" FontSize="14" Opacity=".8" BackgroundColor="White"  />
+				<Label Text="Annual Pass" Grid.RowSpan="2" TextColor="{StaticResource brownLabelColor}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" FontSize="24" Opacity=".8" BackgroundColor="White"  />
+			</Grid>
+
+			<Grid Margin="20,0,0,10" Padding="0,0,0,0" HorizontalOptions="CenterAndExpand">
+          <Grid.RowDefinitions>
+			 <RowDefinition Height="50" />
+            <RowDefinition Height="1" />
+			<RowDefinition Height="50" />
+			<RowDefinition Height="1" />
+			<RowDefinition Height="50" />
+			<RowDefinition Height="1" />
+			<RowDefinition Height="50" />
+			<RowDefinition Height="1" />
+			<RowDefinition Height="1" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"  />
+			<ColumnDefinition Width="*"  />
+			<ColumnDefinition Width="40"  />
+          </Grid.ColumnDefinitions>
+				<!-- Column 1 -->
+				<Label Text="Payment Info" VerticalTextAlignment="Center" HorizontalOptions="Start" Grid.Row = "0" > </Label>
+			<BoxView Color="#E7EBED" HeightRequest="1" Grid.Row = "1" Grid.Column = "0" Grid.ColumnSpan="3" />
+			<Label Text="CARD" FontSize="11" TextColor="{StaticResource paymentGreyColor }" Grid.Row = "2" Grid.Column = "0" Grid.ColumnSpan="3"> </Label>
+			<BoxView Color="#E7EBED"  HeightRequest="1" Grid.Row = "3" Grid.Column = "0" Grid.ColumnSpan="3" />
+			<Label Text="BILLING" FontSize="11" TextColor="{StaticResource paymentGreyColor }" Grid.Row = "4" Grid.Column = "0" Grid.ColumnSpan="3" > </Label>
+			<BoxView Color="#E7EBED" HeightRequest="1" Grid.Row = "5" Grid.Column = "0" Grid.ColumnSpan="3" />
+			<Label Text="Method"  FontSize="11" TextColor="{StaticResource paymentGreyColor }" Grid.Row = "6" Grid.Column="0"> </Label>
+			<BoxView Color="#E7EBED" HeightRequest="1" Grid.Row = "7" Grid.Column = "0" Grid.ColumnSpan="3" />
+
+
+				<!-- Column 2 -->
+			
+			<Label  Text="VISA CREDIT (****4242)" FontSize="11" Grid.Row = "2" Grid.Column = "1" Grid.ColumnSpan="3" />
+			<Label Text="John Doe 123 Jefferson Street Tiburon, CA 94920" Margin="0,0,100,0" FontSize="11" Grid.Row = "4" Grid.Column = "1" Grid.ColumnSpan="3" />
+			<Label Text="STANDARD SHIPPING" Grid.Row = "6" FontSize="11" Grid.Column = "1" />
+
+				<!-- Column 3 -->
+				<Button Text="Cancel" FontSize="17" HorizontalOptions="End" Grid.Row = "0" Grid.Column = "3" />
+				<Button Image="Images/ForwardArrow.png" HorizontalOptions="End" Grid.Row = "2" Grid.Column = "3" Clicked="Card_Clicked"></Button>
+				<Button Image="Images/ForwardArrow.png" HorizontalOptions="End" Grid.Row = "4" Grid.Column = "3" Clicked="BillingAddress_Clicked"></Button>
+				<Button Image="Images/ForwardArrow.png" HorizontalOptions="End" Grid.Row = "6" Grid.Column = "3" Clicked="Card_Clicked"></Button>
+			</Grid>
+
+				 <Grid Margin="20,0,10,0" Padding="0,0,0,0" HorizontalOptions="CenterAndExpand">
+          <Grid.RowDefinitions>
+			 <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"  />
+			<ColumnDefinition Width="*"  />
+			<ColumnDefinition Width="AUto"  />
+          </Grid.ColumnDefinitions>
+				<!-- Column 1 -->
+				<Label Text="SUBTOTAL" FontSize="11" TextColor="{StaticResource paymentGreyColor }" HorizontalOptions="Start" Grid.Row = "0" Grid.Column = "1"> </Label>
+			<Label Text="PROCESSING FEES" FontSize="11" TextColor="{StaticResource paymentGreyColor }" Grid.Row = "1" Grid.Column = "1" > </Label>
+			<Label Text="SHIPPING" FontSize="11" TextColor="{StaticResource paymentGreyColor }" Grid.Row = "2" Grid.Column = "1"  > </Label>
+			<Label Text="Total" FontSize="11" Grid.Row = "3" Grid.Column = "1"  > </Label>
+
+
+
+
+				<!-- Column 2 -->
+			<Label Text="$80.00" FontSize="11" TextColor="{StaticResource paymentGreyColor }" HorizontalOptions="Start" Grid.Row = "0" Grid.Column = "2"> </Label>
+			<Label Text="$1.00" FontSize="11" TextColor="{StaticResource paymentGreyColor }" Grid.Row = "1" Grid.Column = "2" > </Label>
+			<Label Text="$0.00" FontSize="11" TextColor="{StaticResource paymentGreyColor }" Grid.Row = "2" Grid.Column = "2"  > </Label>
+			<Label Text="$81.00" FontSize="14" Grid.Row = "3" Grid.Column = "2"  > </Label>
+				<BoxView Color="#E7EBED"  HeightRequest="1" Grid.Row = "4" Grid.Column = "0" Grid.ColumnSpan="3" />
+			</Grid>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
