@@ -37,7 +37,7 @@
 					<coreviews:TextEntry Placeholder="First Name" x:Name="firstNameEntry" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" />
 					<coreviews:TextEntry Placeholder="Last Name" x:Name="lastNameEntry" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" />
 					<coreviews:TextEntry Placeholder="Username" x:Name="userNameEntry" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" />
-					<coreviews:TextEntry Placeholder="Email Address" x:Name="emailNameEntry" Grid.Row="2" Grid.ColumnSpan="4" />
+					<coreviews:TextEntry Placeholder="Email Address" x:Name="emailEntry" Grid.Row="2" Grid.ColumnSpan="4" />
 					<coreviews:TextEntry Placeholder="Password" x:Name="passEntry" Grid.Row="3" IsPassword="true" Grid.ColumnSpan="4" />
 			</Grid>
 

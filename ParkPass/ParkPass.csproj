@@ -216,6 +216,12 @@
     <Compile Include="Pages\BillingAddressPage.xaml.cs">
       <DependentUpon>BillingAddressPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TokenResponseModel.cs" />
+    <Compile Include="RegisterService.cs" />
+    <Compile Include="RegisterModel.cs" />
+    <Compile Include="BadRequestResponse.cs" />
+    <Compile Include="RequestResponse.cs" />
+    <Compile Include="LoginService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory, Version=3.13.8.999, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -269,11 +275,15 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.2.3.4.184-pre1\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="PCLWebUtility">
+      <HintPath>..\packages\PCLWebUtility.1.0.3\lib\portable-net4+sl4+wp7+win8\PCLWebUtility.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="RestClient.cs" />
     <None Include="Views\GoogleLoginView.cs" />
+    <None Include="ValuesService.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

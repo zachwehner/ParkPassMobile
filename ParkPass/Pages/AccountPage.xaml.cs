@@ -10,12 +10,48 @@ namespace ParkPass
 		public AccountPage()
 		{
 			InitializeComponent();
-			NavigationPage.SetHasNavigationBar(this, false);
+			//NavigationPage.SetHasNavigationBar(this, false);
 
 		}
 		async void CreateAccount_Clicked(object sender, System.EventArgs e)
 		{
-			await Navigation.PushAsync(new TempNavPage(), true);
+			RegisterService reg = new RegisterService();
+
+			var errorMsg = string.Empty;
+			if (string.IsNullOrWhiteSpace(firstNameEntry.Text)
+				|| string.IsNullOrWhiteSpace(lastNameEntry.Text)
+				|| string.IsNullOrWhiteSpace(emailEntry.Text)
+				|| string.IsNullOrWhiteSpace(passEntry.Text))
+			{
+				errorMsg = "All fields are required.";
+			}
+		
+
+			if (string.IsNullOrWhiteSpace(errorMsg))
+			{
+				RequestResponse registrationRequestResponse = await reg.Register(emailEntry.Text, passEntry.Text, passEntry.Text);
+
+				if (registrationRequestResponse.Successful == false)
+				{
+					if (registrationRequestResponse.badRequestReponse.ModelState != null)
+					{
+						foreach( KeyValuePair<string,string[]> error in registrationRequestResponse.badRequestReponse.ModelState)
+							DisplayAlert("Registration Error", error.Value[0], "OK");
+					}
+					else
+					{
+						DisplayAlert("Error", "Error Creating Account", "OK");
+					}
+				}
+				else
+					await Navigation.PushAsync(new LogPage(emailEntry.Text), true);
+			}
+			else
+			{
+				DisplayAlert("Error Creating Account", errorMsg, "cancel");
+			}
+
+
 		}
 
 	}

@@ -14,6 +14,9 @@ namespace ParkPass
 		public const string GoogleClientId = "1020797715272-fqtdkktccn4nc28d50ninh02bem317jc.apps.googleusercontent.com";
 
 		public readonly string[] GoogleScopes = { "profile", "email" };
+
+
+		public static readonly string BaseAddress = "http://parkpasspreferredwebapi.azurewebsites.net/";
 	
 	}
 }

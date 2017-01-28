@@ -6,6 +6,8 @@ namespace ParkPass
 {
 	public partial class LogPage : ContentPage
 	{
+		
+		LoginService loginService = new LoginService();
 		public static string clientId = "e31777d1-cc82-4397-afa5-0da1d4bfc0fc";
 		public static string authority = "https://login.windows.net/common";
 		public static string returnUri = "urn:ietf:wg:oauth:2.0:oob";
@@ -15,11 +17,38 @@ namespace ParkPass
 		private async void Login_Clicked(object sender, System.EventArgs e)
 		{
 
-			 var auth = DependencyService.Get<IAuthenticator>();
-			 var data = await auth.Authenticate(authority, graphResourceUri, clientId, returnUri);
-			 var userName = data.UserInfo.GivenName + " " + data.UserInfo.FamilyName;
-			 await DisplayAlert("Token", userName, "Ok", "Cancel");
-		
+			var errorMsg = string.Empty;
+			if (string.IsNullOrWhiteSpace(emailEntry.Text)
+			    || string.IsNullOrWhiteSpace(passwordEntry.Text))
+			{
+				errorMsg = "All fields are required.";
+			}
+
+
+			if (string.IsNullOrWhiteSpace(errorMsg))
+			{
+				RequestResponse loginRequestResponse = await loginService.Login(emailEntry.Text, passwordEntry.Text);
+
+				if (loginRequestResponse.Successful == false)
+				{
+					if (loginRequestResponse.badRequestReponse.ModelState != null)
+					{
+						foreach (KeyValuePair<string, string[]> error in loginRequestResponse.badRequestReponse.ModelState)
+							DisplayAlert("Login Error", error.Value[0], "OK");
+					}
+					else
+					{
+						DisplayAlert("Error", "Error Logging In", "OK");
+					}
+				}
+				else
+					await Navigation.PushAsync(new TempNavPage(), true);
+			}
+			else
+			{
+				DisplayAlert("Empty Fields", errorMsg, "cancel");
+			}
+
 		}
 
 
@@ -28,10 +57,12 @@ namespace ParkPass
 			await Navigation.PushAsync(new AccountPage(), true);
 		}
 
-		public LogPage()
+		public LogPage(string email)
 		{
 			
 			InitializeComponent();
+
+			emailEntry.Text = email;
 			NavigationPage.SetHasNavigationBar(this, false); 
 		}
 	}
