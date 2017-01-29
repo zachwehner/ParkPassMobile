@@ -42,7 +42,9 @@ namespace ParkPass
 					}
 				}
 				else
+				{
 					await Navigation.PushAsync(new TempNavPage(), true);
+				}
 			}
 			else
 			{

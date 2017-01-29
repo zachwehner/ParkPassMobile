@@ -10,7 +10,7 @@ namespace ParkPass
 
 		public static ParkManager ParkManager { get; private set; }
 		public static IDisplaySettings DisplaySettings { get; private set; }
-
+		public static AccessToken UserToken { get; set; }
 
 		public static void Init(IDisplaySettings displaySettings)
 		{

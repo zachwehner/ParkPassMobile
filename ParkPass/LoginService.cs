@@ -36,7 +36,12 @@ public class LoginService
 				var responseMessage = response.Content.ReadAsStringAsync().Result;
 
 				if (response.IsSuccessStatusCode)
+				{
+					AccessToken accessToken = AccessToken.Create(responseMessage);
+
+					App.UserToken = accessToken;
 					requestResponse.Successful = true;
+				}
 				else {
 					requestResponse.badRequestReponse = JsonConvert.DeserializeObject<BadRequestResponse>(responseMessage);
 					requestResponse.Successful = false;

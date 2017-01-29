@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.TempNavPage">
 	<ContentPage.Content>
 		<StackLayout>
+			<Label x:Name="welcomeLabel"></Label>
 		<Button Text="Profile View" Clicked="Profile_Clicked" />
 		<Button Text="Pass Selection View" Clicked="ParkPassSelected_Clicked" />
 		<Button Text="My Passes" Clicked="MyPasses" />
