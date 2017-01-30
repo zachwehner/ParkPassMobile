@@ -34,7 +34,7 @@ namespace ParkPass
 			{
 				var uri = new Uri(string.Format("http://parkpasspreferred20170104094844.azurewebsites.net/api/values"));
 
-
+				client.DefaultRequestHeaders.Add("Authorization",("bearer " + App.UserToken.Value));
 				var response = await client.GetAsync(uri).ConfigureAwait(false);
 				response.EnsureSuccessStatusCode();
 

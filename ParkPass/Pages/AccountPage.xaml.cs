@@ -10,7 +10,7 @@ namespace ParkPass
 		public AccountPage()
 		{
 			InitializeComponent();
-			//NavigationPage.SetHasNavigationBar(this, false);
+			NavigationPage.SetHasNavigationBar(this, true);
 
 		}
 		async void CreateAccount_Clicked(object sender, System.EventArgs e)

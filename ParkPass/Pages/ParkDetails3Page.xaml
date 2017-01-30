@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" BackgroundImage="BackgroundImage.png" Title="Pass Information" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.ParkDetails3Page">
 	<ContentPage.Content>
+		<ScrollView>
 		<StackLayout>
 			<Frame x:Name="imageFrame" Margin="0,10,0,0" Padding = "0,0,0,0" OutlineColor = "Gray"   HasShadow = "true">
 		<Image Source="Yosemite_Placeholder.png" HeightRequest="100" Aspect="AspectFill" HorizontalOptions="FillAndExpand" ></Image>
@@ -30,5 +31,6 @@
 		<Label FontSize="14" TextColor="{StaticResource termsgreyLabelColor}" Text= "Covers the pass owner and three (3) accompanying adults age 16 and older at sites where per person entrance fees are charged. No entry fee charged for children 15 and under."> </Label>
 		</StackLayout>
 		</StackLayout>
+		</ScrollView>
 	</ContentPage.Content>
 </ContentPage>

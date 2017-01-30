@@ -11,8 +11,10 @@ namespace ParkPass
 
 		public TempNavPage()
 		{
+			
 			InitializeComponent();
-			welcomeLabel.Text = "Welcome " + App.UserToken.UserName.ToString();
+			NavigationPage.SetHasNavigationBar(this, false);
+			//welcomeLabel.Text = "Welcome " + App.UserToken.UserName.ToString();
 		}
 
 		async void Profile_Clicked(object sender, System.EventArgs e)
@@ -28,6 +30,10 @@ namespace ParkPass
 		async void MyPasses(object sender, System.EventArgs e)
 		{
 			await Navigation.PushAsync(new ParkPassListPage());
+		}
+		async void ParkPage_Clicked(object sender, System.EventArgs e)
+		{
+			await Navigation.PushAsync(new ParkView());
 		}
 	}
 }

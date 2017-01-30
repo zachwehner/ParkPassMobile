@@ -5,11 +5,12 @@
 		xmlns:coreviews="clr-namespace:ParkPass.Views;assembly=ParkPass"
              Padding="10,0, 25, 10"> 
 	 <ContentPage.Content>
-    <StackLayout VerticalOptions="FillAndExpand">
+	 <ScrollView>
+		<StackLayout VerticalOptions="FillAndExpand">
       <StackLayout x:Name="contentLayout" VerticalOptions="CenterAndExpand" Spacing="10">
         <Image  Source="ParkPassPreferred.png"/>
         <Label HorizontalTextAlignment="Center" Text="WELCOME" TextColor="{StaticResource brownLabelColor}"  FontFamily="SanFranciscoText-Light" FontSize="24"></Label>
-		<Button Text="LOG IN WITH FACEBOOK" FontSize="12"  BorderRadius= "20" BorderColor="{StaticResource brownLabelColor}" TextColor="{StaticResource defaultButtonTextColor}" Clicked="Login_Clicked" BackgroundColor="{StaticResource facebookButtonBackgroundColor}"/>
+		<Button Text="LOG IN WITH FACEBOOK" FontSize="12"  BorderRadius= "20" BorderColor="{StaticResource brownLabelColor}" TextColor="{StaticResource defaultButtonTextColor}" Clicked="Facebook_Clicked" BackgroundColor="{StaticResource facebookButtonBackgroundColor}"/>
 		     <Grid >
           <Grid.RowDefinitions>
             <RowDefinition Height="1" />
@@ -61,5 +62,6 @@
         
       </StackLayout>
     </StackLayout>
+			</ScrollView>
 		  </ContentPage.Content>
 </ContentPage>

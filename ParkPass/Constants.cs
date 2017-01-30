@@ -15,6 +15,9 @@ namespace ParkPass
 
 		public readonly string[] GoogleScopes = { "profile", "email" };
 
+		public static readonly string brownLabelColor = "#3B2313";
+
+		public static readonly string orangeLabelColor = "#C46221";
 
 		public static readonly string BaseAddress = "http://parkpasspreferredwebapi.azurewebsites.net/";
 	

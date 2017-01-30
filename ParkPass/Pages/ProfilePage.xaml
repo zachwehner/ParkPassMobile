@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" BackgroundImage="BackgroundImage.png" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.ProfilePage" xmlns:coreviews="clr-namespace:ParkPass.Views;assembly=ParkPass" Title="PROFILE INFORMATION">
 	<ContentPage.Content>
+		<ScrollView>
 		<StackLayout>
 			<Button Text="Log Out" HorizontalOptions="End" TextColor="{StaticResource greyLabelColor }" Margin ="0,0,30,0" FontSize = "14">
 			</Button>
@@ -88,29 +89,6 @@
 				</Frame>
 			</StackLayout>
 		</StackLayout>
+			</ScrollView>
 	</ContentPage.Content>
 </ContentPage>
-<!--<ContentPage.Content>
-	<Grid>
-  <Grid.RowDefinitions>
-    <RowDefinition Height="100" />
-    <RowDefinition Height="20" />
-	<RowDefinition Height="30" />
-	<RowDefinition Height="30" />
-	<RowDefinition Height="30" />
-  </Grid.RowDefinitions>
-  <Grid.ColumnDefinitions>
-    <ColumnDefinition Width="5" />
-    <ColumnDefinition Width="200" />
-	<ColumnDefinition Width="200" />
-  </Grid.ColumnDefinitions>
-  <Label Text="" Grid.Row="0" Grid.Column="0" />
-  <Label Text="Log Out"  Grid.Row="0" Grid.Column="1" />
-			
-  <Label Text="" Grid.Row="1" Grid.Column="0" />
-  <Label Text="Basic Info" Grid.Row="1" Grid.Column="1" BackgroundColor = "Maroon" />
-				<Frame>
-  <Label Text="Bottom Right" Grid.Row="2" Grid.Column="1" BackgroundColor = "Maroon" />
-				</Frame>
-</Grid>
-	</ContentPage.Content>-->

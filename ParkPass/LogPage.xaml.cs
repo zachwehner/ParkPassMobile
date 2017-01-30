@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using Xamarin.Forms;
 using Microsoft.IdentityModel.Clients.ActiveDirectory;
+using Acr.UserDialogs;
+
 namespace ParkPass
 {
 	public partial class LogPage : ContentPage
@@ -16,6 +18,8 @@ namespace ParkPass
 
 		private async void Login_Clicked(object sender, System.EventArgs e)
 		{
+			
+
 
 			var errorMsg = string.Empty;
 			if (string.IsNullOrWhiteSpace(emailEntry.Text)
@@ -27,8 +31,9 @@ namespace ParkPass
 
 			if (string.IsNullOrWhiteSpace(errorMsg))
 			{
+				UserDialogs.Instance.ShowLoading("Loading", MaskType.Black);
 				RequestResponse loginRequestResponse = await loginService.Login(emailEntry.Text, passwordEntry.Text);
-
+				UserDialogs.Instance.HideLoading();
 				if (loginRequestResponse.Successful == false)
 				{
 					if (loginRequestResponse.badRequestReponse.ModelState != null)
@@ -56,6 +61,12 @@ namespace ParkPass
 
 		async void NewAccount_Clicked(object sender, System.EventArgs e)
 		{
+			await Navigation.PushAsync(new AccountPage(), true);
+		}
+
+		async void Facebook_Clicked(object sender, System.EventArgs e)
+		{
+			var x = await loginService.GetExternalLoginProviders();
 			await Navigation.PushAsync(new AccountPage(), true);
 		}
 

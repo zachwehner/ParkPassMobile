@@ -6,6 +6,7 @@
 		<Button Text="Profile View" Clicked="Profile_Clicked" />
 		<Button Text="Pass Selection View" Clicked="ParkPassSelected_Clicked" />
 		<Button Text="My Passes" Clicked="MyPasses" />
+		<Button Text="ParkPage" Clicked="ParkPage_Clicked" />
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" BackgroundImage="BackgroundImage.png" Title="PARK INFORMATION" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.ParkView" xmlns:local="clr-namespace:ParkPass;assembly=ParkPass">
+	<ContentPage.Content>
+		<StackLayout>
+		 <Grid Margin="0,0,0,0" Padding="0,0,0,0" RowSpacing="0" HorizontalOptions="CenterAndExpand">
+          <Grid.RowDefinitions>
+			 <RowDefinition Height="100" />
+			<RowDefinition Height="20" />
+			<RowDefinition Height="10" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+			<ColumnDefinition Width="*"  />
+          </Grid.ColumnDefinitions>
+				<!-- Column 1 -->
+					<Image Source="Images/Yosemite_Placeholder.png" Aspect="AspectFill"  Grid.RowSpan ="3" Grid.ColumnSpan ="3" />
+					<Label Text="YOSEMITE" TextColor="{StaticResource greyLabelColor}" Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Center" FontSize="24" Opacity=".8" BackgroundColor="White"  />		
+		</Grid>
+
+		<Grid Margin="0,0,0,0" Padding="0,0,0,0" RowSpacing="0" BackgroundColor="White">
+          <Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+		
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"  />
+			<ColumnDefinition Width="*"  />
+			<ColumnDefinition Width="*"  />
+          </Grid.ColumnDefinitions> 
+          <Button x:Name="btnPasses" TextColor="White" Text="PASSES AND FEES" BackgroundColor="{StaticResource brownLabelColor }" Clicked="Passes_Clicked" Grid.Row="0" Grid.Column="0" />
+           <Button x:Name="btnInfo" Text="PARK INFO" TextColor="White" Clicked="ParkInfo_Clicked" BackgroundColor="{StaticResource brownLabelColor }" Grid.Row="0" Grid.Column="1" />
+           <Button x:Name="btnAlerts" Text="Alerts" TextColor="White" Clicked="Alerts_Clicked"  BackgroundColor="{StaticResource brownLabelColor }" Grid.Row="0" Grid.Column="2" />
+			
+			<ContentView Margin="10,20,0,0" x:Name="ParkContentView" Grid.Row="1" Grid.ColumnSpan="3">
+
+					     
+            <ListView x:Name="myPassesListView" CachingStrategy="RecycleElement" BackgroundColor= "Transparent">
+			<ListView.Header>
+		</ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <local:ParkPassCell Name="{Binding Name}" ParkName= "{Binding ParkName}" Category="{Binding Category}" Status="{Binding Status}" PurchasedDate="{Binding PurchasedDate}" PassPrice="{Binding PassPrice}" ImageFilename="{Binding ImageFilename}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+     
+			</ContentView>
+			</Grid>
+			</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
