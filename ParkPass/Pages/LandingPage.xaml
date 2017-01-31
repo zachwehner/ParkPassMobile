@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.LandingPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.LandingPage" BackgroundImage="BackgroundImage.png" >
 	<ContentPage.Content>
 		<StackLayout Spacing="0">
 			<Grid RowSpacing="1">
@@ -18,7 +18,7 @@
 					<Label HorizontalOptions="Center" FontSize="14" TextColor="{StaticResource greyLabelColor}" Text="Valid for one full year from month of purchase (through last day of that month)">
 					</Label>
 				</StackLayout>
-				<Image Grid.Row="1" Aspect="AspectFill" Source="Yosemite_Placeholder.png">
+				<Image Grid.Row="1" Aspect="AspectFill" Source="NationalParks.png">
 					<Image.GestureRecognizers>
 						<TapGestureRecognizer Tapped="OnNationalParksTapped" />
 					</Image.GestureRecognizers>
@@ -26,7 +26,7 @@
 				<Frame Grid.Row="1" Margin="75,0,75,0" Opacity=".8" VerticalOptions="Center">
 					<Label FontAttributes="Bold" HorizontalOptions="Center" Opacity=".8" BackgroundColor="White" Text="NATIONAL PARKS" />
 				</Frame>
-				<Image Grid.Row="2" Aspect="AspectFill" Source="Yosemite_Placeholder.png">
+				<Image Grid.Row="2" Aspect="AspectFill" Source="SportingEvents.png">
 					<Image.GestureRecognizers>
 						<TapGestureRecognizer Tapped="OnSportingEventsTapped" />
 					</Image.GestureRecognizers>
@@ -34,7 +34,7 @@
 				<Frame Grid.Row="2" Margin="75,0,75,0" Opacity=".8" VerticalOptions="Center">
 					<Label Grid.Row="2" VerticalOptions="Center" FontAttributes="Bold" HorizontalOptions="Center" Opacity=".8" BackgroundColor="White" Text="SPORTING EVENTS" />
 				</Frame>
-				<Image Grid.Row="3" Aspect="AspectFill" Source="Yosemite_Placeholder.png">
+				<Image Grid.Row="3" Aspect="AspectFill" Source="ThemeParks.png">
 					<Image.GestureRecognizers>
 						<TapGestureRecognizer Tapped="OnThemeParksTapped" />
 					</Image.GestureRecognizers>

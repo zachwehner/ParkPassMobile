@@ -356,6 +356,9 @@
     </BundleResource>
     <BundleResource Include="Resources\Fonts\SanFranciscoText-Light.otf" />
     <BundleResource Include="Images\ForwardArrow.png" />
+    <BundleResource Include="Resources\ThemeParks.png" />
+    <BundleResource Include="Resources\SportingEvents.png" />
+    <BundleResource Include="Resources\NationalParks.png" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="facebookios">
