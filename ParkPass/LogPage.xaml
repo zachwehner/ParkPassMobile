@@ -42,7 +42,7 @@
       	
 				</Grid>
        
-         <Button Text="Forgot Password?" x:Name="forgotPasswordLbl" TextColor="{StaticResource loginGreyColor}" FontSize="{StaticResource smallFontSize}" />
+         <Button Text="Forgot Password?" x:Name="forgotPasswordLbl" TextColor="{StaticResource loginGreyColor}" FontSize="{StaticResource smallFontSize}" Clicked="Forgot_Password_Clicked"/>
 				<Button Text="LOG IN" FontSize="12" BorderRadius= "20" BorderColor="{StaticResource brownLabelColor}" TextColor="{StaticResource defaultButtonTextColor}" Clicked="Login_Clicked" BackgroundColor="{StaticResource brownLabelColor}"/>
    
 	

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.OnBoard1Page"  BackgroundImage="BackgroundImage.png" xmlns:coreviews="clr-namespace:ParkPass.Views;assembly=ParkPass">
+	<ContentPage.Content>
+		<StackLayout Margin="20,0,20,0" VerticalOptions="StartAndExpand" Spacing="50">
+			<Image  Source="ParkPassPreferred.png"/>
+			<Label HorizontalTextAlignment="Center" Text="Premium access right from your pocket" TextColor="{StaticResource termsgreyLabelColor}"  FontFamily="SanFranciscoText-Light" FontSize="16"></Label>
+			<Label HorizontalTextAlignment="Center" Text="WELCOME" TextColor="{StaticResource brownLabelColor}"  FontFamily="SanFranciscoText-Light" FontSize="24"></Label>
+			
+			<Label HorizontalTextAlignment="Center" Text="To get started choose an option below. Park Pass Preferred will find venues or parks for you." TextColor="{StaticResource termsgreyLabelColor}"  FontFamily="SanFranciscoText-Light" FontSize="14"></Label>
+
+
+			<Button Text="Use My Current Location" FontSize="12"  BorderRadius= "20" BorderColor="{StaticResource brownLabelColor}" TextColor="{StaticResource defaultButtonTextColor}" BackgroundColor="{StaticResource brownLabelColor}" />
+			<Button Text="Choose Location" FontSize="12"  BorderRadius= "20" BorderColor="{StaticResource brownLabelColor}" TextColor="{StaticResource defaultButtonTextColor}" BackgroundColor="{StaticResource brownLabelColor}" />
+
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

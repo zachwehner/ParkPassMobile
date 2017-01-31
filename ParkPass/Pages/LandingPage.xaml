@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ParkPass.LandingPage">
+	<ContentPage.Content>
+		<StackLayout Spacing="0">
+			<Grid RowSpacing="1">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*" />
+					<RowDefinition Height="*" />
+					<RowDefinition Height="*" />
+					<RowDefinition Height="*" />
+					<RowDefinition Height="20" />
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*" />
+				</Grid.ColumnDefinitions>
+				<StackLayout Grid.Row="0" Margin="20,0,0,0" VerticalOptions="CenterAndExpand" Spacing="20">
+					<Label Text="Choose a Category" FontSize="24" TextColor="{StaticResource greyLabelColor}" HorizontalOptions="Center" />
+					<Label HorizontalOptions="Center" FontSize="14" TextColor="{StaticResource greyLabelColor}" Text="Valid for one full year from month of purchase (through last day of that month)">
+					</Label>
+				</StackLayout>
+				<Image Grid.Row="1" Aspect="AspectFill" Source="Yosemite_Placeholder.png">
+					<Image.GestureRecognizers>
+						<TapGestureRecognizer Tapped="OnNationalParksTapped" />
+					</Image.GestureRecognizers>
+				</Image>
+				<Frame Grid.Row="1" Margin="75,0,75,0" Opacity=".8" VerticalOptions="Center">
+					<Label FontAttributes="Bold" HorizontalOptions="Center" Opacity=".8" BackgroundColor="White" Text="NATIONAL PARKS" />
+				</Frame>
+				<Image Grid.Row="2" Aspect="AspectFill" Source="Yosemite_Placeholder.png">
+					<Image.GestureRecognizers>
+						<TapGestureRecognizer Tapped="OnSportingEventsTapped" />
+					</Image.GestureRecognizers>
+				</Image>
+				<Frame Grid.Row="2" Margin="75,0,75,0" Opacity=".8" VerticalOptions="Center">
+					<Label Grid.Row="2" VerticalOptions="Center" FontAttributes="Bold" HorizontalOptions="Center" Opacity=".8" BackgroundColor="White" Text="SPORTING EVENTS" />
+				</Frame>
+				<Image Grid.Row="3" Aspect="AspectFill" Source="Yosemite_Placeholder.png">
+					<Image.GestureRecognizers>
+						<TapGestureRecognizer Tapped="OnThemeParksTapped" />
+					</Image.GestureRecognizers>
+				</Image>
+				<Frame Grid.Row="3" Margin="75,0,75,0" Opacity=".8" VerticalOptions="Center">
+					<Label Grid.Row="3" VerticalOptions="Center" FontAttributes="Bold" HorizontalOptions="Center" Opacity=".8" BackgroundColor="White" Text="THEME PARKS" />
+				</Frame>
+			</Grid>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

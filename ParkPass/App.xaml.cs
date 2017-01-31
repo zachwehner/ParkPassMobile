@@ -25,20 +25,20 @@ namespace ParkPass
 			ParkManager = new ParkManager(new ParkService());
 
 			App.UserPreferencesStore = userPreferencesStore;
-			var token = UserContext.GetAccessToken();
-			if (token != null && !token.IsExpired)
-			{
-				App.Current.MainPage = new NavigationPage(new TempNavPage());
-			}
-			else
-			{
-				App.Current.MainPage = new NavigationPage(new LogPage(null));
-			}
+			//var token = UserContext.GetAccessToken();
+			//if (token != null && !token.IsExpired)
+			//{
+			//	App.Current.MainPage = new NavigationPage(new TempNavPage());
+			//}
+			//else
+			//{
+			//	App.Current.MainPage = new NavigationPage(new LogPage(null));
+			//}
 
 
 			//MainPage = new NavigationPage(new HelpfulNumbersPage());
 			NavigationPage.SetHasNavigationBar(this, false);
-//			MainPage = new NavigationPage(new ParkView());
+			MainPage = new NavigationPage(new LogPage(null));
 			//MainPage = new NavigationPage(new PaymentPage());
 		//	MainPage = new NavigationPage(new ParkPass.Views.CarouselPage(CarouselLayout.IndicatorStyleEnum.Dots));
 		//	MainPage = new NavigationPage(new SignUpPage());

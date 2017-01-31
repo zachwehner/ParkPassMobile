@@ -78,6 +78,11 @@ namespace ParkPass
 			emailEntry.Text = email;
 			NavigationPage.SetHasNavigationBar(this, false); 
 		}
+
+		async void Forgot_Password_Clicked(object sender, System.EventArgs e)
+		{
+			await Navigation.PushAsync(new ForgotPasswordPage());
+		}
 	}
 
 

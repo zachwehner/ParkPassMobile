@@ -27,6 +27,14 @@ namespace ParkPass
 			await Navigation.PushAsync(new ParkDetails3Page());
 		}
 
+			async void LandingPage_Clicked(object sender, System.EventArgs e)
+		{
+			await Navigation.PushAsync(new LandingPage());
+		}
+		async void OnBoard1_Clicked(object sender, System.EventArgs e)
+		{
+			await Navigation.PushAsync(new OnBoard1Page());
+		}
 		async void MyPasses(object sender, System.EventArgs e)
 		{
 			await Navigation.PushAsync(new ParkPassListPage());
